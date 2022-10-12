@@ -25,5 +25,8 @@
 
 /* 컨텐츠 담는 박스 공통 */
 .cbox {
-    height: 100vh;
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    margin: 0 auto;
 }

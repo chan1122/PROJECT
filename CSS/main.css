@@ -11,37 +11,49 @@ body * {
     outline: 3px dotted red;
     color: #fff;
 }
+/* 배경 영상 디자인 잡기 */
+.VID{
+    /* z-index로 간섭 불가하게 만들기 */
+    z-index: -9999999;
+    /* 포지션 픽스드 움지이지 않고 따라다닌다 */
+    position: fixed;
 
-
-/* 최상단 */
-.head {
-    /* 배경색 */
-    /* background-color: black; */
-
-    /* 정렬을 위한 플렉스 */
-    display: flex;
-    /* 플렉스 방법 */
-    justify-content: center;
-    /* 넘치는것 없게 하기 위해서 */
-    flex-wrap: wrap;
-
+    /* 크기조정값 */
+    width: 100vw;
+    object-fit: cover;
+    height: 100%;
 }
-/* 상단 이름로고 */
-.toplogo{
-    /* 블록호 */
+
+/* 최상단 디자인 */
+.TOP{
+    height: 55px;
+    text-align: center;
+}
+.TOP>span{
+    position: relative;
     display: block;
-    /* 글자크기 */
-    font-size: 4vw;
-    /* 크기 설정 (박스) */
-    width: 200px;
-    height: 100px;
+    font-size: 4rem;
 }
-/* 왼쪽 사이드 바 흐르는 글씨 */
-.topleftside{
-    position: absolute;
+/* 상단 GNB메뉴 잡기 */
+
+/* L사이드 디자인 잡기 */
+.Lside{
+    position: static;
     width: 100px;
-    height: 50%;
-    left: 0;
+    height: 500px;
+    left: 30%;
+}
+/* 상단 GNB메뉴 디자인 잡기 */
+.GNB{
+    width: 1000px
+    
+}
+
+.GNB>ul>li{
+    padding: 0 15px;
+}
+.GNB>ul>li>a{
+
 }
 
 

@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* 음원사이트 메인페이지 CSS - main.css */
+
+/* 외부 CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(comon.css);
+
+/* 공사중 표시 */
+body * {
+    outline: 3px dotted red;
+    color: #fff;
+}
+
+
+/* 최상단 */
+.head {
+    /* 배경색 */
+    /* background-color: black; */
+
+    /* 정렬을 위한 플렉스 */
+    display: flex;
+    /* 플렉스 방법 */
+    justify-content: center;
+    /* 넘치는것 없게 하기 위해서 */
+    flex-wrap: wrap;
+
+}
+/* 상단 이름로고 */
+.toplogo{
+    /* 블록호 */
+    display: block;
+    /* 글자크기 */
+    font-size: 4vw;
+    /* 크기 설정 (박스) */
+    width: 200px;
+    height: 100px;
+}
+/* 왼쪽 사이드 바 흐르는 글씨 */
+.topleftside{
+    position: absolute;
+    width: 100px;
+    height: 50%;
+    left: 0;
+}
+
+
+

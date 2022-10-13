@@ -19,7 +19,7 @@
 .box {
     margin: 0 auto;
     max-width: 1400px;
-    min-height: 100px;
+    min-height: 50px;
 }
 
 
@@ -29,4 +29,9 @@
     width: 90vw;
     height: 90vh;
     margin: 0 auto;
+}
+
+/* 옆으로 흐르게 하기 */
+.clb{
+    float: left;
 }

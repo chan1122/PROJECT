@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* 음원 사이트 미디어 쿼리 */
+
+
+/* 미디어쿼리 1000px */
+@media screen and (max-width:1000px) {
+
+}
+
+
+/* 미디어쿼리 700 */
+@media screen and (max-width:700px) {
+    .nav{
+        position: absolute;
+        height: 0;
+        display: none;
+    }
+}

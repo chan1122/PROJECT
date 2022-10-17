@@ -6,14 +6,20 @@
 @import url(core.css);
 @import url(comon.css);
 @import url(midiaquery.css);
+
 /* 공사중 표시 */
 body * {
     outline: 3px dotted red;
-    color: #fff;
+    /*임시!!!!*/
+    color: darkgoldenrod
+        /* font-size: 3vw; */
 }
-body{
-    overflow: hidden;
+
+body {
+    height: 10000px;
+
 }
+
 /* 배경 영상 디자인 잡기 */
 .VID {
     /* z-index로 간섭 불가하게 만들기 */
@@ -26,42 +32,47 @@ body{
     object-fit: cover;
     height: 100%;
 }
+
 /* 상단 GNB 로고 싸는박스 */
-.tbox1{
+.tbox1 {
+    position: sticky;
+    top: 0;
+    z-index: 9999999;
     /* 배경색 */
     background: rgba(255, 255, 255, 0.214);
 }
+
 /* 상단 디자인 */
-.top{
-    height: 63px;
+.top {
+    height: 60px;
 }
 
 /* 최상단 디자인 */
-.toplogo{
+.toplogo {
     position: relative;
-    width: 98%;
-    height: 100%;
+    width: 100%;
+    height: 60px;
 
     font-size: 30px;
     text-align: center;
-    display: block; 
+    display: block;
 
-    padding: 10px;
-    
+    line-height: 1.5;
 }
+
 /* 상단 글씨로고 */
 
 
 /* ****************************************** */
 /* GNB싸는 박스 */
-.nav{
+.nav {
     height: 50px;
     margin-top: 0;
 }
 
 
 /* 상단 GNB메뉴 잡기 */
-.gnb{
+.gnb {
     /* 상단 메뉴들 움직이게 하기위해서 */
     position: absolute;
     width: 59%;
@@ -71,13 +82,15 @@ body{
     left: 20%;
 
 }
+
 /* 상단 ul */
-.gnb>ul{
+.gnb>ul {
     overflow: hidden;
-    display: flex; 
+    display: flex;
     justify-content: space-around;
 }
-.gnb>ul>li{
+
+.gnb>ul>li {
     /* 블록화 */
     display: block;
     /* 위치조정 */
@@ -93,25 +106,137 @@ body{
 
     padding: 0;
 }
+
 /* gnb a 요소 */
-.gnb>ul>li>a{
+.gnb>ul>li>a {
     display: block;
     width: 100%;
     height: 100%;
 }
+
 /* ****************************************** */
-
-
-/* L사이드 디자인 잡기 */
-.Lside {
-    /* 배경색 */
-    background: rgba(255, 255, 255, 0.214);
-
-    position: absolute;
-    width: 9%;
-    height: 80%;
-    left: 0%;
+/* 메인박스 */
+.mainbox {
+    position: relative;
+    width: 100%;
+    height: 88vh;
 }
 
-/* 상단 GNB메뉴 디자인 잡기 * */
+.Lcoverbox {
+    z-index: -2;
+    position: absolute;
+    left: 0;
+    width: 16.5%;
+    height: 80vh;
+    padding: 1px;
+    overflow: hidden;
+}
 
+/* L사이드 디자인 잡기 */
+/* 흘러가는 글자 부모박스 */
+.Lside {
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    font-size: 5vw;
+    font-family: 'Anton', sans-serif;
+    color: gray;
+    transform-origin: top;
+    transform: rotate(90deg);
+
+
+}
+
+/* 텍스트박스 글자 자식 박스 */
+.LsideText {
+    position: relative;
+    /* 초기값 */
+    left: 0;
+    width: 200vw;
+    top: 0;
+    bottom: 0;
+
+    /* ul이 흘러가게 하기 위해서 */
+    display: flex;
+    /* transform-origin: top; */
+
+
+}
+
+/* 하위 ul */
+.LsideText ul {
+
+    /* li가 흘러가게 하기위해서 */
+    display: flex;
+    flex: 1;
+
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 하위 li 공통 셋팅 */
+.LsideText ul li {
+    /* 상위 ul의 플렉스 등분할 설정 */
+    flex: 1;
+    text-align: center;
+
+}
+
+/* 텍스트 애니 */
+.txt-ani1 {
+    animation: txtFlow1 10s linear infinite;
+}
+
+@keyframes txtFlow1 {
+    to {
+        left: -100%;
+    }
+
+}
+
+/* ***************************************** */
+/* 첫페이지 메인 영역 큰박스 */
+/* 1페이지 메인 */
+.tm1 {
+    /* 포지션 줘서 움직이게 하기 */
+    position: absolute;
+    right: 0;
+    width: 90.9%;
+    height: 80vh;
+    background-color: #fff;
+    /* border-top: 10px solid #000; */
+
+}
+
+/*  메인 첫페이지 우측 설명 박스 */
+.mainRside {
+    position: absolute;
+    right: 0;
+    width: 30%;
+    height: 93%;
+
+    border-left: 1px solid #000;
+}
+
+/* 메인 박스 앨범 들어가는 박스 */
+.mainalbum {
+    position: absolute;
+    width: 100%;
+    /* width: 69.7%; */
+    height: 94%;
+    outline: 1px solid red;
+}
+
+.main2 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.ma2{
+    height: 100%;
+}

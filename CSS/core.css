@@ -10,7 +10,7 @@
     font-family: 'Jua', sans-serif;
 *//* 전체 글자크기 Root 설정  */
 html{
-    font-size: 10px;
+    font-size: 10px; 
     /* 글자 rem담위 계산 편의떄문~! */
 }
 /* **************공통클래스************** */

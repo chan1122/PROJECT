@@ -3,20 +3,120 @@
 /* 음원사이트 공통 클래스 밑 아이디 포지션 정리 */
 
 /* 상단 비디오 */
-#myvid {
-    position: fixed;
-    z-index: -10;
-    left: 0;
-    top: 0;
+
+/* 메인1페이지 */
+.bridg {
+    position: absolute;
+}
+
+
+
+/* 레이아웃잡는 박스 */
+/* *********************************** */
+
+/* 공통 파티션 12그리드 클래스 */
+/* col-숫자 : 숫자는 기둥의 수
+한줄에는 최대한이 12기둥이 되어야함! */
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
     width: 100%;
+}
+
+
+
+.cont {
+    top: 0;
+    position: absolute;
     height: 100%;
-    object-fit: cover;
 
 }
+
+/* 속박스 셋팅 */
+.ibx {
+    /* 렐러티브 부모자격 */
+    position: relative;
+
+    /* 플렉스박스 */
+    display: flex;
+    /* 크기가 넘치면 아래로 내려감 */
+    flex-wrap: wrap;
+
+    max-width: 1400px;
+    margin: 0 auto;
+    /* 임시높이 */
+    min-height: 100px;
+}
+
+/* 메인 2박스 */
+.main {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+}
+
+
+
+
+.ibx h2,
+.ibx h1 {
+    position: absolute;
+    width: 100%;
+    /* 부모는? .ibx */
+    font-size: 5vw;
+    text-align: center;
+    z-index: -1;
+}
+
+
+
 
 
 /* 박스 공통 */
 .box {
+
     margin: 0 auto;
     max-width: 1400px;
     min-height: 50px;
@@ -32,6 +132,257 @@
 }
 
 /* 옆으로 흐르게 하기 */
-.clb{
+.clb {
     float: left;
 }
+
+
+/* h1,h2등 제목들 폰트 크게하기 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* 흘러가는 글자 부모박스 */
+.fdx {
+    position: absolute;
+    width: 100vw;
+
+    font-size: 4vw;
+    font-family: 'Anton', sans-serif;
+    color: gray;
+
+
+
+}
+
+/* 텍스트박스 글자 자식 박스 */
+.tdx {
+    position: absolute;
+    /* 초기값 */
+    left: 0%;
+    width: 200vw;
+
+    /* ul이 흘러가게 하기 위해서 */
+    display: flex;
+}
+
+/* 하위 ul */
+.tdx ul {
+
+    /* li가 흘러가게 하기위해서 */
+    display: flex;
+    flex: 1;
+
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 하위 li 공통 셋팅 */
+.tdx ul li {
+    /* 상위 ul의 플렉스 등분할 설정 */
+    flex: 1;
+    text-align: center;
+}
+
+/* 텍스트 애니 */
+.txt-ani1 {
+    animation: txtFlow1 10s linear infinite;
+}
+
+@keyframes txtFlow1 {
+    to {
+        left: 100%;
+    }
+
+}
+.f1{
+    top: 47%;
+}
+.f2 {
+    bottom: 47%;
+}
+
+.txt-ani2 {
+    left: -100%;
+    animation: txtFlow2 10s linear infinite;
+}
+
+@keyframes txtFlow2 {
+    to {
+        left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 앨범 들어가는자리 */
+.album {
+
+    position: absolute;
+    width: min(30vw, 300px);
+    /* height: 300px; */
+
+    /* 정중앙 셋팅 */
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+
+    /* 입체 설정 */
+    transform-style: preserve-3d;
+    /* 입체설정 잘보이게 하기 */
+    transform: rotateX(10deg) rotateY(30deg);
+
+    z-index: 1;
+}
+
+.album::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+/* 앨범 하단 스팬 공통 */
+.album span {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* 앨범 스팬 각자 위치 */
+.album span:nth-child(1) {
+    background-color: red;
+    /* z축으로 밀기 */
+    transform: translateZ(10px);
+}
+
+/* 오른쪽 면 */
+.album span:nth-child(2) {
+    background-color: orange;
+    /* z축으로 밀기 */
+    width: 20px;
+    right: -10px;
+    transform: rotateY(90deg);
+}
+
+/* 왼쪽 면 */
+.album span:nth-child(3) {
+    background-color: yellow;
+    /* z축으로 밀기 */
+    width: 20px;
+    transform: rotateY(-90deg);
+    left: -10.4px;
+}
+
+/* 아래쪽 면  */
+.album span:nth-child(4) {
+    background-color: green;
+    /* z축으로 밀기 */
+    height: 20px;
+    bottom: 10px;
+    transform: rotateX(90deg);
+}
+
+/* 윗면 */
+.album span:nth-child(5) {
+    background-color: blue;
+    /* z축으로 밀기 */
+    height: 20px;
+    top: -10px;
+    transform: rotateX(90deg);
+}
+
+/* 뒷면 */
+.album span:nth-child(6) {
+    background-color: purple;
+    /* z축으로 밀기 */
+    transform: translateZ(-10px);
+}
+
+.right {
+    right: 0;
+    font-size: 3vw;
+    top: 0;
+}
+
+.left {
+    left: 0;
+    font-size: 3vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#myvid {
+    position: fixed;
+    z-index: -10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+

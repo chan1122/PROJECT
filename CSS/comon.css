@@ -271,13 +271,13 @@ h6 {
     /* height: 300px; */
 
     /* 정중앙 셋팅 */
-    top: calc(50% - 150px);
-    left: calc(50% - 150px);
+    top: 50%;
+    left: 50%;
 
     /* 입체 설정 */
     transform-style: preserve-3d;
     /* 입체설정 잘보이게 하기 */
-    transform: rotateX(10deg) rotateY(30deg);
+    transform: translate(-50%, -50%) rotateX(10deg) rotateY(30deg);
 
     z-index: 1;
 }

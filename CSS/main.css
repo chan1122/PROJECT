@@ -257,7 +257,7 @@ body {
 .track1{
     position: relative;
     top: 3%;
-    width: 20vw;
+    width: 300px;
     height: 300px;
     left: calc(50% - 150px);
 }

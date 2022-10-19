@@ -349,7 +349,7 @@ h6 {
     /* z축으로 밀기 */
     transform: translateZ(-10px);
 }
-
+/* 가르는 박스 */
 .right {
     right: 0;
     font-size: 3vw;
@@ -361,8 +361,14 @@ h6 {
     font-size: 3vw;
 }
 
-
-
+/* 가르는 박스 공통 */
+.mtt{
+    z-index: -10;
+    height: 100%;
+    width: 50vw;
+    position: absolute;
+    background-color: #fff;
+}
 
 
 

@@ -9,321 +9,304 @@
 
 /* 공사중 표시 */
 body * {
-    outline: 3px dotted red;
-    /*임시!!!!*/
-    color: darkgoldenrod
-        /* font-size: 3vw; */
+  outline: 3px dotted red;
+  /*임시!!!!*/
+  color: darkgoldenrod;
+  /* font-size: 3vw; */
 }
 
 body {
-    height: 10000px;
-
+  height: 10000px;
 }
 
 /* 배경 영상 디자인 잡기 */
 .VID {
-    /* z-index로 간섭 불가하게 만들기 */
-    z-index: -9999999;
-    /* 포지션 픽스드 움지이지 않고 따라다닌다 */
-    position: fixed;
+  /* z-index로 간섭 불가하게 만들기 */
+  z-index: -9999999;
+  /* 포지션 픽스드 움지이지 않고 따라다닌다 */
+  position: fixed;
 
-    /* 크기조정값 */
-    width: 100vw;
-    object-fit: cover;
-    height: 100%;
+  /* 크기조정값 */
+  width: 100vw;
+  object-fit: cover;
+  height: 100%;
 }
 
 /* 상단 GNB 로고 싸는박스 */
 .tbox1 {
-    position: sticky;
-    top: 0;
-    z-index: 9999999;
-    /* 배경색 */
-    background: rgba(255, 255, 255, 0.214);
+  position: sticky;
+  top: 0;
+  z-index: 9999999;
+  /* 배경색 */
+  background: rgba(255, 255, 255, 0.214);
 }
 
 /* 상단 디자인 */
 .top {
-    height: 60px;
+  height: 60px;
 }
 
 /* 최상단 디자인 */
 .toplogo {
-    position: relative;
-    width: 100%;
-    height: 60px;
+  position: relative;
+  width: 100%;
+  height: 60px;
 
-    font-size: 30px;
-    text-align: center;
-    display: block;
+  font-size: 30px;
+  text-align: center;
+  display: block;
 
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 /* 상단 글씨로고 */
 
-
 /* ****************************************** */
 /* GNB싸는 박스 */
 .nav {
-    height: 50px;
-    margin-top: 0;
+  height: 50px;
+  margin-top: 0;
 }
-
 
 /* 상단 GNB메뉴 잡기 */
 .gnb {
-    /* 상단 메뉴들 움직이게 하기위해서 */
-
-
+  /* 상단 메뉴들 움직이게 하기위해서 */
 }
 
 /* 상단 ul */
-.gnb>ul {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+.gnb > ul {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
-.gnb>ul>li {
-    /* 위치조정 */
-    width: 100px;
-    line-height: 2;
+.gnb > ul > li {
+  /* 위치조정 */
+  width: 100px;
+  line-height: 2;
 
-    /* 글씨 조정 */
-    text-align: center;
-    font-size: 20px;
-    margin: 0 15px;
-
+  /* 글씨 조정 */
+  text-align: center;
+  font-size: 20px;
+  margin: 0 15px;
 }
 
 /* gnb a 요소 */
-.gnb>ul>li>a {
-    display: block;
-    width: 100%;
-    height: 100%;
+.gnb > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /* ****************************************** */
 /* 메인박스 */
 .mainbox {
-    position: relative;
-    width: 100%;
-    height: 88vh;
+  position: relative;
+  width: 100%;
+  height: 88vh;
 }
 
 .Lcoverbox {
-    z-index: -2;
-    position: absolute;
-    left: 0;
-    width: 16.5%;
-    height: 80vh;
-    padding: 1px;
-    overflow: hidden;
+  z-index: -2;
+  position: absolute;
+  left: 0;
+  width: 16.5%;
+  height: 80vh;
+  padding: 1px;
+  overflow: hidden;
 }
 
 /* L사이드 디자인 잡기 */
 /* 흘러가는 글자 부모박스 */
 .Lside {
-    position: absolute;
-    width: 100%;
-    height: 99%;
-    font-size: 5vw;
-    font-family: 'Anton', sans-serif;
-    color: gray;
-    transform-origin: top;
-    transform: rotate(90deg);
-
-
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 99%;
+  font-size: 5vw;
+  font-family: "Anton", sans-serif;
+  color: gray;
+  transform-origin: top;
+  transform: rotate(90deg);
 }
 
 /* 텍스트박스 글자 자식 박스 */
 .LsideText {
-    position: relative;
-    /* 초기값 */
-    left: 0;
-    width: 200vw;
-    top: 0;
-    bottom: 0;
+  position: relative;
+  /* 초기값 */
+  left: 0;
+  width: 200vh;
+  top: 0;
+  bottom: 0;
 
-    /* ul이 흘러가게 하기 위해서 */
-    display: flex;
-    /* transform-origin: top; */
-
-
+  /* ul이 흘러가게 하기 위해서 */
+  display: flex;
+  /* transform-origin: top; */
 }
 
 /* 하위 ul */
 .LsideText ul {
+  /* li가 흘러가게 하기위해서 */
+  display: flex;
+  flex: 1;
 
-    /* li가 흘러가게 하기위해서 */
-    display: flex;
-    flex: 1;
-
-
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* 하위 li 공통 셋팅 */
 .LsideText ul li {
-    /* 상위 ul의 플렉스 등분할 설정 */
-    flex: 1;
-    text-align: center;
-
+  /* 상위 ul의 플렉스 등분할 설정 */
+  flex: 1;
+  text-align: center;
 }
 
 /* 텍스트 애니 */
 .txt-ani1 {
-    animation: txtFlow1 10s linear infinite;
+  /* animation: txtFlow1 10s linear infinite; */
 }
 
 @keyframes txtFlow1 {
-    to {
-        left: -100%;
-    }
-
+  to {
+    left: -100%;
+  }
 }
 
 /* ***************************************** */
 /* 첫페이지 메인 영역 큰박스 */
 /* 1페이지 메인 */
 .tm1 {
-    /* 포지션 줘서 움직이게 하기 */
-    position: absolute;
-    right: 0;
-    width: 90.9%;
-    height: 80vh;
-    background-color: #fff;
-    /* border-top: 10px solid #000; */
-
+  /* 포지션 줘서 움직이게 하기 */
+  position: absolute;
+  right: 0;
+  width: 90.9%;
+  height: 80vh;
+  background-color: #fff;
+  /* border-top: 10px solid #000; */
 }
 
 /*  메인 첫페이지 우측 설명 박스 */
 .mainRside {
-    position: absolute;
-    right: 0;
-    width: 30%;
-    height: 93%;
+  position: absolute;
+  right: 0;
+  width: 30%;
+  height: 93%;
 
-    border-left: 1px solid #000;
+  border-left: 1px solid #000;
 }
 
 /* 메인 박스 앨범 들어가는 박스 */
 .mainalbum {
-    position: absolute;
-    width: 100%;
-    /* width: 69.7%; */
-    height: 94%;
-    outline: 1px solid red;
+  position: absolute;
+  width: 100%;
+  /* width: 69.7%; */
+  height: 94%;
+  outline: 1px solid red;
 }
 
 .main2 {
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
-.ma2{
-    height: 100%;
+.ma2 {
+  height: 100%;
 }
 
 /* 앨범 집약 페이지 */
-.main3{
-    width: 100%;
-    /* height: 200vw; */
-    position: relative;
-    /* background-color: gray; */
-    display: flex;
+.main3 {
+  width: 100%;
+  /* height: 200vw; */
+  position: relative;
+  /* background-color: gray; */
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 }
-.maintrackcover{
-    height: 100%;
-    margin: 0 auto;
-    width: 50%;
+.maintrackcover {
+  height: 100%;
+  margin: 0 auto;
+  width: 50%;
 
-    left: calc(50% - 200px);
+  left: calc(50% - 200px);
 }
-
 
 /* 트랙 공통 */
-.mtt1{
-    padding: 20px 0;
+.mtt1 {
+  padding: 20px 0;
 }
 /* 앨범 1~10번 */
 /* 1번 */
-.track1{
-    position: relative;
-    top: 3%;
-    width: 300px;
-    height: 300px;
-    left: calc(50% - 150px);
+.track1 {
+  position: relative;
+  top: 3%;
+  width: 300px;
+  height: 300px;
+  left: calc(50% - 150px);
 }
-.track2{
-
-    position: relative;
-    top: 4%;
-    width: 300px;
-    height: 300px;
-    left: calc(50% - 150px);
+.track2 {
+  position: relative;
+  top: 4%;
+  width: 300px;
+  height: 300px;
+  left: calc(50% - 150px);
 }
-.track3{
-    position: relative;
-    top: 5%;
-    width: 300px;
-    height: 300px;
-    left: calc(50% - 150px);
+.track3 {
+  position: relative;
+  top: 5%;
+  width: 300px;
+  height: 300px;
+  left: calc(50% - 150px);
 }
-.track4{
-    position: relative;
-    top: 6%;
-    width: 300px;
-    height: 300px;
-    left: calc(50% - 150px);
+.track4 {
+  position: relative;
+  top: 6%;
+  width: 300px;
+  height: 300px;
+  left: calc(50% - 150px);
 }
-.track5{
-    position: relative;
-    top: 7%;
-    width: 300px;
-    height: 300px;
-    left: calc(50% - 150px);
+.track5 {
+  position: relative;
+  top: 7%;
+  width: 300px;
+  height: 300px;
+  left: calc(50% - 150px);
 }
-.track6{
-    position: relative;
-    top: 8%;
-    width: 300px;
-    height: 300px;
-    left: calc(50% - 150px);
+.track6 {
+  position: relative;
+  top: 8%;
+  width: 300px;
+  height: 300px;
+  left: calc(50% - 150px);
 }
-.track7{
-    position: relative;
-    top: 9%;
-    width: 300px;
-    height: 300px;
-    left: calc(50% - 150px);
+.track7 {
+  position: relative;
+  top: 9%;
+  width: 300px;
+  height: 300px;
+  left: calc(50% - 150px);
 }
-.track8{
-    position: relative;
-    top: 10%;
-    width: 300px;
-    height: 300px;
-    left: calc(50% - 150px);
+.track8 {
+  position: relative;
+  top: 10%;
+  width: 300px;
+  height: 300px;
+  left: calc(50% - 150px);
 }
-.track9{
-    position: relative;
-    top: 11%;
-    width: 300px;
-    height: 300px;
-    left: calc(50% - 150px);
+.track9 {
+  position: relative;
+  top: 11%;
+  width: 300px;
+  height: 300px;
+  left: calc(50% - 150px);
 }
-.track10{
-    position: relative;
-    /* top: 12%; */
-    width: 300px;
-    height: 300px;
-    left: calc(50% - 150px);
+.track10 {
+  position: relative;
+  /* top: 12%; */
+  width: 300px;
+  height: 300px;
+  left: calc(50% - 150px);
 }

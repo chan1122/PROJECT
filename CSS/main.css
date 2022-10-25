@@ -243,70 +243,52 @@ body {
 .track1 {
   position: relative;
   top: 3%;
-  width: 300px;
-  height: 300px;
-  left: calc(50% - 150px);
 }
 .track2 {
   position: relative;
   top: 4%;
-  width: 300px;
-  height: 300px;
-  left: calc(50% - 150px);
 }
 .track3 {
   position: relative;
   top: 5%;
-  width: 300px;
-  height: 300px;
-  left: calc(50% - 150px);
 }
 .track4 {
   position: relative;
   top: 6%;
-  width: 300px;
-  height: 300px;
-  left: calc(50% - 150px);
 }
 .track5 {
   position: relative;
   top: 7%;
-  width: 300px;
-  height: 300px;
-  left: calc(50% - 150px);
 }
 .track6 {
   position: relative;
   top: 8%;
-  width: 300px;
-  height: 300px;
-  left: calc(50% - 150px);
 }
 .track7 {
   position: relative;
   top: 9%;
-  width: 300px;
-  height: 300px;
-  left: calc(50% - 150px);
 }
 .track8 {
   position: relative;
   top: 10%;
-  width: 300px;
-  height: 300px;
-  left: calc(50% - 150px);
 }
 .track9 {
   position: relative;
   top: 11%;
-  width: 300px;
-  height: 300px;
-  left: calc(50% - 150px);
 }
 .track10 {
   position: relative;
   /* top: 12%; */
-  width: 300px;
-  height: 300px;
-  left: calc(50% - 150px);
+}
+
+/* 메인 트랙 공통 */
+.mtrack {
+  transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg);
+  /* 메인 트랙은 앨범이 더커야함!! */
+  width: 500px;
+  height: 500px;
+}
+/* 메인트랙 싸는 박스 */
+.mtrackcoverinng {
+  height: 85px;
 }

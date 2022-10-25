@@ -334,8 +334,9 @@ h6 {
 .album span:nth-child(4) {
     background-color: green;
     /* z축으로 밀기 */
-    height: 50px;
-    bottom: 10px;
+    height: 20px;
+    top: auto;
+    bottom: -10px;
     transform: rotateX(90deg);
 }
 

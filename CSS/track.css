@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+/* 트랙 전용 css */
+/* 메인TRACK 1번 앨범 */
+.ttrack1 {
+  transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(0deg);
+
+  animation: ttrack1ani 15s ease-in-out infinite alternate;
+}
+@keyframes ttrack1ani {
+  to {
+    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
+  }
+}
+.ttrack1 span:nth-child(1) {
+  background: url(../images/trackalbum/track1-span1.jpg) no-repeat top/100% 100%;
+}
+.ttrack1 span:nth-child(2) {
+  background: url(../images/trackalbum/track1-span2.jpg) no-repeat top/100% 100%;
+}
+.ttrack1 span:nth-child(3) {
+  background: url(../images/trackalbum/track1-span2.jpg) no-repeat top/100% 100%;
+}
+.ttrack1 span:nth-child(4) {
+  background: url(../images/trackalbum/track1-span4.jpg) no-repeat top/100% 100%;
+}
+.ttrack1 span:nth-child(5) {
+  background: url(../images/trackalbum/track1-span5.jpg) no-repeat top/100% 100%;
+}
+.ttrack1 span:nth-child(6) {
+  background: url(../images/trackalbum/track1-span6.jpg) no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 2번 앨범 */
+.ttrack2 {
+  animation: ttrack2ani 15.1s ease-in-out infinite alternate;
+}
+@keyframes ttrack2ani {
+  to {
+    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
+  }
+}
+
+.ttrack2 span:nth-child(1) {
+  background: url(../images/trackalbum/track2-span1.jpg) no-repeat top/100% 100%;
+}
+.ttrack2 span:nth-child(2) {
+  background: url(../images/trackalbum/track2-span2.jpg) no-repeat top/100% 100%;
+}
+.ttrack2 span:nth-child(3) {
+  background: url(../images/trackalbum/track2-span3.jpg) no-repeat top/100% 100%;
+}
+.ttrack2 span:nth-child(4) {
+  background: url(../images/trackalbum/track2-span4.jpg) no-repeat top/100% 100%;
+}
+.ttrack2 span:nth-child(5) {
+  background: url(../images/trackalbum/track2-span5.jpg) no-repeat top/100% 100%;
+}
+.ttrack2 span:nth-child(6) {
+  background: url(../images/trackalbum/track2-span6.jpg) no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 3번 앨범 */
+.ttrack3 {
+  animation: ttrack3ani 15.2s ease-in-out infinite alternate;
+}
+@keyframes ttrack3ani {
+  to {
+    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
+  }
+}
+
+.ttrack3 span:nth-child(1) {
+  background: url(../images/trackalbum/track3-span1.jpg) no-repeat top/100% 100%;
+}
+.ttrack3 span:nth-child(2) {
+  background: url(../images/trackalbum/track3-span2.jpg) no-repeat top/100% 100%;
+}
+.ttrack3 span:nth-child(3) {
+  background: url(../images/trackalbum/track3-span3.jpg) no-repeat top/100% 100%;
+}
+.ttrack3 span:nth-child(4) {
+  background: url(../images/trackalbum/track3-span4.jpg) no-repeat top/100% 100%;
+}
+.ttrack3 span:nth-child(5) {
+  background: url(../images/trackalbum/track3-span5.jpg) no-repeat top/100% 100%;
+}
+.ttrack3 span:nth-child(6) {
+  background: url(../images/trackalbum/track3-span6.jpg) no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 4번 앨범 */
+.ttrack4 {
+  animation: ttrack4ani 15.3s ease-in-out infinite alternate;
+}
+@keyframes ttrack4ani {
+  to {
+    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
+  }
+}
+
+.ttrack4 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack4 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack4 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack4 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack4 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack4 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 5번 앨범 */
+.ttrack5 {
+  animation: ttrack5ani 15.4s ease-in-out infinite alternate;
+}
+@keyframes ttrack5ani {
+  to {
+    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
+  }
+}
+
+.ttrack5 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack5 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack5 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack5 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack5 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack5 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 6번 앨범 */
+.ttrack6 {
+  animation: ttrack5ani 15.5s ease-in-out infinite alternate;
+}
+@keyframes ttrack6ani {
+  to {
+    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
+  }
+}
+
+.ttrack6 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack6 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack6 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack6 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack6 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack6 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 7번 앨범 */
+.ttrack7 {
+  animation: ttrack5ani 15.6s ease-in-out infinite alternate;
+}
+@keyframes ttrack7ani {
+  to {
+    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
+  }
+}
+
+.ttrack7 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack7 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack7 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack7 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack7 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack7 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+
+
+/*******************************************/
+
+/* 메인TRACK 8번 앨범 */
+.ttrack8 {
+    animation: ttrack5ani 15.7s ease-in-out infinite alternate;
+  }
+  @keyframes ttrack8ani {
+    to {
+      transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
+    }
+  }
+  
+  .ttrack8 span:nth-child(1) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack8 span:nth-child(2) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack8 span:nth-child(3) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack8 span:nth-child(4) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack8 span:nth-child(5) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack8 span:nth-child(6) {
+    background: url() no-repeat top/100% 100%;
+  }
+
+
+
+  /*******************************************/
+
+/* 메인TRACK 9번 앨범 */
+.ttrack9 {
+    animation: ttrack5ani 15.8s ease-in-out infinite alternate;
+  }
+  @keyframes ttrack9ani {
+    to {
+      transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
+    }
+  }
+  
+  .ttrack9 span:nth-child(1) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack9 span:nth-child(2) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack9 span:nth-child(3) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack9 span:nth-child(4) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack9 span:nth-child(5) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack9 span:nth-child(6) {
+    background: url() no-repeat top/100% 100%;
+  }
+
+
+
+  /*******************************************/
+
+/* 메인TRACK 9번 앨범 */
+.ttrack10 {
+    animation: ttrack5ani 16s ease-in-out infinite alternate;
+  }
+  @keyframes ttrack10ani {
+    to {
+      transform: translate(-50%, -50%) rotateX(100deg) rotateY(0deg) rotate(360deg);
+    }
+  }
+  
+  .ttrack10 span:nth-child(1) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack10 span:nth-child(2) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack10 span:nth-child(3) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack10 span:nth-child(4) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack10 span:nth-child(5) {
+    background: url() no-repeat top/100% 100%;
+  }
+  .ttrack10 span:nth-child(6) {
+    background: url() no-repeat top/100% 100%;
+  }

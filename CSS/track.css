@@ -3,14 +3,22 @@
 /* 트랙 전용 css */
 /* 메인TRACK 1번 앨범 */
 .ttrack1 {
-  transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(0deg);
-
   animation: ttrack1ani 20s ease infinite alternate;
 }
 @keyframes ttrack1ani {
   to {
     transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
   }
+
+}
+.tttrack1{
+    animation: tttrack1 2s ease forwards;
+}
+@keyframes tttrack1 {   
+    to{
+        transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg) rotate(360deg)
+    }
+    
 }
 .ttrack1 span:nth-child(1) {
   background: url(../images/trackalbum/track1-span1.jpg) no-repeat top/100% 100%;
@@ -36,6 +44,7 @@
 /* 메인TRACK 2번 앨범 */
 .ttrack2 {
   animation: ttrack2ani 20.1s ease infinite alternate;
+
 }
 @keyframes ttrack2ani {
   to {

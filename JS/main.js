@@ -6,14 +6,12 @@ $(() => {
   /////////////////////////////////////////////
   // 메인 트랙 커버박스 클릭 이벤트 //
   $(".mtrackcoverinng").click(function(){
-    $(this).css({
-        height:"800px",
-        transition: "all .4s ease-in"
-    })// 메인 트랙 커버박스 클릭 css //
+    $(this).animate({
+      height:"800px", 
+    },800).
     $(".mtrack",this)
-    .css({
-        transition:"all 1s ease-out",
-        transform:"translate(-50%, -50%) rotateX(0deg) rotateY(0deg)"
+    .animate({
+      Transform: "translate(-50%, -50%) rotateX(0) rotateY(0deg) rotate(0deg)"
     })
   });// 메인 트랙 커버박스 클릭 이벤트 //
 }); //제이쿼리 로딩구역/////////////////////////

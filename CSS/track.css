@@ -5,7 +5,7 @@
 .ttrack1 {
   transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(0deg);
 
-  animation: ttrack1ani 15s ease-in-out infinite alternate;
+  animation: ttrack1ani 20s ease infinite alternate;
 }
 @keyframes ttrack1ani {
   to {
@@ -19,7 +19,7 @@
   background: url(../images/trackalbum/track1-span2.jpg) no-repeat top/100% 100%;
 }
 .ttrack1 span:nth-child(3) {
-  background: url(../images/trackalbum/track1-span2.jpg) no-repeat top/100% 100%;
+  background: url(../images/trackalbum/track1-span3.jpg) no-repeat top/100% 100%;
 }
 .ttrack1 span:nth-child(4) {
   background: url(../images/trackalbum/track1-span4.jpg) no-repeat top/100% 100%;
@@ -35,7 +35,7 @@
 
 /* 메인TRACK 2번 앨범 */
 .ttrack2 {
-  animation: ttrack2ani 15.1s ease-in-out infinite alternate;
+  animation: ttrack2ani 20.1s ease infinite alternate;
 }
 @keyframes ttrack2ani {
   to {
@@ -66,7 +66,7 @@
 
 /* 메인TRACK 3번 앨범 */
 .ttrack3 {
-  animation: ttrack3ani 15.2s ease-in-out infinite alternate;
+  animation: ttrack3ani 20.2s ease infinite alternate;
 }
 @keyframes ttrack3ani {
   to {
@@ -97,7 +97,7 @@
 
 /* 메인TRACK 4번 앨범 */
 .ttrack4 {
-  animation: ttrack4ani 15.3s ease-in-out infinite alternate;
+  animation: ttrack4ani 20.3s ease infinite alternate;
 }
 @keyframes ttrack4ani {
   to {
@@ -128,7 +128,7 @@
 
 /* 메인TRACK 5번 앨범 */
 .ttrack5 {
-  animation: ttrack5ani 15.4s ease-in-out infinite alternate;
+  animation: ttrack5ani 20.4s ease infinite alternate;
 }
 @keyframes ttrack5ani {
   to {
@@ -159,7 +159,7 @@
 
 /* 메인TRACK 6번 앨범 */
 .ttrack6 {
-  animation: ttrack5ani 15.5s ease-in-out infinite alternate;
+  animation: ttrack5ani 20.5s ease infinite alternate;
 }
 @keyframes ttrack6ani {
   to {
@@ -190,7 +190,7 @@
 
 /* 메인TRACK 7번 앨범 */
 .ttrack7 {
-  animation: ttrack5ani 15.6s ease-in-out infinite alternate;
+  animation: ttrack5ani 20.6s ease infinite alternate;
 }
 @keyframes ttrack7ani {
   to {
@@ -223,7 +223,7 @@
 
 /* 메인TRACK 8번 앨범 */
 .ttrack8 {
-    animation: ttrack5ani 15.7s ease-in-out infinite alternate;
+    animation: ttrack5ani 20.7s ease infinite alternate;
   }
   @keyframes ttrack8ani {
     to {
@@ -256,7 +256,7 @@
 
 /* 메인TRACK 9번 앨범 */
 .ttrack9 {
-    animation: ttrack5ani 15.8s ease-in-out infinite alternate;
+    animation: ttrack5ani 20.8s ease infinite alternate;
   }
   @keyframes ttrack9ani {
     to {
@@ -289,7 +289,7 @@
 
 /* 메인TRACK 9번 앨범 */
 .ttrack10 {
-    animation: ttrack5ani 16s ease-in-out infinite alternate;
+    animation: ttrack5ani 21s ease infinite alternate;
   }
   @keyframes ttrack10ani {
     to {

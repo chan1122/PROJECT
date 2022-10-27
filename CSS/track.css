@@ -2,23 +2,19 @@
 
 /* 트랙 전용 css */
 /* 트랙 공통 */
-.track{
-    position: relative;
+.track {
+  position: relative;
 }
 /* 메인TRACK 1번 앨범 */
 .ttrack1 {
-  animation: ttrack1ani 20s ease infinite alternate;
+  animation: ttrackani 20s ease infinite alternate;
 }
-@keyframes ttrack1ani {
+@keyframes ttrackani {
   to {
     transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
   }
+}
 
-}
-.tttrack1{
-    animation: tttrack1 2s ease forwards;
-}
-    
 .ttrack1 span:nth-child(1) {
   background: url(../images/trackalbum/track1-span1.jpg) no-repeat top/100% 100%;
 }
@@ -42,13 +38,7 @@
 
 /* 메인TRACK 2번 앨범 */
 .ttrack2 {
-  animation: ttrack2ani 20.1s ease infinite alternate;
-
-}
-@keyframes ttrack2ani {
-  to {
-    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
-  }
+  animation: ttrackani 20.01s ease infinite alternate;
 }
 
 .ttrack2 span:nth-child(1) {
@@ -74,12 +64,7 @@
 
 /* 메인TRACK 3번 앨범 */
 .ttrack3 {
-  animation: ttrack3ani 20.2s ease infinite alternate;
-}
-@keyframes ttrack3ani {
-  to {
-    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
-  }
+  animation: ttrackani 20.02s ease infinite alternate;
 }
 
 .ttrack3 span:nth-child(1) {
@@ -105,12 +90,7 @@
 
 /* 메인TRACK 4번 앨범 */
 .ttrack4 {
-  animation: ttrack4ani 20.3s ease infinite alternate;
-}
-@keyframes ttrack4ani {
-  to {
-    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
-  }
+  animation: ttrackani 20.03s ease infinite alternate;
 }
 
 .ttrack4 span:nth-child(1) {
@@ -136,12 +116,7 @@
 
 /* 메인TRACK 5번 앨범 */
 .ttrack5 {
-  animation: ttrack5ani 20.4s ease infinite alternate;
-}
-@keyframes ttrack5ani {
-  to {
-    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
-  }
+  animation: ttrackani 20.04s ease infinite alternate;
 }
 
 .ttrack5 span:nth-child(1) {
@@ -167,12 +142,7 @@
 
 /* 메인TRACK 6번 앨범 */
 .ttrack6 {
-  animation: ttrack5ani 20.5s ease infinite alternate;
-}
-@keyframes ttrack6ani {
-  to {
-    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
-  }
+  animation: ttrackani 20.05s ease infinite alternate;
 }
 
 .ttrack6 span:nth-child(1) {
@@ -198,12 +168,7 @@
 
 /* 메인TRACK 7번 앨범 */
 .ttrack7 {
-  animation: ttrack5ani 20.6s ease infinite alternate;
-}
-@keyframes ttrack7ani {
-  to {
-    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
-  }
+  animation: ttrackani 20.06s ease infinite alternate;
 }
 
 .ttrack7 span:nth-child(1) {
@@ -225,102 +190,853 @@
   background: url() no-repeat top/100% 100%;
 }
 
-
-
 /*******************************************/
 
 /* 메인TRACK 8번 앨범 */
 .ttrack8 {
-    animation: ttrack5ani 20.7s ease infinite alternate;
-  }
-  @keyframes ttrack8ani {
-    to {
-      transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
-    }
-  }
-  
-  .ttrack8 span:nth-child(1) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack8 span:nth-child(2) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack8 span:nth-child(3) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack8 span:nth-child(4) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack8 span:nth-child(5) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack8 span:nth-child(6) {
-    background: url() no-repeat top/100% 100%;
-  }
+  animation: ttrackani 20.07s ease infinite alternate;
+}
 
+.ttrack8 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack8 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack8 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack8 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack8 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack8 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
 
-
-  /*******************************************/
+/*******************************************/
 
 /* 메인TRACK 9번 앨범 */
 .ttrack9 {
-    animation: ttrack5ani 20.8s ease infinite alternate;
-  }
-  @keyframes ttrack9ani {
-    to {
-      transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
-    }
-  }
-  
-  .ttrack9 span:nth-child(1) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack9 span:nth-child(2) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack9 span:nth-child(3) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack9 span:nth-child(4) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack9 span:nth-child(5) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack9 span:nth-child(6) {
-    background: url() no-repeat top/100% 100%;
-  }
+  animation: ttrackani 20.08s ease infinite alternate;
+}
 
+.ttrack9 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack9 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack9 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack9 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack9 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack9 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
 
+/*******************************************/
 
-  /*******************************************/
-
-/* 메인TRACK 9번 앨범 */
+/* 메인TRACK 10번 앨범 */
 .ttrack10 {
-    animation: ttrack5ani 21s ease infinite alternate;
-  }
-  @keyframes ttrack10ani {
-    to {
-      transform: translate(-50%, -50%) rotateX(100deg) rotateY(0deg) rotate(360deg);
-    }
-  }
-  
-  .ttrack10 span:nth-child(1) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack10 span:nth-child(2) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack10 span:nth-child(3) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack10 span:nth-child(4) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack10 span:nth-child(5) {
-    background: url() no-repeat top/100% 100%;
-  }
-  .ttrack10 span:nth-child(6) {
-    background: url() no-repeat top/100% 100%;
-  }
-  
+  animation: ttrackani 20.09s ease infinite alternate;
+}
+
+.ttrack10 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack10 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack10 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack10 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack10 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack10 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 11번 앨범 */
+.ttrack11 {
+  animation: ttrackani 20.1s ease infinite alternate;
+}
+
+.ttrack11 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack11 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack11 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack11 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack11 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack11 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 12번 앨범 */
+.ttrack12 {
+  animation: ttrackani 20.11s ease infinite alternate;
+}
+
+.ttrack12 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack12 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack12 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack12 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack12 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack12 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 13번 앨범 */
+.ttrack13 {
+  animation: ttrackani 20.12s ease infinite alternate;
+}
+
+.ttrack13 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack13 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack13 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack13 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack13 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack13 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 14번 앨범 */
+.ttrack14 {
+  animation: ttrackani 20.13s ease infinite alternate;
+}
+
+.ttrack14 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack14 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack14 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack14 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack14 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack14 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 15번 앨범 */
+.ttrack15 {
+  animation: ttrackani 20.14s ease infinite alternate;
+}
+
+.ttrack15 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack15 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack15 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack15 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack15 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack15 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 16번 앨범 */
+.ttrack16 {
+  animation: ttrackani 20.15s ease infinite alternate;
+}
+
+.ttrack16 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack16 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack16 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack16 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack16 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack16 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 17번 앨범 */
+.ttrack17 {
+  animation: ttrackani 20.16s ease infinite alternate;
+}
+
+.ttrack17 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack17 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack17 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack17 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack17 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack17 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 18번 앨범 */
+.ttrack18 {
+  animation: ttrackani 20.17s ease infinite alternate;
+}
+
+.ttrack18 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack18 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack18 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack18 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack18 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack18 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 19번 앨범 */
+.ttrack19 {
+  animation: ttrackani 20.18s ease infinite alternate;
+}
+
+.ttrack19 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack19 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack19 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack19 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack19 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack19 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 20번 앨범 */
+.ttrack20 {
+  animation: ttrackani 20.19s ease infinite alternate;
+}
+
+.ttrack20 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack20 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack20 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack20 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack20 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack20 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+/*******************************************/
+
+/* 메인TRACK 21번 앨범 */
+.ttrack21 {
+  animation: ttrackani 20.2s ease infinite alternate;
+}
+
+.ttrack21 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack21 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack21 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack21 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack21 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack21 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 22번 앨범 */
+.ttrack22 {
+  animation: ttrackani 20.21s ease infinite alternate;
+}
+
+.ttrack22 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack22 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack22 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack22 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack22 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack22 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 23번 앨범 */
+.ttrack23 {
+  animation: ttrackani 20.22s ease infinite alternate;
+}
+
+.ttrack23 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack23 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack23 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack23 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack23 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack23 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 24번 앨범 */
+.ttrack24 {
+  animation: ttrackani 20.23s ease infinite alternate;
+}
+
+.ttrack24 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack24 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack24 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack24 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack24 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack24 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 25번 앨범 */
+.ttrack25 {
+  animation: ttrackani 20.24s ease infinite alternate;
+}
+
+.ttrack25 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack25 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack25 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack25 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack25 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack25 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+/*******************************************/
+
+/* 메인TRACK 26번 앨범 */
+.ttrack26 {
+  animation: ttrackani 20.25s ease infinite alternate;
+}
+
+.ttrack26 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack26 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack26 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack26 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack26 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack26 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+/*******************************************/
+
+/* 메인TRACK 27번 앨범 */
+.ttrack27 {
+  animation: ttrackani 20.26s ease infinite alternate;
+}
+
+.ttrack27 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack27 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack27 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack27 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack27 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack27 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+/*******************************************/
+
+/* 메인TRACK 28번 앨범 */
+.ttrack28 {
+  animation: ttrackani 20.27s ease infinite alternate;
+}
+
+.ttrack28 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack28 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack28 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack28 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack28 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack28 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 29번 앨범 */
+.ttrack29 {
+  animation: ttrackani 20.28s ease infinite alternate;
+}
+
+.ttrack29 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack29 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack29 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack29 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack29 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack29 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+/*******************************************/
+
+/* 메인TRACK 30번 앨범 */
+.ttrack30 {
+  animation: ttrackani 20.29s ease infinite alternate;
+}
+
+.ttrack30 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack30 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack30 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack30 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack30 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack30 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 31번 앨범 */
+.ttrack31 {
+  animation: ttrackani 20.3s ease infinite alternate;
+}
+
+.ttrack31 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack31 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack31 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack31 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack31 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack31 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+/*******************************************/
+
+/* 메인TRACK 32번 앨범 */
+.ttrack32 {
+  animation: ttrackani 20.31s ease infinite alternate;
+}
+
+.ttrack32 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack32 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack32 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack32 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack32 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack32 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 33번 앨범 */
+.ttrack33 {
+  animation: ttrackani 20.32s ease infinite alternate;
+}
+
+.ttrack33 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack33 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack33 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack33 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack33 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack33 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 34번 앨범 */
+.ttrack34 {
+  animation: ttrackani 20.33s ease infinite alternate;
+}
+
+.ttrack34 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack34 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack34 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack34 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack34 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack34 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 35번 앨범 */
+.ttrack35 {
+  animation: ttrackani 20.34s ease infinite alternate;
+}
+
+.ttrack35 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack35 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack35 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack35 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack35 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack35 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 36번 앨범 */
+.ttrack36 {
+  animation: ttrackani 20.35s ease infinite alternate;
+}
+
+.ttrack36 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack36 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack36 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack36 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack36 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack36 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 37번 앨범 */
+.ttrack37 {
+  animation: ttrackani 20.36s ease infinite alternate;
+}
+
+.ttrack37 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack37 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack37 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack37 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack37 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack37 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 38번 앨범 */
+.ttrack38 {
+  animation: ttrackani 20.37s ease infinite alternate;
+}
+
+.ttrack38 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack38 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack38 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack38 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack38 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack38 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+
+/*******************************************/
+
+/* 메인TRACK 39번 앨범 */
+.ttrack39 {
+  animation: ttrackani 20.38s ease infinite alternate;
+}
+
+.ttrack39 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack39 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack39 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack39 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack39 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack39 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}
+/*******************************************/
+
+/* 메인TRACK 40번 앨범 */
+.ttrack40 {
+  animation: ttrackani 20.39s ease infinite alternate;
+}
+
+.ttrack40 span:nth-child(1) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack40 span:nth-child(2) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack40 span:nth-child(3) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack40 span:nth-child(4) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack40 span:nth-child(5) {
+  background: url() no-repeat top/100% 100%;
+}
+.ttrack40 span:nth-child(6) {
+  background: url() no-repeat top/100% 100%;
+}

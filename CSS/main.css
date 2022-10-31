@@ -16,7 +16,7 @@ body * {
 }
 
 body {
-  height: 10000px;
+  height: auto;
 }
 
 /* 배경 영상 디자인 잡기 */
@@ -285,7 +285,7 @@ body {
 .mtrack {
   transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg);
   /* 메인 트랙은 앨범이 더커야함!! */
-  width: min(66vw,530px);
+  width: min(66vw, 530px);
   transition: all 1s ease;
 }
 /* 메인트랙 싸는 박스 */
@@ -294,18 +294,35 @@ body {
 }
 
 /* 하단 박스 */
-footer{
-  width: 90vw;
+footer {
+  position: relative;
+  width: 100%;
   height: 500px;
-  background-color: #ddd;
+  background-color: rgba(0, 0, 0, 0.957);
   text-align: center;
-  
 }
-footer>span{
-  font-size: 8vw;
-  font-family: '나눔명조', serif;
-  display: block;
-  font-weight: bold;
-  padding-top: 50px;
-  font-style: italic;
+/* 하단 로고 들어가는 부분 */
+footer .flogo {
+  top: 0;
+  position: relative;
+  background-color: blue;
+  width: 100%;
+  height: 150px;
+}
+
+/* 하단 아이콘 들어가는 부분  */
+footer .ffll1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+}
+/* 하단 로고 설명 글 들어가는 장소  */
+.ffll2 {
+  position: relative;
+  background-color: red;
+  height: 50%;
+  width: 50%;
+  transform: translate(-50%);
+  left: 50%;
 }

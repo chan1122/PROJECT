@@ -59,6 +59,17 @@ $(() => {
 
   });/////// each ///////
 
+  let ttracks = $(".ttrack");
+
+  ttracks.each(function(t1,r1){
+    $(r1).each((t2,r2)=>{
+      $(r2).css({
+      animationDuration:`${20+t1/2}s`
+    })
+    })
+  })
+
+
 
   // console.log("순번:",a)
 

@@ -65,26 +65,25 @@ body {
 .mostpopular {
   display: flex;
   justify-content: center;
-  font-family: 'Fasthand', cursive;
+  font-family: "Fasthand", cursive;
   font-size: 5vw;
   font-weight: bold;
   font-style: italic;
 
   color: #000;
-
 }
 /* p태그 */
-.mostpopular>div {
+.mostpopular > div {
   transition: all 2s;
   width: 0;
   opacity: 0;
   color: lightblue;
 }
-.mostpopular:hover>div {
+.mostpopular:hover > div {
   width: auto;
- opacity: 1;
+  opacity: 1;
 }
-.mcpop{
+.mcpop {
   transition: all 2s;
 }
 

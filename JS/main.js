@@ -5,7 +5,6 @@
 $(() => {
   /////////////////////////////////////////////
 
-
   /////////////////////////////////////////////
 
   // 메인 트랙 커버박스 클릭 이벤트 //
@@ -50,38 +49,36 @@ $(() => {
   // 제이쿼리 전용
   // each((순번,자신)=>{})
 
-  album.each((i1,e1)=>{
-
+  album.each((i1, e1) => {
     $(e1)
       .find("span")
       .each((i2, e2) => {
         $(e2).css({
-          background: `url(images/trackalbum/track${i1-1}-span${i2+1}.jpg)no-repeat center/100% 100%`,
+          background: `url(images/trackalbum/track${i1 - 1}-span${
+            i2 + 1
+          }.jpg)no-repeat center/100% 100%`,
         });
       }); ////// each ///////
-
-  });/////// each ///////
+  }); /////// each ///////
 
   let ttracks = $(".ttrack");
 
-  ttracks.each(function(t1,r1){
-    $(r1).each((t2,r2)=>{
+  ttracks.each(function (t1, r1) {
+    $(r1).each((t2, r2) => {
       $(r2).css({
-      animationDuration:`${20+t1/3}s`
-    })
-    })
-  })
-  ttracks.click(function(){
-    $(this).each(function(t1,r1){
-    $(r1).each((t2,r2)=>{
-      $(r2).css({
-      animationDuration:`${20+t1/1}s`
-    })
-    })
-  })
-  })
-
-
+        animationDuration: `${20 + t1 / 3}s`,
+      });
+    });
+  });
+  ttracks.click(function () {
+    $(this).each(function (t1, r1) {
+      $(r1).each((t2, r2) => {
+        $(r2).css({
+          animationDuration: `${20 + t1 / 1}s`,
+        });
+      });
+    });
+  });
 
   // console.log("순번:",a)
 

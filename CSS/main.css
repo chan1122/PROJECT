@@ -34,7 +34,8 @@ body {
 
 /* 상단 GNB 로고 싸는박스 */
 .tbox1 {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 9999999;
   /* 배경색 */

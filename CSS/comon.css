@@ -373,8 +373,12 @@ h6 {
     height: 100%;
     width: 50vw;
     position: absolute;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
+
+
+/* 상단 앨범 조준 */
+
 
 
 

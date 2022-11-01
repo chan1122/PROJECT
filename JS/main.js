@@ -5,6 +5,9 @@
 $(() => {
   /////////////////////////////////////////////
 
+
+  /////////////////////////////////////////////
+
   // 메인 트랙 커버박스 클릭 이벤트 //
   $(".mtrackcoverinng").click(function () {
     $(this).animate({
@@ -67,6 +70,15 @@ $(() => {
       animationDuration:`${20+t1/3}s`
     })
     })
+  })
+  ttracks.click(function(){
+    $(this).each(function(t1,r1){
+    $(r1).each((t2,r2)=>{
+      $(r2).css({
+      animationDuration:`${20+t1/1}s`
+    })
+    })
+  })
   })
 
 

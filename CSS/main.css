@@ -45,23 +45,53 @@ body {
 
 /* 상단 디자인 */
 .top {
-  height: 60px;
-}
-
-.toplogo{
-  display: flex;
-  width: 100%;
   position: relative;
+  height: 75px;
 }
-.toplogo>section{
-  flex-basis: 33%;
+
+/* SVG로고 */
+.toplogo {
+  display: flex;
+  justify-content: center;
 }
-.toplogo svg{
-  align-items: center;
+/* 싸는 박스 */
+.coverSVG {
+  width: 90vw;
+  margin: 0 auto;
+}
+.coverSVG::before {
+  content: "";
+  display: block;
+  padding-top: 30%;
+}
+.coverSVG > div {
   position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 
-  height: 500px;
+/* SVG 공통 */
+.toplogo svg {
+  width: 30.33%;
+}
 
+/* SVG 개별 디자인 */
+.P0 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
+}
+.M0 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
+}
+.J0 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
 }
 
 /* 상단 글씨로고 */
@@ -407,7 +437,6 @@ body {
   position: absolute;
   right: 0;
   width: 30%;
-  height: 93%;
 
   border-left: 1px solid #000;
 }
@@ -416,8 +445,7 @@ body {
 .mainalbum {
   position: absolute;
   width: 100%;
-  /* width: 69.7%; */
-  height: 94%;
+  top: 50%;
   outline: 1px solid red;
 }
 
@@ -426,10 +454,6 @@ body {
   left: 0;
   width: 100%;
   overflow: hidden;
-}
-
-.ma2 {
-  height: 100%;
 }
 
 /* 앨범 집약 페이지 */
@@ -579,4 +603,3 @@ footer .ffll1 {
 .fooeterstar section:nth-child(4) {
   border-radius: 50% 0 0 0;
 }
-

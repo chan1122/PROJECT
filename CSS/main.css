@@ -46,20 +46,17 @@ body {
 /* 상단 디자인 */
 .top {
   position: relative;
-  height: 75px;
+  height: 100px;
 }
 
-/* SVG로고 */
-.toplogo {
-  display: flex;
-  justify-content: center;
-}
 /* 싸는 박스 */
 .coverSVG {
   width: 90vw;
   margin: 0 auto;
 }
 .coverSVG::before {
+  position: absolute;
+  z-index: -9999;
   content: "";
   display: block;
   padding-top: 30%;
@@ -70,15 +67,55 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
+  overflow: hidden;
 }
 
 /* SVG 공통 */
 .toplogo svg {
+  position: absolute;
+  top: 2px;
   width: 30.33%;
 }
 
-/* SVG 개별 디자인 */
+/* SVG개별 */
+.toplogo svg:nth-child(1) {
+  left: 40.2%;
+}
+.toplogo svg:nth-child(2) {
+  left: 47%;
+}
+.toplogo svg:nth-child(3) {
+  left: 53%;
+}
+/* SVG PATH 공통 클래스 */
+.path {
+  
+
+
+  stroke-dasharray: 300%;
+  stroke-dashoffset: -300%;
+
+  animation: pathstrokeani 3s ease-out 0.2s forwards;
+}
+@keyframes pathstrokeani {
+  80% {
+    stroke: #fff;
+    stroke-dashoffset: 0%;
+  }
+  90% {
+    stroke: #fff;
+    stroke-dashoffset: -300%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+    stroke: aqua;
+  }
+}
+/* SVG  PATH 개별 디자인 */
 .P0 {
+  position: absolute;
+
+  overflow: hidden;
   fill: none;
   stroke: #fff;
   stroke-width: 2px;
@@ -350,6 +387,7 @@ body {
   position: relative;
   width: 100%;
   height: 88vh;
+  overflow: hidden;
 }
 
 .Lcoverbox {
@@ -406,11 +444,6 @@ body {
   /* 상위 ul의 플렉스 등분할 설정 */
   flex: 1;
   text-align: center;
-}
-
-/* 텍스트 애니 */
-.txt-ani1 {
-  /* animation: txtFlow1 10s linear infinite; */
 }
 
 @keyframes txtFlow1 {

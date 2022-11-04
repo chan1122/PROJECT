@@ -31,7 +31,29 @@ body {
   object-fit: cover;
   height: 100%;
 }
-/* 상단 tbox1 싸는 박스 */
+/* 상단 햄버거버튼*/
+.topbtn{
+  /* 위치조정 */
+  top: 2px;
+  position: fixed;
+  width: min(20%,115px);
+  height: 10%;
+  z-index: 9999999999999999;
+  background-color: #fff;
+}
+.topbtn::before{
+  content: '';
+  position: absolute;
+  padding-top: 100%;
+  display: block;
+}
+.topbtn>div{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
 /* 상단 GNB 로고 싸는박스 */
 .tbox1 {
@@ -632,21 +654,6 @@ footer .ffll1 {
   bottom: 0;
   right: 0;
   background-color: #fff;
-}
-/* 하단 로고 설명 글 들어가는 장소  */
-.ffll2 {
-  z-index: 1;
-  position: relative;
-
-  color: #fff;
-  height: 50%;
-  width: 50%;
-  transform: translate(-70%);
-  left: 50%;
-
-  font-family: "IBM Plex Serif", serif;
-
-  font-size: 2vw;
 }
 /* 하단 별만들기 */
 .fooeterstar {

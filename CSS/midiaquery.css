@@ -2,18 +2,34 @@
 
 /* 음원 사이트 미디어 쿼리 */
 
-
 /* 미디어쿼리 1000px */
-@media screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
+  /* 상단 로그인 회원가입 창 */
 
 }
+/* 미디어쿼리 900px */
+@media screen and (max-width: 900px){
 
+}
+/* 미디어쿼리 800px */
+@media screen and (max-width: 800px){
 
+}
 /* 미디어쿼리 700 */
-@media screen and (max-width:700px) {
-    .nav{
+@media screen and (max-width: 700px) {
+
+    .nav {
         position: absolute;
         height: 0;
         display: none;
     }
+}
+
+/* 미디어쿼리 600px */
+@media screen and (max-width: 600px){
+    
+}
+/* 미디어쿼리 500px */
+@media screen and (max-width: 500px){
+    
 }

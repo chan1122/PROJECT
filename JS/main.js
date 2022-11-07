@@ -96,4 +96,27 @@ $(() => {
   // $(".mtrack").children().find("span:nth-child(1)").css({
   //   background:`url(../images/trackalbum/track${tr}-span${sp}.jpg)no-repeat center/100% 100%`
   // })
+
+  $(".mostpopular").hover(
+    function () {
+      // over
+      let myw = $(">div>span", this);
+      myw.each((idx, ele) => {
+        $(ele)
+          .parent() // 부모div
+          .css({
+            width: $(ele).width() + "px",
+            paddingRight: ".8vw",
+          });
+      });
+    },
+    function () {
+      // out
+      $($(">div", this))
+      .css({ 
+        width: "0" ,
+        paddingRight: "0",
+      });
+    }
+  );
 }); //제이쿼리 로딩구역/////////////////////////

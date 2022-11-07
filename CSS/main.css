@@ -296,13 +296,14 @@ body {
 .mostpopular > div {
   transition: all 2s;
   width: 0;
-  opacity: 0;
+  overflow: hidden;
   color: lightblue;
+  white-space: nowrap;/* 줄바꿈방지 */
 }
-.mostpopular:hover > div {
-  width: auto;
+/* .mostpopular:hover > div {
+  width: 100px;
   opacity: 1;
-}
+} */
 .mcpop {
   transition: all 2s;
 }
@@ -577,6 +578,7 @@ body {
   /* ul이 흘러가게 하기 위해서 */
   display: flex;
   /* transform-origin: top; */
+
 }
 
 /* 하위 ul */
@@ -588,6 +590,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+
 }
 
 /* 하위 li 공통 셋팅 */
@@ -595,8 +598,13 @@ body {
   /* 상위 ul의 플렉스 등분할 설정 */
   flex: 1;
   text-align: center;
+  font-family: 'Tangerine', cursive;
+  color: #fff;
 }
-
+.tt{
+  color: #fff;
+  font-weight: 1vw;
+}
 @keyframes txtFlow1 {
   to {
     left: -100%;
@@ -811,11 +819,14 @@ footer .ffll1 {
   width: 100%;
   height: 100%;
   top: 0;
+  transition: all .6s;
 }
 .fooeterstar section {
   background-color: #000;
   position: relative;
   flex-basis: 50%;
+
+  transition: all .5s ;
 }
 
 .fooeterstar section:nth-child(1) {
@@ -830,6 +841,20 @@ footer .ffll1 {
 .fooeterstar section:nth-child(4) {
   border-radius: 50% 0 0 0;
 }
+/* 바닥 별모양 호버시 애니 */
+.fooeterstar section:nth-child(1):hover {
+  border-radius: 0 0 70% 0;
+}
+.fooeterstar section:nth-child(2):hover {
+  border-radius: 0 0 0 70%;
+}
+.fooeterstar section:nth-child(3):hover {
+  border-radius: 0 70% 0 0;
+}
+.fooeterstar section:nth-child(4):hover {
+  border-radius: 70% 0 0 0;
+}
+
 
 /* 카테고리(숨김네비) */
 /* 노이즈 */
@@ -909,20 +934,70 @@ footer .ffll1 {
   display: block;
 }
 /* 햄버튼 밑에 하위 자손 li */
+/* 공통 */
 .hamul > li {
   position: relative;
   border-bottom: 2px solid #fff;
   line-height: 1.5;
 }
+/* 첫번쨰 */
+.hamul > li> a:first-child{
+  
+}
+.hamul > li>a:nth-child(2){
+
+
+
+}
+.hamul > li:nth-child(3){
+
+}
+/* 마지막 */
+.hamul > li:last-child{
+  font-family: 'Cinzel', serif
+}
 .hamul > li > a {
-  font-family: "Fredoka One", cursive;
+
   color: #fff;
-  font-weight: bold;
-  font-size: 8vw;
-  opacity: 0.5;
+
+  font-size: 7vw;
   transition: all .2s ;
+
 }
 .hamul > li:hover a{
   opacity: 1;
-  text-shadow: 100px 100px 2px #fff;
+  color: #000;
+}
+.hamul >li:hover{
+  background-color: #FFF;
+  border-bottom: 2px solid #000;
+
+
+}
+/* 햄버거 버튼 하단 상세 카테고리 */
+/* 공통 */
+.sham{
+  text-align: center;
+  display: none;
+}
+/* 공통 하위 li공통 */
+.sham>li{
+  font-size: 5vw;
+}
+/* 개별  */
+/* 인물소개 */
+.king{
+
+}
+/* 빌보드 차트 노래방차트 멜론 차트 */
+.mostmusic{
+
+}
+/* 게시판 */
+.Hboard{
+
+}
+/* 랭귀지 */
+.LANGUAGE{
+
 }

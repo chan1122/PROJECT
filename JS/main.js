@@ -83,40 +83,13 @@ $(() => {
   // 상단 햄버거 버튼 클릭시 애니메이션
   $(".topbtn").click(function () {
     //버튼에 줄가있는거 x자 만들기
-    $(".topbtn > div > span:nth-child(1)").css({
-      transform: "rotate(30deg)",
-      top: "12px",
-    });
-    $(".topbtn > div > span:nth-child(2)").css({
-      transform: "rotate(31deg)",
-      top: "35px",
-      width: "200%",
-    });
-    $(".topbtn > div > span:nth-child(3)").css({
-      transform: "rotate(30deg)",
-    });
-    $(".topbtn > div > span:nth-child(4)").css({
-      transform: "rotate(-30deg)",
-    });
-    $(".topbtn > div > span:nth-child(5)").css({
-      transform: "rotate(-30deg)",
-    });
-    $(".topbtn > div > span:nth-child(6)").css({
-      transform: "rotate(150deg)",
-      top: "26px",
-    });
-    $(".topbtn > div > span:nth-child(7)").css({
-      top: "4px",
-      left: "63%",
-    });
-    $(".topbtn > div > span:nth-child(8)").css({
-      display: "none",
-    });
+    $(this).toggleClass("on");
 
     // 박스 늘어남!
-    $(".noise").toggleClass("widthONnoise")
-
-
+    $(".noise").toggleClass("on");
+    $(".wrapp").toggleClass("on");
+    $(".coralwrapp").toggleClass("on");
+    $(".whitewrapp").toggleClass("on");
   }); // 상단 햄버거 버튼 클릭시 이벤트 //
   // console.log("순번:",a)
 

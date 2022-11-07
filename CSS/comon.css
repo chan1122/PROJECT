@@ -321,13 +321,3 @@ h6 {
   height: 100%;
   object-fit: cover;
 }
-
-/* 가로 늘어나는 클래스 */
-.noise.widthONnoise {
-  transition: all .5s ease-out;
-  width: 100vw;
-}
-/* 가로늘어나는 클래스 wrapp */
-.widthONwrapp {
-  width: 90vw;
-}

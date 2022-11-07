@@ -183,7 +183,13 @@ body {
 }
 
 /* 마우스 오버시 트랜지션!! */
-.topbtn > div:hover span.cc {
+.topbtn:hover > div > span:nth-child(2) {
+  width: 100%;
+}
+.topbtn:hover > div > span:nth-child(4) {
+  width: 100%;
+}
+.topbtn:hover > div > span:nth-child(5) {
   width: 100%;
 }
 
@@ -882,7 +888,41 @@ footer .ffll1 {
   top: 0;
   position: fixed;
   transition: all 0.61s;
+  overflow: hidden;
 }
 .wrapp.on {
   width: 93vw;
+}
+
+/* 햅버거 버튼 안에 버튼들 */
+.ulcoverham {
+  position: absolute;
+  right: 0;
+  width: 70%;
+  top: 50px;
+  height: 100%;
+}
+.hamul {
+  position: absolute;
+  overflow: hidden;
+
+  display: block;
+}
+/* 햄버튼 밑에 하위 자손 li */
+.hamul > li {
+  position: relative;
+  border-bottom: 2px solid #fff;
+  line-height: 1.5;
+}
+.hamul > li > a {
+  font-family: "Fredoka One", cursive;
+  color: #fff;
+  font-weight: bold;
+  font-size: 8vw;
+  opacity: 0.5;
+  transition: all .2s ;
+}
+.hamul > li:hover a{
+  opacity: 1;
+  text-shadow: 100px 100px 2px #fff;
 }

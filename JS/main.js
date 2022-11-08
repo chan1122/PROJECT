@@ -20,7 +20,7 @@ $(() => {
         $(this)
           .css({
             transform: " translate(-50%, -50%) rotateX(90deg) rotateY(0deg)",
-            animation: "running",
+            // animation: "running",
           })
           .delay(100)
           .show(10, function () {
@@ -90,6 +90,8 @@ $(() => {
     $(".wrapp").toggleClass("on");
     $(".coralwrapp").toggleClass("on");
     $(".whitewrapp").toggleClass("on");
+
+    $(".hamul").toggleClass("on");
   }); // 상단 햄버거 버튼 클릭시 이벤트 //
   // console.log("순번:",a)
 
@@ -106,15 +108,15 @@ $(() => {
           .parent() // 부모div
           .css({
             width: $(ele).width() + "px",
-            paddingRight: ".8vw",
+            paddingRight: ".9vw",
+
           });
       });
     },
     function () {
       // out
-      $($(">div", this))
-      .css({ 
-        width: "0" ,
+      $($(">div", this)).css({
+        width: "0",
         paddingRight: "0",
       });
     }

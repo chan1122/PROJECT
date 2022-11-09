@@ -214,7 +214,6 @@ body {
 /* 여기까지가 밑줄 쫙 쫙 */
 /* 상단 GNB 로고 싸는박스 */
 .tbox1 {
-
   position: relative;
   width: 100%;
   top: 0;
@@ -544,7 +543,7 @@ body {
   text-align: center;
   font-size: 30px;
   margin: 0 15px;
-  font-family: 'Single Day', cursive;
+  font-family: "Single Day", cursive;
 
   color: #fff;
 }
@@ -557,20 +556,19 @@ body {
 }
 /* gnb 통배너 밑에 하위 카테고리 ul */
 /* 공통 */
-.ssm{
+.ssm {
   display: flex;
   flex-direction: column;
 }
 /* 개별 */
 /* gnb 통배너 밑에 하위 카테고리 ll */
-.ssm>li{
+.ssm > li {
   /* display: none; */
 }
 /* 공통 */
-.ssm>li>a{
-
+.ssm > li > a {
   color: #000;
-  font-size: 2  vw;
+  font-size: 2 vw;
 }
 /* 개별 */
 
@@ -1064,11 +1062,8 @@ footer .ffll1 {
 .LANGUAGE {
 }
 
-
-
-
 /* 상단 로고 싸는박스 */
-.coverlogotop{
+.coverlogotop {
   position: absolute;
   width: 20%;
   height: 13%;
@@ -1077,10 +1072,8 @@ footer .ffll1 {
   z-index: 10000000;
 }
 /* 상단로고 싸는박스 하위 a */
-.coverlogotop>a{
+.coverlogotop > a {
   display: block;
   width: 100%;
   height: 100%;
 }
-
-

@@ -14,7 +14,7 @@ $(()=>{
         SC = $(this).scrollTop();
         // scrollTop() 메서드 - 세로 스크롤 위치값을 리턴하는 
         // 메서드 
-        console.log(SC)
+        console.log(SC) // -> 콘솔창에 현제 세로 위치값이 찍힌다...
 
 
 

@@ -243,15 +243,15 @@ h6 {
 .album span:nth-child(1) {
   background-color: red;
   /* z축으로 밀기 */
-  transform: translateZ(10px);
+  transform: translateZ(20px);
 }
 
 /* 오른쪽 면 */
 .album span:nth-child(2) {
   background-color: orange;
   /* z축으로 밀기 */
-  width: 20px;
-  right: -10px;
+  width: 50px;
+  right: -25px;
   transform: rotateY(90deg);
 }
 
@@ -259,18 +259,18 @@ h6 {
 .album span:nth-child(3) {
   background-color: yellow;
   /* z축으로 밀기 */
-  width: 20px;
+  width: 50px;
   transform: rotateY(-90deg);
-  left: -10.4px;
+  left: -25px;
 }
 
 /* 아래쪽 면  */
 .album span:nth-child(4) {
   background-color: green;
   /* z축으로 밀기 */
-  height: 20px;
+  height: 50px;
   top: auto;
-  bottom: -10px;
+  bottom: -25px;
   transform: rotateX(90deg);
 }
 
@@ -278,8 +278,8 @@ h6 {
 .album span:nth-child(5) {
   background-color: blue;
   /* z축으로 밀기 */
-  height: 20px;
-  top: -10px;
+  height: 50px;
+  top: -25px;
   transform: rotateX(90deg);
 }
 
@@ -289,6 +289,8 @@ h6 {
   /* z축으로 밀기 */
   transform: translateZ(-10px);
 }
+
+
 /* 가르는 박스 */
 .right {
   right: 0;

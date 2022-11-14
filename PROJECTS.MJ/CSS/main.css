@@ -222,6 +222,10 @@ body {
   /* 배경색 */
   background: rgba(255, 255, 255, 0.214);
 }
+/* 클래스 on시 fixed */
+.tbox1.on{
+  position: fixed;
+}
 
 /* 상단 디자인 */
 .top {

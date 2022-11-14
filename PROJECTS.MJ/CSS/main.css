@@ -220,10 +220,10 @@ body {
   top: 0;
   z-index: 9999999;
   /* 배경색 */
-  background: rgba(255, 255, 255, 0.214);
+  background: #000;
 }
 /* 클래스 on시 fixed */
-.tbox1.on{
+.tbox1.on {
   position: fixed;
 }
 
@@ -539,7 +539,6 @@ body {
   width: 180px;
 }
 .gnb > ul > li {
-  position: relative;
   /* 위치조정 */
   width: 130px;
   line-height: 2;
@@ -559,11 +558,18 @@ body {
   width: 100%;
   height: 100%;
 }
+
 /* gnb 통배너 밑에 하위 카테고리 ul */
 /* 공통 */
 .ssm {
+  position: absolute;
   display: flex;
   flex-direction: column;
+  display: none;
+  width: 100vw;
+  background: #000;
+  right: 0;
+  border-radius: 0 0 30% 30%;
 }
 /* 개별 */
 /* gnb 통배너 밑에 하위 카테고리 ll */

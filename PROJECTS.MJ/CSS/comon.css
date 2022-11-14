@@ -323,3 +323,39 @@ h6 {
   height: 100%;
   object-fit: cover;
 }
+
+/* 비누방울!! */
+.buble{
+  display: block;
+  position: relative;
+  width: 3vw;
+  height: 3vw;
+  background: url(../images/buble.jpg)no-repeat top/100% 100%;
+  padding: 0;
+  margin: 0;
+
+}
+/* 비눗방울 안에 아이콘 공통 */
+.buble>a{
+  display: block;
+  color: #000;
+  position: absolute;
+  margin: 0 auto;
+  font-size: 2vw;
+  top: 0; 
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+
+}
+.buble:nth-child(1){
+  display: block;
+  position: relative;
+  width: 3vw;
+  height: 3vw;
+  background: url(../images/buble.jpg)no-repeat top/100% 100%;
+  padding: 0;
+  margin: 0;
+  left: 50%;
+}

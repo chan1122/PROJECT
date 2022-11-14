@@ -252,7 +252,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  /* overflow: hidden; */
+  overflow: hidden;
   z-index: -1;
 }
 
@@ -529,6 +529,7 @@ body {
 
 /* 상단 ul */
 .gnb > ul {
+  bottom: -3px;
   position: relative;
   height: 47px;
   display: flex;
@@ -546,7 +547,7 @@ body {
   /* 글씨 조정 */
   text-align: center;
   font-size: 30px;
-  margin: 0 15px;
+  margin: 0 25px;
   font-family: "Single Day", cursive;
 
   color: #fff;

@@ -33,28 +33,30 @@ $(() => {
       .css({ height: "0" }, 800)
       .find(".mtrack")
       .attr("style", "");
-    // .css({
-    //   transform: " translate(-50%, -50%) rotateX(0deg) rotateY(0deg)",
+      
+    $(this).find("AUDIO").addClass("on");
 
-    // })
-    // AUDIO.get(0).pause()
-    // AUDIO.parent().siblings().find("AUDIO").get(0).pause();
-    // AUDIO.get(0).currentTime = 0;
+    if ($(this).find("AUDIO").hasClass("on")) {
+      // 시작 // 내가 찍은것에 클래스on이 있다면
+      // 실행해라
+      $(this).find("AUDIO").get(0).play();
+    }
+    // 멈춰
+    $(this).siblings().find("AUDIO").removeClass("on");
+    $(this).siblings().find("AUDIO").get(0).pause();
 
-    // 시작하게만드는 클래스제거
-    $(".mtrackcoverinng")
-      .find("AUDIO")
-      .removeClass("letsplay");
-    // 내가 하려는것만 재생!
-    $(this).find("AUDIO").addClass("letsplay", () => {
-      if ($(this).find("AUDIO").hasClass("letsplay") === true) {
-        $(this).find("AUDIO").get(0).play();
-      } else {
-        $().find("AUDIO").get(0).pause().currentTime = 0;
-      }
-    });
-    // 클래스 리스트에 letsplay가 있다재생
-    // 없다면 중지!밑 처음으로 돌아가라!
+
+
+    // $(this).find("AUDIO").addClass("on");
+
+    // if ($(this).find("AUDIO").hasClass("on")) {
+    //   // 시작 // 내가 찍은것에 클래스on이 있다면
+    //   // 실행해라
+    //   $(this).find("AUDIO").get(0).play();
+    // }
+    // // 멈춰
+    // $(this).siblings().find("AUDIO").removeClass("on");
+    // $(this).siblings().find("AUDIO").get(0).pause();
   }); // 메인 트랙 커버박스 클릭 이벤트 //
 
   // 제이쿼리 전용
@@ -220,7 +222,7 @@ let GAG = {
     SNS주소: [``, ``],
   },
   PMJ5: {
-    //  . 5.사랑을늘도망가-임영웅
+    //  . 5.사랑은늘도망가-임영웅
     노래: `사랑은늘도망가-임영웅`,
     SNS주소: [``, ``],
   },

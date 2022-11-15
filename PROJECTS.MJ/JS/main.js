@@ -39,9 +39,22 @@ $(() => {
     // })
     // AUDIO.get(0).pause()
     // AUDIO.parent().siblings().find("AUDIO").get(0).pause();
-    AUDIO.get(0).currentTime = 0;
-    $(this).find("AUDIO").get(0).pause();
-    $(this).find("AUDIO").get(0).play();
+    // AUDIO.get(0).currentTime = 0;
+
+    // 시작하게만드는 클래스제거
+    $(".mtrackcoverinng")
+      .find("AUDIO")
+      .removeClass("letsplay");
+    // 내가 하려는것만 재생!
+    $(this).find("AUDIO").addClass("letsplay", () => {
+      if ($(this).find("AUDIO").hasClass("letsplay") === true) {
+        $(this).find("AUDIO").get(0).play();
+      } else {
+        $().find("AUDIO").get(0).pause().currentTime = 0;
+      }
+    });
+    // 클래스 리스트에 letsplay가 있다재생
+    // 없다면 중지!밑 처음으로 돌아가라!
   }); // 메인 트랙 커버박스 클릭 이벤트 //
 
   // 제이쿼리 전용
@@ -62,9 +75,9 @@ $(() => {
     // 유튜브 아이콘
     sns.eq(1).attr("href", GAG["PMJ" + albnum[i1]]["SNS주소"][1]);
     // 트위터 아이콘
-    sns.eq(0).attr("href", GAG["PMJ" + albnum[i1]]["SNS주소"][3]);
+    sns.eq(2).attr("href", GAG["PMJ" + albnum[i1]]["SNS주소"][3]);
     // 페이스북 아이콘
-    sns.eq(1).attr("href", GAG["PMJ" + albnum[i1]]["SNS주소"][4]);
+    sns.eq(3).attr("href", GAG["PMJ" + albnum[i1]]["SNS주소"][4]);
 
     $(".track")
       .eq(i1)

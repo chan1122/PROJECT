@@ -290,7 +290,6 @@ h6 {
   transform: translateZ(-10px);
 }
 
-
 /* 가르는 박스 */
 .right {
   right: 0;
@@ -325,37 +324,231 @@ h6 {
 }
 
 /* 비누방울!! */
-.buble{
-  display: block;
+.buble {
+  /* display: block; */
   position: relative;
-  width: 3vw;
-  height: 3vw;
-  background: url(../images/buble.jpg)no-repeat top/100% 100%;
+  width: 3.5vw;
+  height: 3.5vw;
+  background: url(../images/buble.jpg) no-repeat top/100% 100%;
   padding: 0;
   margin: 0;
 
 }
 /* 비눗방울 안에 아이콘 공통 */
-.buble>a{
+.buble > a {
   display: block;
-  color: #000;
+  border-radius: 50%;
   position: absolute;
   margin: 0 auto;
-  font-size: 2vw;
-  top: 0; 
+  font-size: 2.3vw;
+  top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   text-align: center;
+  opacity: 0.7;
+
+  transition: all 0.5s;
+}
+/* 버블 개인설정 */
+/* 인스타그램 */
+.bb1 {
+  left: 0%;
+  top: 100%;
+animation: instargrambubleani  6s  linear infinite alternate;
 
 }
-.buble:nth-child(1){
-  display: block;
-  position: relative;
-  width: 3vw;
-  height: 3vw;
-  background: url(../images/buble.jpg)no-repeat top/100% 100%;
-  padding: 0;
-  margin: 0;
-  left: 50%;
+.bb1 > a {
+  background: radial-gradient(
+      circle farthest-corner at 32% 106%,
+      #ffe17d 0%,
+      #ffcd69 10%,
+      #fa9137 28%,
+      #eb4141 42%,
+      transparent 82%
+    ),
+    linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+  /* 글자에 적용할떄는 이것을 이용한다! */
+  /* color: transparent;
+    -webkit-background-clip: text; */
+
 }
+.bb1 > a:hover {
+  background: radial-gradient(
+      circle farthest-corner at 32% 106%,
+      #ffe17d 0%,
+      #ffcd69 10%,
+      #fa9137 28%,
+      #eb4141 42%,
+      transparent 82%
+    ),
+    linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+  color: transparent;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
+/* 페이스북 */
+.bb2 {
+  /* 위치 */
+}
+.bb2 > a {
+  /* 파비콘 모양 */
+  background-color: #234bd7;
+}
+.bb2 > a:hover {
+  /* 파비콘 모양 */
+  background-color: #234bd7;
+  color: transparent;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
+
+/* 트위터 */
+.bb3 {
+}
+.bb3 > a {
+  background-color: skyblue;
+}
+.bb3 > a:hover {
+  background-color: skyblue;
+  color: transparent;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
+/* 유튜브 */
+.bb4 {
+}
+.bb4 > a {
+  background-color: red;
+}
+.bb4 > a:hover {
+  background-color: red;
+  color: transparent;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
+/* 틱톡 */
+.bb5 {
+}
+.bb5 > a {
+  text-shadow: 4px 7px 10px red, -2px -6px 10px aqua;
+  background-color: black;
+}
+.bb5 > a :hover {
+  text-shadow: 4px 7px 5px red, -2px -6px 5px aqua;
+  background-color: black;
+  opacity: 1;
+}
+/* 프로필(나무위키) */
+.bb6 {
+}
+.bb6 > a {
+  font-size: 3vw;
+  background-color: green;
+  font-weight: bold;
+}
+.bb6 > a:hover {
+  background-color: green;
+  font-weight: bold;
+  color: transparent;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
+
+/* 비눗방울 움직이는 애니매에션 */
+/* 인스타그램 */
+@keyframes instargrambubleani {
+  0% {
+    left: 0%;
+    top: 80%;
+  }
+  10% {
+    left: 5%;
+    top: 78%;
+
+  }
+  15% {
+    left: 10%;
+    top: 75%;
+
+  }
+  20% {
+    left: 15%;
+    top: 72%;
+
+  }
+  30% {
+    left: 17%;
+    top: 70%;
+  }
+  35% {
+    left: 15%;
+    top: 67%;
+  }
+  40% {
+    left: 10%;
+    top: 65%;
+  }
+  45% {
+    left: 7%;
+    top: 62%;
+  }
+  50% {
+    left: 4%;
+    top: 58%;
+  }
+  55% {
+    left: 6%;
+    top: 54%;
+  }
+  60% {
+    left: 7%;
+    top: 50%;
+  }
+  65% {
+    left: 10%;
+    top: 45%;
+  }
+  70% {
+    left: 15%;
+    top: 40%;
+  }
+  75% {
+    left: 20%;
+    top: 45%;
+  }
+  80% {
+    left: 15%;
+    top: 40%;
+  }
+  85% {
+    left: 20%;
+    top: 35%;
+  }
+  90% {
+    left: 15%;
+    top: 30%;
+  }
+  93% {
+    left: 10%;
+    top: 25%;
+  }
+  95% {
+    left: 5%;
+    top: 20%;
+  }
+  98%{
+    left: 3%;
+    top: 15%;
+  }
+  100%{
+    left: 20%;
+    top: 5%;
+  }
+  
+}
+/* 페이스북 */
+/* 트위터 */
+/* 유튜브 */
+/* 틱톡 */
+/* 프로필(나무위키) */

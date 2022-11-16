@@ -23,7 +23,7 @@ font-family: 'Single Day', cursive; = GNB폰트
 
 /* 공사중 표시 */
 body * {
-  /* outline: 3px dotted red; */
+  outline: 3px dotted red;
   /*임시!!!!*/
   /* color: darkgoldenrod; */
   /* font-size: 3vw; */

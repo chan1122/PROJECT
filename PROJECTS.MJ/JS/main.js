@@ -12,7 +12,7 @@ $(() => {
       overflow: "hidden",
     });
     $(".mtrack", this)
-      .css({ animation: "paused" })
+      .css({ animationPlayState: "paused" })
       .hide(10, function () {
         $(this)
           .css({
@@ -32,7 +32,7 @@ $(() => {
       .siblings()
       .css({ height: "0" }, 800)
       .find(".mtrack")
-      .attr("style", "");
+      .css({transform: "translate(-50%, -50%) rotateX(90deg) rotateY(0deg)",}).toggle
 
 
     $(".track").each((idx,ele)=>{
@@ -55,6 +55,11 @@ $(() => {
     // // 멈춰
     // $(this).siblings().find("AUDIO").removeClass("on");
     // $(this).siblings().find("AUDIO").get(0).pause();
+
+    // 스테이지 맞추기
+    $("html,body").animate({
+      scrollTop : $(this).offset().top + "px"
+    },600);
   }); // 메인 트랙 커버박스 클릭 이벤트 //
 
   // 제이쿼리 전용
@@ -68,6 +73,9 @@ $(() => {
   ];
 
   album.each((i1, e1) => {
+    // 변수 셋팅 
+    let track = $(".track");
+    
     let sns = $(".track").eq(i1).find("a");
 
     // 인스타그램 아이콘
@@ -93,6 +101,7 @@ $(() => {
 
     $(e1)
       .find("span")
+      // 한번더 each
       .each((i2, e2) => {
         $(e2).css({
           background: `url(images/trackalbum/track${albnum[i1]}-span${
@@ -100,6 +109,14 @@ $(() => {
           }.jpg)no-repeat center/100% 100%`,
         });
       }); ////// each ///////
+
+
+      // track에 z-index 50씩 차례대로 뿌리기
+      track.eq(i1).css({zIndex:`${i1}`});
+
+
+
+
   }); /////// each ///////
 
   let ttracks = $(".ttrack");
@@ -172,7 +189,7 @@ $(() => {
   $(".gnb > ul > li").hover(
     function () {
       //오버시
-      $(this).children("ul").slideDown();
+      $(this).children("ul").stop().slideDown();
 
       $(".gnb >ul>li>a").css({
         color: "black",
@@ -183,7 +200,7 @@ $(() => {
     },
     function () {
       //아웃시
-      $(this).children("ul").slideUp();
+      $(this).children("ul").stop().slideUp();
       $(".gnb >ul>li>a").css({
         color: "#fff",
         transition: ".5s",

@@ -4,10 +4,14 @@
 /* 트랙 공통 */
 .track {
   position: relative;
+  perspective: 1000px;
+  perspective-origin: 0% 500%;
 }
 /* 메인TRACK 1번 앨범 */
 .ttrack {
   animation: ttrackani 20s ease infinite alternate;
+  animation-timing-function: linear;
+
 }
 @keyframes ttrackani {
   to {

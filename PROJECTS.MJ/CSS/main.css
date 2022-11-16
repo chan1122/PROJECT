@@ -247,25 +247,32 @@ body {
   padding-top: 30%;
 }
 .coverSVG > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  width: min(max(30vw,250px),300px);
+  height: 130px;
+  margin: 0 auto;
+  
+}
+
+.coverSVG > div > div {
+  position: relative;
+  top: 50%;
+  width: 33.33%;
   overflow: hidden;
-  z-index: -1;
+  padding-top: 30%;
+  float: left;
+  transform: translateY(-50%);
 }
 
 /* SVG 공통 */
 .toplogo svg {
-  z-index: -1;
   position: absolute;
-  top: 2px;
-  width: 30.33%;
+  top: 0;
+  left: 0;
+  width: 410%;
 }
 
 /* SVG개별 */
-.toplogo svg:nth-child(1) {
+/* .toplogo svg:nth-child(1) {
   left: 40.2%;
 }
 .toplogo svg:nth-child(2) {
@@ -273,7 +280,7 @@ body {
 }
 .toplogo svg:nth-child(3) {
   left: 53%;
-}
+} */
 /* SVG PATH 공통 클래스 */
 .path {
   fill: none;
@@ -701,13 +708,21 @@ body {
 /* 앨범 집약 페이지 */
 .main3 {
   width: 100%;
-  /* height: 200vw; */
+  height: 200vw;
   position: relative;
-  /* background-color: gray; */
-  display: flex;
+  background-color: gray;
+  /* display: flex; */
 
-  flex-direction: column;
+  /* flex-direction: column; */
 }
+.per{
+  perspective: 1000px;
+}
+
+
+
+
+
 .maintrackcover {
   height: 100%;
   margin: 0 auto;
@@ -718,7 +733,8 @@ body {
 
 /* 트랙 공통 */
 .mtt1 {
-  padding: 40px 0;
+  /* perspective: 1000px; */
+  padding: 5vw 0;
 }
 /* 앨범 1~10번 */
 /* 1번 */
@@ -1090,4 +1106,6 @@ footer .ffll1 {
   width: 100%;
   height: 100%;
 }
+
+
 

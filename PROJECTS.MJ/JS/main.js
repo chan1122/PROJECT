@@ -2,7 +2,7 @@
 // 로딩하기
 // 변수!!
 let album = $(".album");
-let AUDIO = $("#AUDIO");
+let AUDIO = $(".AUDIO");
 //제이쿼리 로딩구역
 $(() => {
   // 메인 트랙 커버박스 클릭 이벤트 //
@@ -33,19 +33,17 @@ $(() => {
       .css({ height: "0" }, 800)
       .find(".mtrack")
       .attr("style", "");
-      
-    $(this).find("AUDIO").addClass("on");
-
-    if ($(this).find("AUDIO").hasClass("on")) {
-      // 시작 // 내가 찍은것에 클래스on이 있다면
-      // 실행해라
-      $(this).find("AUDIO").get(0).play();
-    }
-    // 멈춰
-    $(this).siblings().find("AUDIO").removeClass("on");
-    $(this).siblings().find("AUDIO").get(0).pause();
 
 
+    $(".track").each((idx,ele)=>{
+      $(ele).find(".AUDIO").get(0).pause();
+    });
+    
+    let iam = $(this).find(".AUDIO").get(0);
+    
+    iam.currentTime=0;
+    
+    iam.play();
 
     // $(this).find("AUDIO").addClass("on");
 
@@ -83,7 +81,7 @@ $(() => {
 
     $(".track")
       .eq(i1)
-      .find("#AUDIO")
+      .find(".AUDIO")
       .attr(
         "src",
         "images/MUSIC/" +

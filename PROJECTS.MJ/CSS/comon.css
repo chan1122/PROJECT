@@ -355,7 +355,7 @@ h6 {
 .bb1 {
   left: 0%;
   top: 100%;
-animation: instargrambubleani  6s  linear infinite alternate;
+animation: instargrambubleani  30s  linear infinite alternate;
 
 }
 .bb1 > a {
@@ -373,7 +373,8 @@ animation: instargrambubleani  6s  linear infinite alternate;
     -webkit-background-clip: text; */
 
 }
-.bb1 > a:hover {
+.bb1 > a:hover
+ {
   background: radial-gradient(
       circle farthest-corner at 32% 106%,
       #ffe17d 0%,
@@ -386,6 +387,12 @@ animation: instargrambubleani  6s  linear infinite alternate;
   color: transparent;
   -webkit-background-clip: text;
   opacity: 1;
+
+
+}
+.bb1:hover{
+  animation-play-state: paused;
+  transform: scale(1.5);
 }
 /* 페이스북 */
 .bb2 {
@@ -402,7 +409,10 @@ animation: instargrambubleani  6s  linear infinite alternate;
   -webkit-background-clip: text;
   opacity: 1;
 }
-
+.bb2:hover{
+  animation-play-state: paused;
+  transform: scale(1.5);
+}
 /* 트위터 */
 .bb3 {
 }
@@ -414,6 +424,10 @@ animation: instargrambubleani  6s  linear infinite alternate;
   color: transparent;
   -webkit-background-clip: text;
   opacity: 1;
+}
+.bb3:hover{
+  animation-play-state: paused;
+  transform: scale(1.5);
 }
 /* 유튜브 */
 .bb4 {
@@ -427,6 +441,10 @@ animation: instargrambubleani  6s  linear infinite alternate;
   -webkit-background-clip: text;
   opacity: 1;
 }
+.bb4:hover{
+  animation-play-state: paused;
+  transform: scale(1.5);
+}
 /* 틱톡 */
 .bb5 {
 }
@@ -438,6 +456,10 @@ animation: instargrambubleani  6s  linear infinite alternate;
   text-shadow: 4px 7px 5px red, -2px -6px 5px aqua;
   background-color: black;
   opacity: 1;
+}
+.bb5:hover{
+  animation-play-state: paused;
+  transform: scale(1.5);
 }
 /* 프로필(나무위키) */
 .bb6 {
@@ -454,7 +476,10 @@ animation: instargrambubleani  6s  linear infinite alternate;
   -webkit-background-clip: text;
   opacity: 1;
 }
-
+.bb6:hover{
+  animation-play-state: paused;
+  transform: scale(1.5);
+}
 /* 비눗방울 움직이는 애니매에션 */
 /* 인스타그램 */
 @keyframes instargrambubleani {
@@ -552,3 +577,71 @@ animation: instargrambubleani  6s  linear infinite alternate;
 /* 유튜브 */
 /* 틱톡 */
 /* 프로필(나무위키) */
+
+
+
+
+
+/* 건들면 터지는 비눗방울 */
+.bubblepop{
+  position:absolute;
+  width:10em;
+  height:10em;
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:50%;
+  background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%);
+  box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.4), inset 1em 1em 1em rgba(255, 255, 255, 0.6), 0 1em 2em rgba(0, 0, 0, 0.25);
+}
+.bubblepop:hover{
+  display:none;
+}
+
+.b1{
+  animation: floatup 10s linear infinite, sideways 5s ease-in-out infinite alternate;
+  left: 10%;
+  top:100%; 
+}
+.b2{
+  animation: floatup 5s linear infinite, sideways 4s ease-in-out 1s infinite alternate;
+  left: 15%;
+  top: 30%;
+  transform: scale(.7);
+}
+.b3{
+  animation: floatup 4s linear infinite, sideways 6s ease-in-out 6s infinite alternate;
+  left: 20%;
+  transform: scale(1.2);
+}
+.b4{
+  animation: floatup 6s linear infinite, sideways 5s ease-in-out 3s infinite alternate;
+  left: 25%;
+  top:90%;
+  transform: scale(.5);
+}
+.b5{
+  animation: floatup 8s linear infinite, sideways 6s ease-in-out 3s infinite alternate;
+  left: 30%;
+  top:30%;
+  transform: scale(1.1);
+}
+.b6{
+  animation: floatup 7s linear infinite, sideways 4s ease-in-out 3.5s infinite alternate;
+  left:40%;
+  top:50%;
+  transform: scale(.7);
+}
+.b7{
+  animation: floatup 6s linear infinite, sideways 5s ease-in-out 4s infinite alternate;
+  left: 90%;
+  top:90%;
+  transform: scale(.6);
+}
+@keyframes floatup{
+  0% {margin-top: 50%;}
+  100% {margin-top: -50%;}
+}
+@keyframes sideways{
+  0% {margin-left: 0em;}
+  100%{margin-left: 20em;}
+  100% {margin-left: 0px;}
+}

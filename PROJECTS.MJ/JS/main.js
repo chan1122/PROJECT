@@ -112,7 +112,7 @@ $(() => {
 
 
       // track에 z-index 50씩 차례대로 뿌리기
-      track.eq(i1).css({zIndex:`${i1}`});
+      track.eq(i1).css({zIndex:`${50-i1}`});
 
 
 

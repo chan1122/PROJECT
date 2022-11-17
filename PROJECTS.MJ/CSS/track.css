@@ -5,7 +5,7 @@
 .track {
   position: relative;
   perspective: 1000px;
-  perspective-origin: 0% 500%;
+  perspective-origin: 120% -200%;
 }
 /* 메인TRACK 1번 앨범 */
 .ttrack {

@@ -4,8 +4,7 @@
 /* 트랙 공통 */
 .track {
   position: relative;
-  perspective: 1000px;
-  perspective-origin: 120% -200%;
+  transform-style: preserve-3d;
 }
 /* 메인TRACK 1번 앨범 */
 .ttrack {

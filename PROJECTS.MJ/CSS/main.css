@@ -707,16 +707,13 @@ body {
 
 /* 앨범 집약 페이지 */
 .main3 {
-  width: 100%;
-  height: 200vw;
-  position: relative;
-  background-color: gray;
-  /* display: flex; */
-
-  /* flex-direction: column; */
-}
-.per{
-  perspective: 1000px;
+  top: 0;
+  left: 0;
+  width: 99vw;
+  height: 110vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 1300px;
 }
 
 
@@ -724,11 +721,10 @@ body {
 
 
 .maintrackcover {
-  height: 100%;
-  margin: 0 auto;
-  width: 50%;
 
-  left: calc(50% - 200px);
+  height: 4400px;
+  padding: 450px 0;
+  transform-style: preserve-3d;
 }
 
 /* 트랙 공통 */
@@ -794,6 +790,7 @@ footer {
   height: 500px;
   background-color: white;
   text-align: center;
+  top: 50vw;
 }
 /* 하단 로고 들어가는 부분 */
 footer .flogo {

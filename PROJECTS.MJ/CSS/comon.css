@@ -220,6 +220,7 @@ h6 {
   transform: translate(-50%, -50%) rotateX(10deg) rotateY(30deg);
 
   z-index: 1;
+  transform-style: preserve-3d;
 }
 
 .album::before {

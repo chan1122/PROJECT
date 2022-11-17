@@ -415,7 +415,7 @@ h6 {
 .bb3 {
   left: 95%;
   top: 90%;
-  animation: twitterbubleani 10s linear infinite alternate;
+  animation: twitterbubleani 45s linear infinite alternate;
 }
 .bb3 > a {
   background-color: skyblue;
@@ -432,6 +432,10 @@ h6 {
 }
 /* 유튜브 */
 .bb4 {
+
+  left: 95%;
+  top: 10%;
+  animation: youtubebubleani 10s linear infinite alternate;
 }
 .bb4 > a {
   background-color: red;
@@ -639,31 +643,34 @@ h6 {
     top: 65%;
   }
   50% {
-    left: ;
-    top: ;
+    left: 65%;
+    top: 50%;
   }
   60% {
-    left: ;
-    top: ;
+    left: 30%;
+    top: 80%;
   }
   70% {
-    left: ;
-    top: ;
+    left: 20%;
+    top: 60%;
   }
   80% {
-    left: ;
-    top: ;
+    left: 10%;
+    top: 40%;
   }
   90% {
-    left: ;
-    top: ;
+    left: 30%;
+    top: 20%;
   }
   100% {
-    top: ;
-    left: ;
+    top: 10%;
+    left: 10%;
   }
 }
 /* 유튜브 */
+@keyframes youtubebubleani{
+  
+}
 /* 틱톡 */
 /* 프로필(나무위키) */
 

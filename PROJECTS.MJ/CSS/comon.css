@@ -326,13 +326,12 @@ h6 {
 /* 비누방울!! */
 .buble {
   /* display: block; */
-  position: relative;
+  position: absolute;
   width: 3.5vw;
   height: 3.5vw;
   background: url(../images/buble.jpg) no-repeat top/100% 100%;
   padding: 0;
   margin: 0;
-
 }
 /* 비눗방울 안에 아이콘 공통 */
 .buble > a {
@@ -355,8 +354,7 @@ h6 {
 .bb1 {
   left: 0%;
   top: 100%;
-animation: instargrambubleani  30s  linear infinite alternate;
-
+  animation: instargrambubleani 30s linear infinite alternate;
 }
 .bb1 > a {
   background: radial-gradient(
@@ -371,10 +369,8 @@ animation: instargrambubleani  30s  linear infinite alternate;
   /* 글자에 적용할떄는 이것을 이용한다! */
   /* color: transparent;
     -webkit-background-clip: text; */
-
 }
-.bb1 > a:hover
- {
+.bb1 > a:hover {
   background: radial-gradient(
       circle farthest-corner at 32% 106%,
       #ffe17d 0%,
@@ -387,16 +383,17 @@ animation: instargrambubleani  30s  linear infinite alternate;
   color: transparent;
   -webkit-background-clip: text;
   opacity: 1;
-
-
 }
-.bb1:hover{
+.bb1:hover {
   animation-play-state: paused;
   transform: scale(1.5);
 }
 /* 페이스북 */
 .bb2 {
+  left: 0;
+  top: 0;
   /* 위치 */
+  animation: facebookbubleani 40s linear infinite alternate;
 }
 .bb2 > a {
   /* 파비콘 모양 */
@@ -409,12 +406,15 @@ animation: instargrambubleani  30s  linear infinite alternate;
   -webkit-background-clip: text;
   opacity: 1;
 }
-.bb2:hover{
+.bb2:hover {
   animation-play-state: paused;
   transform: scale(1.5);
 }
 /* 트위터 */
 .bb3 {
+  left: 95%;
+  top: 90%;
+  animation: twitterbubleani 10s linear infinite alternate;
 }
 .bb3 > a {
   background-color: skyblue;
@@ -425,7 +425,7 @@ animation: instargrambubleani  30s  linear infinite alternate;
   -webkit-background-clip: text;
   opacity: 1;
 }
-.bb3:hover{
+.bb3:hover {
   animation-play-state: paused;
   transform: scale(1.5);
 }
@@ -441,7 +441,7 @@ animation: instargrambubleani  30s  linear infinite alternate;
   -webkit-background-clip: text;
   opacity: 1;
 }
-.bb4:hover{
+.bb4:hover {
   animation-play-state: paused;
   transform: scale(1.5);
 }
@@ -457,7 +457,7 @@ animation: instargrambubleani  30s  linear infinite alternate;
   background-color: black;
   opacity: 1;
 }
-.bb5:hover{
+.bb5:hover {
   animation-play-state: paused;
   transform: scale(1.5);
 }
@@ -476,7 +476,7 @@ animation: instargrambubleani  30s  linear infinite alternate;
   -webkit-background-clip: text;
   opacity: 1;
 }
-.bb6:hover{
+.bb6:hover {
   animation-play-state: paused;
   transform: scale(1.5);
 }
@@ -490,17 +490,14 @@ animation: instargrambubleani  30s  linear infinite alternate;
   10% {
     left: 5%;
     top: 78%;
-
   }
   15% {
     left: 10%;
     top: 75%;
-
   }
   20% {
     left: 15%;
     top: 72%;
-
   }
   30% {
     left: 17%;
@@ -562,86 +559,195 @@ animation: instargrambubleani  30s  linear infinite alternate;
     left: 5%;
     top: 20%;
   }
-  98%{
+  98% {
     left: 3%;
     top: 15%;
   }
-  100%{
+  100% {
     left: 20%;
     top: 5%;
   }
-  
 }
 /* 페이스북 */
+@keyframes facebookbubleani {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  10% {
+    left: 10%;
+    top: 10%;
+  }
+  20% {
+    left: 20%;
+    top: 20%;
+  }
+  30% {
+    left: 30%;
+    top: 30%;
+  }
+  40% {
+    left: 20%;
+    top: 40%;
+  }
+  50% {
+    left: 10%;
+    top: 30%;
+  }
+  60% {
+    left: 30%;
+    top: 20%;
+  }
+  70% {
+    left: 40%;
+    top: 30%;
+  }
+  80% {
+    left: 70%;
+    top: 50%;
+  }
+  90% {
+    left: 80%;
+    top: 20%;
+  }
+  100% {
+    top: -5%;
+    left: 50%;
+  }
+}
 /* 트위터 */
+@keyframes twitterbubleani {
+  0% {
+    left: 95%;
+    top: 90%;
+  }
+  10% {
+    left: 80%;
+    top: 90%;
+  }
+  20% {
+    left: 75%;
+    top: 80%;
+  }
+  30% {
+    left: 95%;
+    top: 70%;
+  }
+  40% {
+    left: 70%;
+    top: 65%;
+  }
+  50% {
+    left: ;
+    top: ;
+  }
+  60% {
+    left: ;
+    top: ;
+  }
+  70% {
+    left: ;
+    top: ;
+  }
+  80% {
+    left: ;
+    top: ;
+  }
+  90% {
+    left: ;
+    top: ;
+  }
+  100% {
+    top: ;
+    left: ;
+  }
+}
 /* 유튜브 */
 /* 틱톡 */
 /* 프로필(나무위키) */
 
-
-
-
-
-/* 건들면 터지는 비눗방울 */
-.bubblepop{
-  position:absolute;
-  width:10em;
-  height:10em;
-  border:1px solid rgba(255,255,255,0.1);
-  border-radius:50%;
-  background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%);
-  box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.4), inset 1em 1em 1em rgba(255, 255, 255, 0.6), 0 1em 2em rgba(0, 0, 0, 0.25);
+/* 건들면 터지는 비눗방울 (small)*/
+.bubblepop {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.4),
+    inset 1em 1em 1em rgba(255, 255, 255, 0.6), 0 1em 2em rgba(0, 0, 0, 0.25);
 }
-.bubblepop:hover{
-  display:none;
+.bubblepop:hover {
+  display: none;
 }
 
-.b1{
-  animation: floatup 10s linear infinite, sideways 5s ease-in-out infinite alternate;
+.b1 {
+  animation: floatup 10s linear infinite,
+    sideways 5s ease-in-out infinite alternate;
   left: 10%;
-  top:100%; 
+  top: 100%;
 }
-.b2{
-  animation: floatup 5s linear infinite, sideways 4s ease-in-out 1s infinite alternate;
+.b2 {
+  animation: floatup 5s linear infinite,
+    sideways 4s ease-in-out 1s infinite alternate;
   left: 15%;
   top: 30%;
-  transform: scale(.7);
+  transform: scale(0.7);
 }
-.b3{
-  animation: floatup 4s linear infinite, sideways 6s ease-in-out 6s infinite alternate;
+.b3 {
+  animation: floatup 4s linear infinite,
+    sideways 6s ease-in-out 6s infinite alternate;
   left: 20%;
   transform: scale(1.2);
 }
-.b4{
-  animation: floatup 6s linear infinite, sideways 5s ease-in-out 3s infinite alternate;
+.b4 {
+  animation: floatup 6s linear infinite,
+    sideways 5s ease-in-out 3s infinite alternate;
   left: 25%;
-  top:90%;
-  transform: scale(.5);
+  top: 90%;
+  transform: scale(0.5);
 }
-.b5{
-  animation: floatup 8s linear infinite, sideways 6s ease-in-out 3s infinite alternate;
+.b5 {
+  animation: floatup 8s linear infinite,
+    sideways 6s ease-in-out 3s infinite alternate;
   left: 30%;
-  top:30%;
+  top: 30%;
   transform: scale(1.1);
 }
-.b6{
-  animation: floatup 7s linear infinite, sideways 4s ease-in-out 3.5s infinite alternate;
-  left:40%;
-  top:50%;
-  transform: scale(.7);
+.b6 {
+  animation: floatup 7s linear infinite,
+    sideways 4s ease-in-out 3.5s infinite alternate;
+  left: 40%;
+  top: 50%;
+  transform: scale(0.7);
 }
-.b7{
-  animation: floatup 6s linear infinite, sideways 5s ease-in-out 4s infinite alternate;
+.b7 {
+  animation: floatup 6s linear infinite,
+    sideways 5s ease-in-out 4s infinite alternate;
   left: 90%;
-  top:90%;
-  transform: scale(.6);
+  top: 90%;
+  transform: scale(0.6);
 }
-@keyframes floatup{
-  0% {margin-top: 50%;}
-  100% {margin-top: -50%;}
+@keyframes floatup {
+  0% {
+    margin-top: 50%;
+  }
+  100% {
+    margin-top: -50%;
+  }
 }
-@keyframes sideways{
-  0% {margin-left: 0em;}
-  100%{margin-left: 20em;}
-  100% {margin-left: 0px;}
+@keyframes sideways {
+  0% {
+    margin-left: 0em;
+  }
+  100% {
+    margin-left: 20em;
+  }
+  100% {
+    margin-left: 0px;
+  }
 }

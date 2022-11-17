@@ -3,6 +3,7 @@
 // 변수!!
 let album = $(".album");
 let AUDIO = $(".AUDIO");
+let track = $(".track");
 //제이쿼리 로딩구역
 $(() => {
   // 메인 트랙 커버박스 클릭 이벤트 //
@@ -32,17 +33,18 @@ $(() => {
       .siblings()
       .css({ height: "0" }, 800)
       .find(".mtrack")
-      .css({transform: "translate(-50%, -50%) rotateX(90deg) rotateY(0deg)",}).toggle
+      .css({
+        transform: "translate(-50%, -50%) rotateX(90deg) rotateY(0deg)",
+      }).toggle;
 
-
-    $(".track").each((idx,ele)=>{
+    $(".track").each((idx, ele) => {
       $(ele).find(".AUDIO").get(0).pause();
     });
-    
+
     let iam = $(this).find(".AUDIO").get(0);
-    
-    iam.currentTime=0;
-    
+
+    iam.currentTime = 0;
+
     iam.play();
 
     // $(this).find("AUDIO").addClass("on");
@@ -57,9 +59,12 @@ $(() => {
     // $(this).siblings().find("AUDIO").get(0).pause();
 
     // 스테이지 맞추기
-    $("html,body").animate({
-      scrollTop : $(this).offset().top + "px"
-    },600);
+    $("html,body").animate(
+      {
+        scrollTop: $(this).offset().top + "px",
+      },
+      600
+    );
   }); // 메인 트랙 커버박스 클릭 이벤트 //
 
   // 제이쿼리 전용
@@ -72,10 +77,10 @@ $(() => {
     41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
   ];
 
+
   album.each((i1, e1) => {
-    // 변수 셋팅 
-    let track = $(".track");
-    
+    // 변수 셋팅
+
     let sns = $(".track").eq(i1).find("a");
 
     // 인스타그램 아이콘
@@ -111,9 +116,10 @@ $(() => {
       }); ////// each ///////
   }); /////// each ///////
 
-
-
-  // 
+  // track each
+  $(track.get().reverse()).each(function (ti, te) {
+    $(this).css({ zIndex: ti });
+  });
 
   let ttracks = $(".ttrack");
 

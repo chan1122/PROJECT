@@ -1007,7 +1007,6 @@ footer .ffll1 {
   overflow: hidden;
   transition: all 0.7s ease-in;
   white-space: nowrap;
-  height: 20%;
 }
 .hamul.on > li {
   width: 100%;
@@ -1047,7 +1046,6 @@ footer .ffll1 {
   font-size: 7vw;
   transition: all 0.2s;
   transition: transform 0.7s ease-out 0.5s;
-  position: absolute;
   transform: translateX(-200%);
 }
 .hamul > li:hover a {
@@ -1061,12 +1059,21 @@ footer .ffll1 {
 /* 햄버거 버튼 하단 상세 카테고리 */
 /* 공통 */
 .sham {
-  text-align: center;
-  /* display: none; */
+  color: black;
+  display: none;
 }
 /* 공통 하위 li공통 */
-.sham > li {
+.hamul .sham > li {
   font-size: 5vw;
+
+}
+.hamul .sham > li:hover{
+  background-color: black;
+}
+
+.hamul .sham > li > a {
+  display: block;
+  width: 100%;
 }
 /* 개별  */
 /* 인물소개 */
@@ -1107,7 +1114,7 @@ footer .ffll1 {
 }
 .dExplanation:hover {
   animation-play-state: paused;
-    /* 리니어 그라디언트 */
+  /* 리니어 그라디언트 */
   /* background: radial-gradient(
       circle farthest-corner at 32% 106%,
       #ffe17d 0%,
@@ -1117,7 +1124,6 @@ footer .ffll1 {
       transparent 82%
     ),
     linear-gradient(135deg, lightblue 12%, skyblue 58%); */
-    
 }
 /* 하단 설명 박스 만들기 */
 .dExplanation {
@@ -1173,7 +1179,7 @@ footer .ffll1 {
   right: 20px;
 
   text-align: center;
-  font-size: 2vw;
+  font-size: 1.7vw;
   transform: translateZ(40px);
 
   font-weight: bold;
@@ -1191,4 +1197,9 @@ footer .ffll1 {
 }
 .dback2 {
   transform: translateZ(-40px);
+}
+
+/* 햄버거 버튼 하위 li세부 사항 조정 */
+.sham > li > a {
+  width: 100%;
 }

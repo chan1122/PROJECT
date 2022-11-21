@@ -211,6 +211,25 @@ $(() => {
       $(".nav").css({ background: "#000", transition: ".2s" });
     }
   );
+
+  
+  // 햄버거 버튼 마우스 오버 아웃 시 
+  $(".hamul li").hover(function(){
+    const tfs = $(this).find(".sham");
+    // 마우스 오버시
+    tfs.stop().slideDown();
+  },function(){
+    // 마우스 아웃시
+    const tfs = $(this).find(".sham");
+    tfs.stop().slideUp();
+  });
+
+  // 햄버거 버튼 하위 ul li a 호버시 배경색 글자색 반전 -> 만들기!
+
+
+
+
+
 }); //제이쿼리 로딩구역/////////////////////////
 
 // 배열 객체 들!@!

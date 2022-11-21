@@ -23,7 +23,7 @@ font-family: 'Single Day', cursive; = GNB폰트
 
 /* 공사중 표시 */
 body * {
-  outline: 3px dotted red;
+  /* outline: 3px dotted red; */
   /*임시!!!!*/
   /* color: darkgoldenrod; */
   /* font-size: 3vw; */
@@ -1099,18 +1099,42 @@ footer .ffll1 {
 }
 /*     <!-- 위치 잡는 박스 -->
     <div class="wrap3dplat"> */
-.wrap3dplat{
+.wrap3dplat {
   position: relative;
-  background-color: #fff;
-  width: 99.8vw;
+  width: 99.5vw;
   height: 100vh;
-margin-top: 25vh;
+  margin-top: 25vh;
 }
-
+.dExplanation:hover {
+  animation-play-state: paused;
+    /* 리니어 그라디언트 */
+  /* background: radial-gradient(
+      circle farthest-corner at 32% 106%,
+      #ffe17d 0%,
+      aqua 10%,
+      #ffcd69 28%,
+      #fa9137 42%,
+      transparent 82%
+    ),
+    linear-gradient(135deg, lightblue 12%, skyblue 58%); */
+    
+}
 /* 하단 설명 박스 만들기 */
 .dExplanation {
   position: absolute;
-  background-color: orange;
+  /* background-color: darkblue; */
+  background-color: navy;
+
+  /* 리니어 그라디언트 */
+  /* background: radial-gradient(
+      circle farthest-corner at 32% 106%,
+      #ffe17d 0%,
+      aqua 10%,
+      #ffcd69 28%,
+      #fa9137 42%,
+      transparent 82%
+    ),
+    linear-gradient(135deg, lightblue 12%, skyblue 58%); */
   width: 230px;
   height: 330px;
 
@@ -1123,36 +1147,48 @@ margin-top: 25vh;
   animation: bottomplat 5s ease-in-out alternate infinite;
 }
 /* 줄 박스!! 1번 앞면 */
-.firstfront1{
+.firstfront1 {
   position: absolute;
   outline: 5px double black;
 
-
   top: 20px;
   left: 20px;
-  bottom: 20px; 
+  bottom: 20px;
   right: 20px;
   transform: translateZ(20px);
 }
 
 /* 플랫카드 움직이는 애니메이션 */
 @keyframes bottomplat {
-  to{
+  to {
     transform: translate(-50%, -50%) rotateY(180deg);
   }
 }
 /* 줄 박스!! 2번 앞면 글자 텍스트 */
-.firstfront2{
+.firstfront2 {
   position: absolute;
   top: 20px;
   left: 20px;
-  bottom: 20px; 
+  bottom: 20px;
   right: 20px;
-  
+
   text-align: center;
   font-size: 2vw;
   transform: translateZ(40px);
 
   font-weight: bold;
+}
+/* 플랫 카드 뒷면 */
+.dback1 {
+  position: absolute;
+  transform: translateZ(-20px);
+  outline: 5px double white;
 
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+}
+.dback2 {
+  transform: translateZ(-40px);
 }

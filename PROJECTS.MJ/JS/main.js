@@ -77,7 +77,6 @@ $(() => {
     41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
   ];
 
-
   album.each((i1, e1) => {
     // 변수 셋팅
 
@@ -212,20 +211,68 @@ $(() => {
     }
   );
 
-  
-  // 햄버거 버튼 마우스 오버 아웃 시 
-  $(".hamul li").hover(function(){
-    const tfs = $(this).find(".sham");
-    // 마우스 오버시
-    tfs.stop().slideDown();
-  },function(){
-    // 마우스 아웃시
-    const tfs = $(this).find(".sham");
-    tfs.stop().slideUp();
-  });
+  // 햄버거 버튼 마우스 오버 아웃 시
+  $(".hamul li").hover(
+    function () {
+      const tfs = $(this).find(".sham");
+      // 마우스 오버시
+      tfs.stop().slideDown();
 
-  // 햄버거 버튼 하위 ul li a 호버시 배경색 글자색 반전 -> 만들기!
+      $(this)
+        .children(".hambtnbiga")
+        .css({ backgroundColor: "white", color: "black" });
 
+      // 햄버거 버튼 하위 ul li a 호버시 배경색 글자색 반전 -> 만들기!
+    },
+    function () {
+      // 마우스 아웃시
+      const tfs = $(this).find(".sham");
+      tfs.stop().slideUp();
+
+      $(this)
+        .children(".hambtnbiga")
+        .css({ backgroundColor: "black", color: "white" });
+
+      // 햄버거 버튼 하위 ul li a 호버시 배경색 글자색 반전 -> 만들기!
+    }
+  );
+
+  let lpnum = 0;
+  // 음소거 버튼 클릭시 뮤트시키기
+  $(".mutedbtn").click(function () {
+    const tca = $(this).children("a");
+    // 레프트값 증가 변수
+    if (lpnum === -1) {
+      lpnum ++;
+      setTimeout(() => {
+        
+        tca.css({ left: "0%" }).parent(".mutedbtn").delay(1000).animate(
+          {
+            backgroundColor: "gray",
+          },
+          100
+        );
+      });
+      $(".muteoff").css({opacity:"1"});
+      $(".muteon").css({opacity:"0"})
+      return;
+    }
+    if (lpnum === 0) {
+      $(".muteoff").css({opacity:"0"});
+      $(".muteon").css({opacity:"1"})
+      tca.css({ left: "67%" }).parent(".mutedbtn").delay(1000).animate(
+        {
+          backgroundColor: "white",
+        },
+        100
+      );
+      lpnum--;
+      return;
+    } // else
+
+    // console.log(lpnum);
+  }); // 음소거 버튼 클릭시 뮤트시키기
+  // 함수구역 음소거 버튼 %증가 하게 만들기
 
 
 

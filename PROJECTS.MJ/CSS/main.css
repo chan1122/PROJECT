@@ -323,7 +323,6 @@ body {
   width: 0;
   overflow: hidden;
   color: lightblue;
-  white-space: nowrap; /* 줄바꿈방지 */
 }
 /* .mostpopular:hover > div {
   width: 100px;
@@ -782,7 +781,6 @@ footer {
   position: relative;
   width: 100%;
   height: 500px;
-  background-color: white;
   text-align: center;
   top: 50vw;
 }
@@ -955,7 +953,6 @@ footer .ffll1 {
   position: fixed;
   z-index: 100000000;
   top: 0;
-  background-color: white;
   transition: all 0.6s;
 }
 .whitewrapp.on {
@@ -1006,7 +1003,6 @@ footer .ffll1 {
   width: 0;
   overflow: hidden;
   transition: all 0.7s ease-in;
-  white-space: nowrap;
 }
 .hamul.on > li {
   width: 100%;
@@ -1020,22 +1016,9 @@ footer .ffll1 {
 .hamul > li:nth-child(3) {
   font-family: "Black Han Sans", sans-serif;
 }
-/* 첫번쨰 */
-.hamul.on > li:first-child a {
-  transform: translateX(0);
-  transition-delay: 0.5s;
-}
-.hamul.on > li:nth-child(2) a {
-  transform: translateX(0);
-  transition-delay: 0.7s;
-}
-.hamul.on > li:nth-child(3) a {
-  transform: translateX(0);
-  transition-delay: 0.9s;
-}
 
 /* 마지막 */
-.hamul.on > li:last-child a {
+.hamul.on > li:last-child > a {
   transform: translateX(0);
   font-family: "Cinzel", serif;
   transition-delay: 0.11s;
@@ -1046,16 +1029,16 @@ footer .ffll1 {
   font-size: 7vw;
   transition: all 0.2s;
   transition: transform 0.7s ease-out 0.5s;
-  transform: translateX(-200%);
+  width: 100%;
+  display: block;
 }
-.hamul > li:hover a {
-  opacity: 1;
-  color: #000;
-}
-.hamul > li:hover {
+
+.shamaa:hover,
+.shamaa:hover .hambtnbiga {
+  color: black;
   background-color: #fff;
-  border-bottom: 2px solid #000;
 }
+
 /* 햄버거 버튼 하단 상세 카테고리 */
 /* 공통 */
 .sham {
@@ -1065,28 +1048,11 @@ footer .ffll1 {
 /* 공통 하위 li공통 */
 .hamul .sham > li {
   font-size: 5vw;
-
-}
-.hamul .sham > li:hover{
-  background-color: black;
 }
 
 .hamul .sham > li > a {
   display: block;
   width: 100%;
-}
-/* 개별  */
-/* 인물소개 */
-.king {
-}
-/* 빌보드 차트 노래방차트 멜론 차트 */
-.mostmusic {
-}
-/* 게시판 */
-.Hboard {
-}
-/* 랭귀지 */
-.LANGUAGE {
 }
 
 /* 상단 로고 싸는박스 */
@@ -1188,7 +1154,6 @@ footer .ffll1 {
 .dback1 {
   position: absolute;
   transform: translateZ(-20px);
-  outline: 5px double white;
 
   top: 10px;
   left: 10px;
@@ -1202,4 +1167,18 @@ footer .ffll1 {
 /* 햄버거 버튼 하위 li세부 사항 조정 */
 .sham > li > a {
   width: 100%;
+}
+
+
+.muteoff{
+  display: block;
+  color: #fff;
+    right: 3px;
+    position: absolute;
+    transition: all 1s ease-in-out;
+}
+.muteon{
+  color: black;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }

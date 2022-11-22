@@ -243,9 +243,8 @@ $(() => {
     const tca = $(this).children("a");
     // 레프트값 증가 변수
     if (lpnum === -1) {
-      lpnum ++;
+      lpnum++;
       setTimeout(() => {
-        
         tca.css({ left: "0%" }).parent(".mutedbtn").delay(1000).animate(
           {
             backgroundColor: "gray",
@@ -253,19 +252,22 @@ $(() => {
           100
         );
       });
-      $(".muteoff").css({opacity:"1"});
-      $(".muteon").css({opacity:"0"})
+      $(".muteoff").css({ opacity: "1" });
+      $(".muteon").css({ opacity: "0" });
+      
+      $(".AUDIO").prop("muted", true);
       return;
     }
     if (lpnum === 0) {
-      $(".muteoff").css({opacity:"0"});
-      $(".muteon").css({opacity:"1"})
+      $(".muteoff").css({ opacity: "0" });
+      $(".muteon").css({ opacity: "1" });
       tca.css({ left: "67%" }).parent(".mutedbtn").delay(1000).animate(
         {
           backgroundColor: "white",
         },
         100
       );
+      $(".AUDIO").prop("muted", false);
       lpnum--;
       return;
     } // else
@@ -273,10 +275,6 @@ $(() => {
     // console.log(lpnum);
   }); // 음소거 버튼 클릭시 뮤트시키기
   // 함수구역 음소거 버튼 %증가 하게 만들기
-
-
-
-
 }); //제이쿼리 로딩구역/////////////////////////
 
 // 배열 객체 들!@!

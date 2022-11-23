@@ -155,22 +155,22 @@ h6 {
   text-align: right;
   font-size: 2vw;
   font-weight: bold;
-  opacity: .5;
-  transition: opacity .7s ease-in-out;
+  opacity: 0.5;
+  transition: opacity 0.7s ease-in-out;
 }
-.mutedbtn:hover{
+.mutedbtn:hover {
   opacity: 1;
 }
-.mutedbtn>a{
+.mutedbtn > a {
   position: absolute;
   background-color: #fff;
   box-shadow: 1px 5px #000;
   display: block;
-  width:25px;
+  width: 25px;
   height: 25px;
   border-radius: 50%;
   left: 0;
-  transition: all .8s linear;
+  transition: all 0.8s linear;
 }
 
 /* 흘러가는 글자 부모박스 */
@@ -470,7 +470,7 @@ h6 {
 .bb4 {
   left: 95%;
   top: 10%;
-  animation: youtubebubleani 10s linear infinite alternate;
+  animation: youtubebubleani 30s linear infinite alternate;
 }
 .bb4 > a {
   background-color: red;
@@ -487,6 +487,9 @@ h6 {
 }
 /* 틱톡 */
 .bb5 {
+  top: 10%;
+  left: 20%;
+  animation: tiktokbubleani 10s linear infinite alternate;
 }
 .bb5 > a {
   text-shadow: 4px 7px 10px red, -2px -6px 10px aqua;
@@ -503,6 +506,9 @@ h6 {
 }
 /* 프로필(나무위키) */
 .bb6 {
+  left: 80%;
+  top: 50%;
+  animation: profilebubleani 30s linear infinite alternate;
 }
 .bb6 > a {
   font-size: 3vw;
@@ -704,9 +710,145 @@ h6 {
 }
 /* 유튜브 */
 @keyframes youtubebubleani {
+  0% {
+    left: 95%;
+    top: 10%;
+  }
+  10% {
+    left: 90%;
+    top: 5%;
+  }
+  20% {
+    left: 85%;
+    top: 15%;
+  }
+  30% {
+    left: 80%;
+    top: 20%;
+  }
+  40% {
+    left: 75%;
+    top: 25%;
+  }
+  50% {
+    left: 70%;
+    top: 10%;
+  }
+  60% {
+    left: 65%;
+    top: 15%;
+  }
+  70% {
+    left: 70%;
+    top: 20%;
+  }
+  80% {
+    left: 75%;
+    top: 30%;
+  }
+  90% {
+    left: 80%;
+    top: 40%;
+  }
+  100% {
+    left: 70%;
+    top: 60%;
+  }
 }
 /* 틱톡 */
+@keyframes tiktokbubleani {
+  0% {
+    top: 10%;
+    left: 20%;
+  }
+  10% {
+    top: 20%;
+    left: 15%;
+  }
+  20% {
+    top: 30%;
+    left: 10%;
+  }
+  30% {
+    top: 40%;
+    left: 15%;
+  }
+  40% {
+    top: 50%;
+    left: 20%;
+  }
+  50% {
+    top: 60%;
+    left: 25%;
+  }
+  60% {
+    top: 70%;
+    left: 30%;
+  }
+  70% {
+    top: 80%;
+    left: 25%;
+  }
+  80% {
+    top: 85%;
+    left: 20%;
+  }
+  90% {
+    top: 90%;
+    left: 15%;
+  }
+  100% {
+    top: 85%;
+    left: 5%;
+  }
+}
 /* 프로필(나무위키) */
+@keyframes profilebubleani {
+  0%{
+    left: 80%;
+    top: 50%;
+  }
+  10%{
+    left: 70%;
+    top: 40%;
+  }
+  20%{
+    left: 60%;
+    top: 30%;
+  }
+  30%{
+    left: 50%;
+    top: 40%;
+  }
+  40%{
+    left: 40%;
+    top: 50%;
+  }
+  50%{
+    left: 30%;
+    top: 60%;
+  }
+  60%{
+    left: 20%;
+    top: 70%;
+  }
+  70%{
+    left: 10%;
+    top: 80%;
+  }
+  80%{
+    left: 5%;
+    top: 70%;
+  }
+  90%{
+    left: 15%;
+    top: 60%;
+  }
+  100%{
+    left: 80%;
+    top: 50%;
+  }
+}
 
 /* 건들면 터지는 비눗방울 (small)*/
 .bubblepop {

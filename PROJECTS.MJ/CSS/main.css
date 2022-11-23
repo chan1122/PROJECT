@@ -850,7 +850,7 @@ footer .flogo {
     stroke-dashoffset: -350%;
   }
   100% {
-    stroke: aqua;
+    stroke: #fff;
     stroke-dashoffset: 0%;
   }
 }

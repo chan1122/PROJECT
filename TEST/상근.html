@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보여줄게!</title>
+
+    <style>
+        body{
+            height: 2000px;
+            background: linear-gradient(to bottom, lightgreen,lightcoral,skyblue);
+        }
+        .wrap{
+            position: fixed;
+            width: 80vw;
+            height: 90vh;
+            overflow-x: scroll;
+            background-color: #fff;
+        }
+        .mw{
+            background-color: black;
+            width: 4000px;
+            height: 4000px;
+
+            animation: aaa  ease-out 10s alternate infinite;
+            position: absolute;
+        }
+        .mw>img:nth-child(1){
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .mw>img:nth-child(2){
+            position: absolute;
+            top: 300px;
+            right: 300px;
+        }
+        .mw>img:nth-child(3){
+            position: absolute;
+            top: 50%;
+            right: 50%;
+        }
+
+        @keyframes aa {
+            0%{
+                right: -10%;
+                top: -10%;
+            }
+
+            50% {
+                right: -50%;
+                top: -50%;
+            }
+            100%{
+                right: -100%;
+                top: -100%;
+            }
+        }
+
+        
+    </style>
+    <script src="./jquery/jquery-3.6.1.min.js"></script>
+    <script src="./jquery/jquery-ui.min.js"></script>
+    <script>
+        $(()=>{
+
+            $(".wrap").scroll(function(){
+                let SCCC = 0;
+                let SC = $(this).scrollTop();
+                let SCL = $(this).scrollLeft();
+                console.log("움직",SC,SCL)
+                $(this).scrollLeft("3300")
+                if(SC > SCCC){
+                    $(this).scrollLeft("3000px")
+                }
+                
+                SCCC = SC;
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="mw">
+            <img src="./images/cat1.jpg" alt="냥이">
+            <img src="./images/dog1.jpg" alt="멍이">
+            <img src="./images/dog2.jpg" alt="멍멍이">
+        </div>
+    </div>
+    
+</body>
+</html>

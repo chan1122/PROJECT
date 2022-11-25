@@ -1,34 +1,48 @@
 // 마우스 휠 (스크롤이벤트 전용 페이지)
 $(() => {
-  //   console.log("스크롤 준비완료!");
-  ///////////////////////////////
-  // 이벤트명 scroll
-  // 대상 window
-  // 스크롤 이벤트 전용 변수 : SC
-  let SC;
-  let SC2 = 0;
-  // 2번째 화면 높이 변수
-  let twoView = $(".main");
-  // 3번째 화면 높이 변수
-  let altreeView = $(".main3").offset().top + "px";
-  let platbox = $(".wrap3dplat").offset().top + "px";
-  $(window).scroll(function () {
-    SC = $(this).scrollTop();
+  let scTop;
+  let lastSc;
+  const slidegnb = $(".slidegnb");
+  const sm = $(".sm");
+  const topA = $(".tbox1");
 
-    // 스크롤 이벤트
-    // 여기서 this는 window를 가리킨다
-    // scrollTop() 메서드 - 세로 스크롤 위치값을 리턴하는
-    // 메서드
-    console.log(SC); // -> 콘솔창에 현제 세로 위치값이 찍힌다...
-    // 첫화면 변수
-    // let firstView = $(window).scrollTop("0");
-    // if($(this).scrollTop() >= Math.ceil($('.target').offset().top))
-    if (SC > SC2) {
-    
-        
+
+
+  $(window).scroll(function () {
+    //  스크롤 위치값 찍기
+    scTop = $(this).scrollTop(); // -> 세로 스크롤 위치값을 리턴하는 메서드
+    // 콘솔창에 위치값 찍어보기
+    // console.log(scTop)
+
+    // 1 . 슬림메뉴 클래스 온 적용
+    if (scTop >= 100) {
+
+      topA.css({ position: "fixed" });
+      topA.find(".top").slideUp();
+      topA.addClass("on")
+
+      if (scTop > lastSc) {
+        slidegnb.addClass("up");
+        sm.fadeOut();
+      } else {
+        slidegnb.removeClass("up");
+        sm.fadeIn(1500);
+      }
+    } else {
+      topA.css({ position: "relative" });
+      topA.find(".top").slideDown();
       
     }
 
-    SC2 = SC;
-  }); //////// SCROLL /////////
+    ////////////////////////////
+    // 스크롤 방향 알아내기
+    if (scTop > lastSc) {
+      console.log("아래");
+    } else {
+      console.log("윗방향!");
+    }
+    // 마지막 위치 없데이트 필수!
+
+    lastSc = scTop;
+  }); /// 스크롤 ///
 }); ///////  JQB  //////////

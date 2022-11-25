@@ -101,14 +101,17 @@
   text-align: center;
   z-index: -1;
 }
-
 /* 박스 공통 */
 .box {
   margin: 0 auto;
-  /* max-width: 1400px; */
-  min-height: 50px;
+  max-width: 1400px;
+  /* min-height: 50px; */
 }
 
+.tbox1.on .slidegnb.up .gnb>ul{
+  overflow-y: hidden;
+  height: 0;
+}
 /* 컨텐츠 담는 박스 공통 */
 .cbox {
   position: relative;

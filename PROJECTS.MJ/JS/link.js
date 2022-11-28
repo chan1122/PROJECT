@@ -3,9 +3,9 @@ $(() => {
     // 변수선언
     let abtn = $(".abtn");
 
-    abtn.each((ele) => {
+    abtn.each((idx,ele) => {
         /* 모든 a요소 기본 이동 막기  */
-        abtn.click(function (e) {
+        $(ele).click(function (e) {
             e.preventDefault();
 
             // a요소 버튼 클릭시
@@ -127,8 +127,17 @@ $(() => {
             }else if(url === "pp"){
                 window.location.href = "./index.html"
             }else if(url === "bd" || url==="mbd" || url === "ubd"){
-                window.location.href = "./index.html"
+                window.location.href = "./border.html"
+            }
+            else if(url === "lang" || url === "" || url === "introtext" || url === "od"){
+                alert(
+                    "현제 공사중 입니다. / 게시판(일밤,회원) /앨범상세(서브페이지)  /안내문구,페이지소개 / 를 이용 가능하십니다! 이용에 불편을 드려 죄송합니다.",
+                    function(){
+                        window.location.href = "./sub.html"
+                    }
+                );
+                
             }
         }); ///// abtn click //////
-    });
+    }); /// each ////
 }); ///////// JQB ///////////////

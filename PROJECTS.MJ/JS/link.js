@@ -3,7 +3,7 @@ $(() => {
     // 변수선언
     let abtn = $(".abtn");
 
-    abtn.each((idx,ele) => {
+    abtn.each((idx, ele) => {
         /* 모든 a요소 기본 이동 막기  */
         $(ele).click(function (e) {
             e.preventDefault();
@@ -12,7 +12,6 @@ $(() => {
             let atxt = $(this).text().trim();
 
             console.log("안뇽", atxt);
-           
 
             let url;
 
@@ -104,11 +103,16 @@ $(() => {
                 case "페이지 소개글":
                     url = "pagetext";
                     break;
+                case "logIn":
+                    url = "lg";
+                    break;
+                case "Sign":
+                    url = "mem";
+                    break;
             } ///// switch /////
 
-
-            console.log("url",url)
-          /* 
+            console.log("url", url);
+            /* 
                     앨범 소개 = at
                     앨범 상세 = ad
                     인기 = pp
@@ -119,24 +123,32 @@ $(() => {
                     기타 세부사항 = od
                     안내문구 = introtext
                     페이지 소개글 = pagetext
+                    로그인 = lg
+                    회원가입 = mem
                 */
 
-
-            if(url === "at" || url==="ad"){
-                window.location.href = "./sub.html"
-            }else if(url === "pp"){
-                window.location.href = "./index.html"
-            }else if(url === "bd" || url==="mbd" || url === "ubd"){
-                window.location.href = "./border.html"
-            }
-            else if(url === "lang" || url === "" || url === "introtext" || url === "od"){
+            if (url === "at" || url === "ad") {
+                window.location.href = "./sub.html";
+            } else if (url === "pp") {
+                window.location.href = "./index.html";
+            } else if (url === "bd" || url === "mbd" || url === "ubd") {
+                window.location.href = "./border.html";
+            } else if (
+                url === "lang" ||
+                url === "" ||
+                url === "introtext" ||
+                url === "od"
+            ) {
                 alert(
                     "현제 공사중 입니다. / 게시판(일밤,회원) /앨범상세(서브페이지)  /안내문구,페이지소개 / 를 이용 가능하십니다! 이용에 불편을 드려 죄송합니다.",
-                    function(){
-                        window.location.href = "./sub.html"
+                    function () {
+                        window.location.href = "./sub.html";
                     }
                 );
-                
+            } else if (url === "lg") {
+                window.location.href = "./login.html";
+            } else if (url === "mem") {
+                window.location.href = "./join.html";
             }
         }); ///// abtn click //////
     }); /// each ////

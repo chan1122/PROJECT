@@ -1,7 +1,8 @@
 // 링크 이동 js
 $(() => {
     // 변수선언
-    let abtn = $(".abtn");
+    let abtn = $("html a");
+    console.log("이동준비완료")
 
     abtn.each((idx, ele) => {
         /* 모든 a요소 기본 이동 막기  */
@@ -128,12 +129,16 @@ $(() => {
                 */
 
             if (url === "at" || url === "ad") {
-                window.location.href = "./sub.html";
+                window.location.href = "sub.html";
             } else if (url === "pp") {
-                window.location.href = "./index.html";
+                window.location.href = "index.html";
             } else if (url === "bd" || url === "mbd" || url === "ubd") {
-                window.location.href = "./border.html";
-            } else if (
+                window.location.href = "border.html";
+            }  else if (url === "lg") {
+                window.location.href = "login.html";
+            } else if (url === "mem") {
+                window.location.href = "join.html";
+            }else if (
                 url === "lang" ||
                 url === "" ||
                 url === "introtext" ||
@@ -145,10 +150,6 @@ $(() => {
                         window.location.href = "./sub.html";
                     }
                 );
-            } else if (url === "lg") {
-                window.location.href = "./login.html";
-            } else if (url === "mem") {
-                window.location.href = "./join.html";
             }
         }); ///// abtn click //////
     }); /// each ////

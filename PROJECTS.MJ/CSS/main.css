@@ -1120,7 +1120,7 @@ footer .ffll1 {
   margin-top: 20vw;
 
   transform-style: preserve-3d;
-  animation: bottomplat 5s ease-in-out alternate infinite;
+  /* animation: bottomplat 5s ease-in-out alternate infinite; */
 }
 /* 줄 박스!! 1번 앞면 */
 .firstfront1 {
@@ -1149,10 +1149,13 @@ footer .ffll1 {
   right: 20px;
 
   text-align: center;
-  font-size: 1.7vw;
+  font-size: 27px;
   transform: translateZ(40px);
 
+  color: #fff;
   font-weight: bold;
+  /* text-shadow: 5px 5px 10px #fff; */
+
 }
 /* 플랫 카드 뒷면 */
 .dback1 {

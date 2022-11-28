@@ -6,6 +6,10 @@ let AUDIO = $(".AUDIO");
 let track = $(".track");
 //제이쿼리 로딩구역
 $(() => {
+
+
+
+
   // 메인 트랙 커버박스 클릭 이벤트 //
   $(".mtrackcoverinng").click(function () {
     $(this).animate({

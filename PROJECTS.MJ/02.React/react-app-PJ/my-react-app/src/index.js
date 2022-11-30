@@ -37,3 +37,6 @@ function PMJ_APP() {
         </BrowserRouter>
     ); ///////// return ///////////
 } /////////////// PMJ_APP /////////////////////
+
+const root0 = ReactDOM.createRoot(document.getElementById("root0"));
+root0.render(<PMJ_APP />);

@@ -5,10 +5,38 @@ let album = $(".album");
 let AUDIO = $(".AUDIO");
 let track = $(".track");
 let ttracks = $(".ttrack");
+const mtk = $(".mtrack");
+const mtc = $(".mtrackcoverinng");
+const MTC = $(".maintrackcover");
+const hb = $("html,boby");
+// 트램스폼!
+let tfrxry1 = " translate(-50%, -50%) rotateX(90deg) rotateY(0deg)";
+let tfrxry2 = "translate(-50%, -50%) rotateX(0deg) rotateY(0deg) rotate(0)";
+
+let main_album_track_FOR50 = `<div class="mtt1 track mtrackcoverinng">
+<!-- 오디오 들어가는 자리 JS에서 뿌려주는중!.../../ -->
+<audio src="#" class="AUDIO" muted></audio>
+<!-- 앨범---------------3D요소---------------------------- -->
+<div class="ttrack album mtrack gubun1">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+</div>`
 //제이쿼리 로딩구역
 $(() => {
+    // 메인  앨범 트랙 반복문 
+    for(i = main_album_track_FOR50 ; i<50 ; i++){
+        MTC.append(i).html()
+
+    }
+    
+    
     // 메인 트랙 커버박스 클릭 이벤트 //
-    $(".mtrackcoverinng").click(function () {
+    mtc.click(function () {
         $(this).animate({
             height: "700px",
             overflow: "hidden",
@@ -18,15 +46,13 @@ $(() => {
             .hide(10, function () {
                 $(this)
                     .css({
-                        transform:
-                            " translate(-50%, -50%) rotateX(90deg) rotateY(0deg)",
+                        transform: tfrxry1,
                         // animation: "running",
                     })
                     .delay(100)
                     .show(10, function () {
                         $(this).css({
-                            transform:
-                                "translate(-50%, -50%) rotateX(0deg) rotateY(0deg) rotate(0)",
+                            transform: tfrxry2,
                         }); // 등장!
                     });
             }) // 사라진후 이어서!
@@ -36,10 +62,10 @@ $(() => {
             .css({ height: "0" }, 800)
             .find(".mtrack")
             .css({
-                transform: "translate(-50%, -50%) rotateX(90deg) rotateY(0deg)",
+                transform: tfrxry1,
             }).toggle;
 
-        $(".track").each((idx, ele) => {
+        track.each((idx, ele) => {
             $(ele).find(".AUDIO").get(0).pause();
         });
 
@@ -49,19 +75,8 @@ $(() => {
 
         iam.play();
 
-        // $(this).find("AUDIO").addClass("on");
-
-        // if ($(this).find("AUDIO").hasClass("on")) {
-        //   // 시작 // 내가 찍은것에 클래스on이 있다면
-        //   // 실행해라
-        //   $(this).find("AUDIO").get(0).play();
-        // }
-        // // 멈춰
-        // $(this).siblings().find("AUDIO").removeClass("on");
-        // $(this).siblings().find("AUDIO").get(0).pause();
-
         // 스테이지 맞추기
-        $("html,body").animate(
+        hb.animate(
             {
                 scrollTop: $(this).offset().top + "px",
             },
@@ -73,7 +88,7 @@ $(() => {
     // each((순번,자신)=>{})
 
     // DB연동용 순번 배열 (앨범 이미지 배열임)
-  let albnum = [
+    let albnum = [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
         21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
         39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
@@ -82,7 +97,8 @@ $(() => {
     album.each((i1, e1) => {
         // 변수 셋팅
 
-        let sns = $(".track").eq(i1).find("a");
+        let sns = track.eq(i1).find("a");
+        let ahGPa
 
         // 인스타그램 아이콘
         sns.eq(0).attr("href", GAG["PMJ" + albnum[i1]]["SNS주소"][0]);
@@ -93,7 +109,7 @@ $(() => {
         // 페이스북 아이콘
         sns.eq(3).attr("href", GAG["PMJ" + albnum[i1]]["SNS주소"][4]);
 
-        $(".track")
+        track
             .eq(i1)
             .find(".AUDIO")
             .attr(
@@ -122,8 +138,6 @@ $(() => {
         $(this).css({ zIndex: ti });
     });
 
-
-
     ttracks.each(function (t1, r1) {
         $(r1).each((t2, r2) => {
             $(r2).css({
@@ -140,7 +154,6 @@ $(() => {
             });
         });
     });
-
     // 상단 햄버거 버튼 클릭시 애니메이션
     $(".topbtn").click(function () {
         //버튼에 줄가있는거 x자 만들기
@@ -277,9 +290,7 @@ $(() => {
         // console.log(lpnum);
     }); // 음소거 버튼 클릭시 뮤트시키기
     // 함수구역 음소거 버튼 %증가 하게 만들기.
-    
 }); //제이쿼리 로딩구역/////////////////////////
-
 
 // 배열 객체 들!@!
 let GAG = {
@@ -539,4 +550,3 @@ let GAG = {
 };
 
 console.log(GAG);
-

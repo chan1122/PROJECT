@@ -1,7 +1,7 @@
+import $ from "jquery";
 // PMJSUB PJ
 
 // 상단 햄버거 버튼 클릭시 애니메이션
-
 // import {albnum} from `./main`;
 $(() => {
     $(".topbtn").click(function () {
@@ -73,25 +73,25 @@ $(() => {
         }
     );
 
-    let swiper = new Swiper(".mySwiper", { 
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      rewind:true,
-      coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
+    // let swiper = new Swiper(".mySwiper", { 
+    //   effect: "coverflow",
+    //   grabCursor: true,
+    //   centeredSlides: true,
+    //   slidesPerView: "auto",
+    //   rewind:true,
+    //   coverflowEffect: {
+    //         rotate: 50,
+    //         stretch: 0,
+    //         depth: 100,
+    //         modifier: 1,
 
-            slideShadows: true,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-        },
+    //         slideShadows: true,
+    //     },
+    //     pagination: {
+    //         el: ".swiper-pagination",
+    //     },
        
-    });
+    // });
 
     /*********** 이미지 뿌리는 곳!! ***********/
 

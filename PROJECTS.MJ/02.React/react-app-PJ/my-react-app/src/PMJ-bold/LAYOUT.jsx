@@ -1,12 +1,15 @@
 import { Outlet, Link } from "react-router-dom";
 import React from "react";
-import "./Layout.css";
-import "../sub_JSX"
+import $ from "jquery";
+import "../sub_JSX";
 // import "../swiper-bundle.min.js"
 // 상단 가로 앨범 + 하단 로고 + 앨범에 링크 따라 움직이는 레이아웃 페이지 Route 에 상단에
 // root로서 고정될 페이지
 
 const Layout = () => {
+    let myFn=()=>{
+        $("body").css({background:"red"})
+    }
     return (
         <React.Fragment>
             {/* 1. 상단영역 */}
@@ -51,7 +54,7 @@ const Layout = () => {
                         </li>
                     </ul>
                     {/* <!-- 로고 싸는 박스 --> */}
-                    <div calssName="top">
+                    <div calssName="top" onClick={myFn}>
                         {/* <!-- 상단 부분 구분하기위해 헤더태그를 붙임 --> */}
                         <header>
                             {/* <!-- 탑로고 SVG관련해서 있음 --> */}

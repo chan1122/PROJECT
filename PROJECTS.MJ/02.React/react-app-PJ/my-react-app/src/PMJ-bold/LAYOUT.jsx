@@ -38,7 +38,6 @@ const Layout = () => {
                     <ul calssName="lm">
                         <li>
                             <a href="#" calssName="abtn login">
-                                {" "}
                                 logIn
                             </a>
                         </li>
@@ -151,8 +150,7 @@ const Layout = () => {
                             <ul>
                                 <li calssName="sm">
                                     <a href="#" calssName="abtn">
-                                        {" "}
-                                        앨범소개♡{" "}
+                                        앨범소개♡
                                     </a>
                                     <ul calssName="ssm">
                                         <div calssName="beforebox">
@@ -166,8 +164,7 @@ const Layout = () => {
                                 </li>
                                 <li calssName="sm">
                                     <a href="#" calssName="abtn">
-                                        {" "}
-                                        CHART♡{" "}
+                                        CHART♡
                                     </a>
                                     <ul calssName="ssm">
                                         <div calssName="beforebox">
@@ -191,8 +188,7 @@ const Layout = () => {
                                 </li>
                                 <li calssName="sm">
                                     <a href="#" calssName="abtn">
-                                        {" "}
-                                        게시판♡{" "}
+                                        게시판♡
                                     </a>
                                     <ul calssName="ssm">
                                         <div calssName="beforebox">
@@ -211,8 +207,7 @@ const Layout = () => {
                                 </li>
                                 <li calssName="sm">
                                     <a href="#" calssName="abtn">
-                                        {" "}
-                                        기타세부사항♡{" "}
+                                        기타세부사항♡
                                     </a>
                                     <ul calssName="ssm">
                                         <div calssName="beforebox">

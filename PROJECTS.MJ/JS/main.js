@@ -4,6 +4,7 @@
 let album = $(".album");
 let AUDIO = $(".AUDIO");
 let track = $(".track");
+let ttracks = $(".ttrack");
 //제이쿼리 로딩구역
 $(() => {
     // 메인 트랙 커버박스 클릭 이벤트 //
@@ -121,7 +122,7 @@ $(() => {
         $(this).css({ zIndex: ti });
     });
 
-    let ttracks = $(".ttrack");
+
 
     ttracks.each(function (t1, r1) {
         $(r1).each((t2, r2) => {

@@ -1,6 +1,8 @@
 import { Outlet, Link } from "react-router-dom";
 import React from "react";
 import "./Layout.css";
+import "../sub_JSX"
+// import "../swiper-bundle.min.js"
 // 상단 가로 앨범 + 하단 로고 + 앨범에 링크 따라 움직이는 레이아웃 페이지 Route 에 상단에
 // root로서 고정될 페이지
 
@@ -320,6 +322,463 @@ const Layout = () => {
             </div>
 
             {/* 2. 메인영역 */}
+            <main>
+                <div className="swiper mySwiper wrappsub">
+                    <div className="swiper-wrapper">
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="swiper-slide albumsub tracksub">
+                            <audio src="" className="AUDIO"></audio>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div className="swiper-pagination"></div>
+                </div>
+            </main>
             {/* 3. 하단영역 */}
         </React.Fragment>
     ); //// return

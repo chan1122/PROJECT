@@ -1,5 +1,5 @@
 // PMJSUB PJ
-import $ from "jquery";
+
 // 상단 햄버거 버튼 클릭시 애니메이션
 
 // import {albnum} from `./main`;

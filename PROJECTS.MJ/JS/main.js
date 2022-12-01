@@ -3,7 +3,7 @@
 // 상단 import 구역 -------------------------------------
 ////////////////////////////////////////////
 import { LoadFor, Widbb, MuteBtn } from "./module/FUNCTIONS.js";
-import { ssm, mtb, Gul, GuIA, navC, GulU, Hamli } from "./module/variable.js";
+import { ssm, mtb, Gul, GuIA, navC, Hamli } from "./module/variable.js";
 LoadFor();
 ////////////////////////////////////////////////
 // 변수 정리 구역 ------------------------------
@@ -17,6 +17,7 @@ const AUDIO = $(".AUDIO");
 $(() => {
   // 메인 트랙 커버박스 클릭 이벤트 //
   mtc.click(function () {
+
     $(this).animate({
       height: "50vh",
     });

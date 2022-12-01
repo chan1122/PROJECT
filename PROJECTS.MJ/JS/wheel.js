@@ -4,7 +4,7 @@ let port = 0;
 $(() => {
     let lastSc = 0;
 
-    $(window).scroll(function () {
+    $(window).on("mousewheel wheel",function () {
         //  스크롤 위치값 찍기
         let scTop = $(this).scrollTop(); // -> 세로 스크롤 위치값을 리턴하는 메서드
         // 콘솔창에 위치값 찍어보기
@@ -37,6 +37,7 @@ $(() => {
         //   },
         //   600
         // );
+        
         ////////////////////////////
         // 스크롤 방향 알아내기
         if (port) return;
@@ -56,25 +57,18 @@ $(() => {
         Cl(mot, "2버째");
         Cl(mot2, "집약");
         Cl(mot3, "플랫");
+
         // 최상단으로 가게 하는 것!
-        if (scTop <= mot && scTop <= lastSc) {
-            hb.animate({ scrollTop: 0 }, 1000);
+        if (scTop >= 200 && scTop <= 300) {
+            hb.animate({ scrollTop: mot+"px" }, 1000);
         }
         // // 두번째 앨범 으로 가게 함!
-        else if (
-            (lastSc >= scTop && scTop <= mot2) ||
-            (lastSc <= scTop && scTop <= mot2)
-        ) {
-            hb.animate({ scrollTop: mot }, 1000);
+        else if (scTop > mot && scTop <= mot+200) {
+            hb.animate({ scrollTop: mot2+"px" }, 1000);
         }
         // 앨범 집약 페이지로 가게 하는거
-        else if (
-            // 마우스 올릴때
-            (lastSc >= scTop && scTop <= mot3 && scTop >= 0ㅜㅗㅠ ) ||
-            // 마우스 내릴때
-            (lastSc <= scTop && scTop <= mot3 && scTop >= 0)
-        ) {
-            hb.animate({ scrollTop: mot2 }, 1000);
+        else if (scTop > mot2 && scTop <= mot2+200) {
+            hb.animate({ scrollTop: mot3+"px" }, 1000);
         }
         // //하단 플랫 카드 부분으로 가게 하는
         // else if(){

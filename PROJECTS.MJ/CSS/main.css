@@ -20,6 +20,7 @@ font-family: 'Single Day', cursive; = GNB폰트
 @import url(core.css);
 @import url(comon.css);
 @import url(AUDIO.css);
+@import url(track.css);
 
 /* 공사중 표시 */
 body * {
@@ -1171,15 +1172,4 @@ footer .ffll1 {
     width: 100%;
 }
 
-.muteoff {
-    display: block;
-    color: #fff;
-    right: 3px;
-    position: absolute;
-    transition: all 1s ease-in-out;
-}
-.muteon {
-    color: black;
-    opacity: 0;
-    transition: all 1s ease-in-out;
-}
+

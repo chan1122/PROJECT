@@ -8,12 +8,18 @@
 }
 /* 메인TRACK 1번 앨범 */
 .ttrack {
-  animation: ttrackani 20s ease infinite alternate;
+  animation: ttrackani ease infinite alternate;
   animation-timing-function: linear;
+  transform: translate(-50%,-50%) rotateX(90deg) rotateY(0deg) rotate(90deg);
+  transition: 1s ease-out;
+}
+.ttrack.on{
+  animation: none;
 
+  transform: translate(-50%,-50%) rotateX(0deg) rotateY(0deg) rotate(0deg);
 }
 @keyframes ttrackani {
   to {
-    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(360deg);
+    transform: translate(-50%, -50%) rotateX(90deg) rotateY(0deg) rotate(900deg);
   }
 }

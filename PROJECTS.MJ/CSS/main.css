@@ -1117,7 +1117,7 @@ footer .ffll1 {
     margin-top: 20vw;
 
     transform-style: preserve-3d;
-    /* animation: bottomplat 5s ease-in-out alternate infinite; */
+    animation: bottomplat 5s ease-in-out alternate infinite;
 }
 /* 줄 박스!! 1번 앞면 */
 .firstfront1 {

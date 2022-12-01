@@ -108,10 +108,12 @@
   /* min-height: 50px; */
 }
 
-.tbox1.on .slidegnb.up .gnb>ul{
+.tbox1.on .slidegnb.up .gnb > ul {
   overflow-y: hidden;
   height: 0;
 }
+
+
 /* 컨텐츠 담는 박스 공통 */
 .cbox {
   position: relative;
@@ -146,7 +148,7 @@ h6 {
   background-color: gray;
 
   width: 80px;
-  height: 30px;
+  height: 22px;
   z-index: 100000000;
   border-radius: 30px;
   right: 40px;
@@ -161,13 +163,13 @@ h6 {
   opacity: 0.5;
   transition: opacity 0.7s ease-in-out;
 }
-.mutedbtn.on{
+.mutedbtn.on {
   background-color: #fff;
 }
-.mutedbtn.on .mbtmon{
+.mutedbtn.on .mbtmon {
   left: 58px;
 }
-.mutedbtn.on .muteon{
+.mutedbtn.on .muteon {
   opacity: 1;
 }
 .mutedbtn:hover {
@@ -829,47 +831,47 @@ h6 {
 }
 /* 프로필(나무위키) */
 @keyframes profilebubleani {
-  0%{
+  0% {
     left: 80%;
     top: 50%;
   }
-  10%{
+  10% {
     left: 70%;
     top: 40%;
   }
-  20%{
+  20% {
     left: 60%;
     top: 30%;
   }
-  30%{
+  30% {
     left: 50%;
     top: 40%;
   }
-  40%{
+  40% {
     left: 40%;
     top: 50%;
   }
-  50%{
+  50% {
     left: 30%;
     top: 60%;
   }
-  60%{
+  60% {
     left: 20%;
     top: 70%;
   }
-  70%{
+  70% {
     left: 10%;
     top: 80%;
   }
-  80%{
+  80% {
     left: 5%;
     top: 70%;
   }
-  90%{
+  90% {
     left: 15%;
     top: 60%;
   }
-  100%{
+  100% {
     left: 80%;
     top: 50%;
   }
@@ -960,7 +962,6 @@ h6 {
     margin-left: 0px;
   }
 }
-
 
 /* 하단 플랫 카드 css */
 .st0 {

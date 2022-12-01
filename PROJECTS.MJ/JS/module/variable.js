@@ -18,23 +18,33 @@ let main_album_track_FOR50 = `
       <span></span>
     </div>
     </div>`;
+// HTML BODY
 const hb = $("html,boby");
+// 앨범 커버 박스 부모의 부모격
 const MTC = $(".maintrackcover");
+// gnb요소
+const slidegnb = $(".slidegnb");
+const Gul = $(".gnb > ul > li");
+const GuIA = Gul.children("a");
+const navC = $(".nav");
+// gnb하위요소
 let ssm = $(".ssm");
+const sm = $(".sm");
+// 음소거 관련
 let moff = $(".muteoff");
 let mon = $(".muteon");
-
 const mtb = $(".mutedbtn");
-const sm = $(".sm");
-const slidegnb = $(".slidegnb");
+// 상단 헤더 영역
 const topA = $(".tbox1");
-const Cl = console.log;
+// 햄버거 버튼 관련
+const Hamli = $(".hamul li");
+
 /*********************************** 
   [JQB안쪽 변수] 
 ***********************************/
 
-
 let lpnum = 0;
+const Cl = console.log;
 // 추가된변수
 
 export {
@@ -52,4 +62,9 @@ export {
   slidegnb,
   topA,
   Cl,
+  Gul,
+  GuIA,
+  navC,
+  GulU,
+  Hamli,
 };

@@ -1,19 +1,16 @@
 /**********  음원사이트 메인 페이지 자바스크립트  **********/
-/////////////////////////////////////////////////////////
+////////////////////////////////////////////
 // 상단 import 구역 -------------------------------------
-////////////////////////////////////////////////////////
-import { LoadFor, Widbb ,MuteBtn } from "./module/FUNCTIONS.js";
-import { tfrxry1, tfrxry2, hb,ssm,lpnum,  moff,
-  mon,mtb } from "./module/variable.js";
-import albnum from "./module/DBconnect.js";
+////////////////////////////////////////////
+import { LoadFor, Widbb, MuteBtn } from "./module/FUNCTIONS.js";
+import { ssm, mtb, Gul, GuIA, navC, GulU, Hamli } from "./module/variable.js";
 LoadFor();
 ////////////////////////////////////////////////
 // 변수 정리 구역 ------------------------------
-let AUDIO = $(".AUDIO");
-const mtk = $(".mtrack");
 const mtc = $(".mtrackcoverinng");
 const track = $(".track");
 const ttrack = $(".ttrack");
+const AUDIO = $(".AUDIO");
 ///////////////////////////////////////////////////////////
 //-------------------------------------------------------//
 // JQB ////////////////////////////////////////////////////
@@ -24,12 +21,15 @@ $(() => {
       height: "50vh",
     });
     // 앨범 세우고 내리기
-    $(".ttrack", this).delay(2000).addClass("on")
+    $(".ttrack", this)
+      .delay(2000)
+      .addClass("on")
       .parent()
       .siblings()
       .css({ height: "0" })
-      .find(".ttrack").removeClass("on")
-      
+      .find(".ttrack")
+      .removeClass("on");
+
     // 오디오 뿌려주기
     track.each((idx, ele) => {
       $(ele).find(".AUDIO").get(0).pause();
@@ -37,11 +37,9 @@ $(() => {
     // 오디오재생 변수 할당
     let iam = $(this).find(".AUDIO").get(0);
     // 오디오 클릭시 처음부터  재생
-   iam.currentTime = 0;
+    iam.currentTime = 0;
 
     iam.play();
-
-
   }); // 메인 트랙 커버박스 클릭 이벤트 //
   // 앨범 z-index주기
   $(track.get().reverse()).each(function (ti, te) {
@@ -60,7 +58,6 @@ $(() => {
     $(this).toggleClass("on");
     Widbb();
   }); // 상단 햄버거 버튼 클릭시 이벤트 //
-
 
   // 상단 첫번쨰 MPP호버시 늘어나는 애니
   $(".mostpopular").hover(
@@ -91,32 +88,33 @@ $(() => {
     background: "#000",
     left: "0",
   });
-  $(".gnb > ul > li").hover(
+  Gul.hover(
     function () {
       //오버시
       $(this).children("ul").stop().slideDown();
 
-      $(".gnb >ul>li>a").css({
+      GuIA.css({
         color: "black",
         transition: ".5s",
         fontweight: "bold",
       });
-      $(".nav").css({ background: "#fff", transition: ".2s" });
+      navC.css({ background: "#fff", transition: ".2s" });
     },
     function () {
       //아웃시
       $(this).children("ul").stop().slideUp();
-      $(".gnb >ul>li>a").css({
+
+      GuIA.css({
         color: "#fff",
         transition: ".5s",
         fontweight: "bold",
       });
-      $(".nav").css({ background: "#000", transition: ".2s" });
+      navC.css({ background: "#000", transition: ".2s" });
     }
   );
 
-  // 햄버거 버튼 마우스 오버 아웃 시
-  $(".hamul li").hover(
+  // 햄버거 버튼 안쪽 요소들 오버시--------
+  Hamli.hover(
     function () {
       const tfs = $(this).find(".sham");
       // 마우스 오버시
@@ -125,8 +123,6 @@ $(() => {
       $(this)
         .children(".hambtnbiga")
         .css({ backgroundColor: "white", color: "black" });
-
-      // 햄버거 버튼 하위 ul li a 호버시 배경색 글자색 반전 -> 만들기!
     },
     function () {
       // 마우스 아웃시
@@ -136,17 +132,13 @@ $(() => {
       $(this)
         .children(".hambtnbiga")
         .css({ backgroundColor: "black", color: "white" });
-
-      // 햄버거 버튼 하위 ul li a 호버시 배경색 글자색 반전 -> 만들기!
     }
   );
+  // 햄버거 버튼 안쪽 요소들 오버시
 
-  
-  // 음소거 버튼 클릭시 뮤트시키기
+  // 음소거 버튼 클릭
   mtb.click(function () {
     MuteBtn();
-  }); // 음소거 버튼 클릭시 뮤트시키기
+  }); // 음소거 버튼
 }); //제이쿼리 로딩구역/////////////////////////
-let GAG = JSON.parse(JSON.stringify(PMJjsonDATA));
-console.log(GAG);
-
+// 제이슨 파일 - albnum 파일 불러와서 변수에 할당함!

@@ -66,8 +66,16 @@ function Widbb() {
   $(".hamul").toggleClass("on");
 } ////// Widbb ////////////////////////////////
 // ----------------------------------------//
+///// 음소거 버튼 ----------------------//////
 function MuteBtn() {
  mtb.toggleClass("on");
+//  클래스 on이있으면 음소거 해제
+ if(mtb.hasClass("on")){
+  $(".AUDIO").prop("muted",false)
+ }else{
+  // 아니라면 음소거
+  $(".AUDIO").prop("muted",true)
+ }
 }
 
 export { LoadFor, Widbb, MuteBtn };

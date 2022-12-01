@@ -28,9 +28,8 @@ $(() => {
       topA.css({ position: "relative" });
       topA.find(".top").slideDown();
       topA.find(".lm").slideDown();
+      topA.removeClass("on");
     }
-    let aa = $(".main3").offsetTop()
-    Cl(aa);
     // 스테이지 맞추기
     // hb.animate(
     //   {

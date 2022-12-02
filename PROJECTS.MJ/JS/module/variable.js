@@ -49,6 +49,8 @@ const mtb = $(".mutedbtn");
 const topA = $(".tbox1");
 // 햄버거 버튼 관련
 const Hamli = $(".hamul li");
+const tbt = $(".topbtn");
+const mpp = $(".mostpopular")
 /*********************************** 
   [JQB안쪽 변수] 
 ***********************************/
@@ -93,5 +95,7 @@ export {
     palt,
     subAl,
   GAG,
+  tbt,
+mpp,
 
 };

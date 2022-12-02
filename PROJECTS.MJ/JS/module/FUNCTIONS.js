@@ -9,8 +9,12 @@ import {
     lpnum,
     moff,
     mon,
+    SUB_album_track_FOR,
+    subAl,
+    GAG,
+
 } from "./variable.js";
-let GAG = JSON.parse(JSON.stringify(PMJjsonDATA));
+
 //////////////////////////////////////////////////
 // 함수 구역 -------------------------------------
 //////////////////////////////////////////////////
@@ -78,5 +82,34 @@ function MuteBtn() {
         $(".AUDIO").prop("muted", true);
     }
 }
-
-export { LoadFor, Widbb, MuteBtn };
+/* 서브 페이지 반복 형식 박아넣기 */
+function PMJ_SUB_FOR() {
+    for (let i = 0; i < 50; i++) {
+        subAl.append(SUB_album_track_FOR);
+    }
+    let albumsub = $(".albumsub");
+    // 이미지 뿌리기
+    albumsub.each((i1, e1) => {
+        // 음원 뿌리기
+        $(i1)
+            .find(".AUDIO")
+            .attr(
+                "src",
+                "images/MUSIC/" +
+                    albnum[i1] +
+                    "." +
+                    GAG["PMJ" + albnum[i1]]["노래"] +
+                    ".mp3"
+            );
+        $(e1)
+            .children("span")
+            .each((i2, e2) => {
+                $(e2).css({
+                    background: `url(images/trackalbum/track${albnum[i1]}-span${
+                        i2 + 1
+                    }.jpg)no-repeat center/100% 100%`,
+                });
+            }); ////// each
+    }); /////// each //////
+}
+export { LoadFor, Widbb, MuteBtn, PMJ_SUB_FOR };

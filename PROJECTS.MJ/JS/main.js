@@ -3,7 +3,7 @@
 // 상단 import 구역 -------------------------------------
 ////////////////////////////////////////////
 import { LoadFor, Widbb, MuteBtn } from "./module/FUNCTIONS.js";
-import { ssm, mtb, Gul, GuIA, navC, Hamli } from "./module/variable.js";
+import { ssm, mtb, Gul, GuIA, navC, Hamli, tbt, mpp } from "./module/variable.js";
 LoadFor();
 ////////////////////////////////////////////////
 // 변수 정리 구역 ------------------------------
@@ -55,13 +55,13 @@ $(() => {
     });
   });
   // 상단 햄버거 버튼 클릭시 애니메이션
-  $(".topbtn").click(function () {
+  tbt.click(function () {
     $(this).toggleClass("on");
     Widbb();
   }); // 상단 햄버거 버튼 클릭시 이벤트 //
 
   // 상단 첫번쨰 MPP호버시 늘어나는 애니
-  $(".mostpopular").hover(
+  mpp.hover(
     function () {
       // over
       let myw = $(">div>span", this);

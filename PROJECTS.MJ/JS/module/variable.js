@@ -5,7 +5,16 @@ let GAG = JSON.parse(JSON.stringify(PMJjsonDATA));
 let tfrxry1 = " translate(-50%, -50%) rotateX(90deg) rotateY(0deg)";
 // 세워지는
 let tfrxry2 = "translate(-50%, -50%) rotateX(0deg) rotateY(0deg) rotate(0)";
-
+// 앨범 서브
+let SUB_PMJ_album_track_For50 = `<div class="swiper-slide albumsub tracksub">
+<audio src="" class="AUDIO"></audio>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>`;
 let main_album_track_FOR50 = `
 <div class="mtt1 track mtrackcoverinng">
     <audio src="#" class="AUDIO" muted></audio>
@@ -43,40 +52,45 @@ const Hamli = $(".hamul li");
 /*********************************** 
   [JQB안쪽 변수] 
 ***********************************/
-// 기타 변수들 
+// 기타 변수들
 let palt = $(".wrap3dplat");
+const mpp = $(".mostpopular");
 /* *******스크롤 액션 변수******** */
 // 일반변수
 let lpnum = 0;
 const Cl = console.log;
 
-
-
+// ------서브페이지 전용 변수
+let tbt = $(".topbtn");
+let albumsub = $(".albumsub");
+const GTASP = $(".pmj_sub-ab-tem")
 // 추가된변수
 
 export {
-    tfrxry1,
-    tfrxry2,
-    main_album_track_FOR50,
-    hb,
-    MTC,
-    ssm,
-    lpnum,
-    moff,
-    mon,
-    mtb,
-    sm,
-    slidegnb,
-    topA,
-    Cl,
-    Gul,
-    GuIA,
-    navC,
-    Hamli,
-    m2,
-
-
-
-    m3,
-    palt
+  tfrxry1,
+  tfrxry2,
+  main_album_track_FOR50,
+  SUB_PMJ_album_track_For50,
+  hb,
+  MTC,
+  ssm,
+  lpnum,
+  moff,
+  mon,
+  mtb,
+  sm,
+  slidegnb,
+  topA,
+  Cl,
+  Gul,
+  GuIA,
+  navC,
+  Hamli,
+  m2,
+  tbt,
+  m3,
+  palt,
+  mpp,
+  albumsub,
+  GTASP,
 };

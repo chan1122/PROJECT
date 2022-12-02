@@ -1,4 +1,4 @@
-import {PMJ_SUB_FOR, Widbb} from "./module/FUNCTIONS.js"
+import { PMJ_SUB_FOR, Widbb } from "./module/FUNCTIONS.js";
 import { GuIA, Gul, Hamli, navC, ssm, tbt } from "./module/variable.js";
 PMJ_SUB_FOR();
 // PMJSUB PJ
@@ -6,12 +6,12 @@ $(() => {
     // 상단 햄버거 버튼 클릭시 애니메이션
     tbt.click(function () {
         $(this).toggleClass("on");
-       Widbb();
+        Widbb();
     }); // 상단 햄버거 버튼 클릭시 이벤트 //
 
     // 상단 GNB A요소 호버시 슬라이드 다운효과
     ssm.css({
-        width: "99.6vw",
+        width: "100vw",
         background: "#000",
         left: "0",
     });
@@ -65,13 +65,13 @@ $(() => {
         }
     );
 
-    let swiper = new Swiper(".mySwiper", { 
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      rewind:true,
-      coverflowEffect: {
+    let swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        rewind: true,
+        coverflowEffect: {
             rotate: 50,
             stretch: 0,
             depth: 100,
@@ -82,7 +82,5 @@ $(() => {
         pagination: {
             el: ".swiper-pagination",
         },
-       
     });
 }); /////// JQB
-

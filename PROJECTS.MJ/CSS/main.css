@@ -21,13 +21,7 @@ font-family: 'Single Day', cursive; = GNB폰트
 @import url(comon.css);
 @import url(AUDIO.css);
 @import url(track.css);
-.view{
-    position: fixed;
-    top: 0;
-    left:0;
-    width: 100%;
-    height: 100%;
-}
+
 /* 공사중 표시 */
 body * {
     /* outline: 3px dotted red; */

@@ -1,7 +1,8 @@
 // 링크 이동 js
+import {abtn} from "./module/variable.js"
 $(() => {
     // 변수선언
-    let abtn = $("html a");
+    
     console.log("이동준비완료")
 
     abtn.each((idx, ele) => {
@@ -110,6 +111,9 @@ $(() => {
                 case "Sign":
                     url = "mem";
                     break;
+                case "GO-MAIN":
+                    url = "HOME";
+                    break;
             } ///// switch /////
 
             console.log("url", url);
@@ -150,6 +154,8 @@ $(() => {
                         window.location.href = "./sub.html";
                     }
                 );
+            }else if (url === "HOME"){
+                window.location.href = "./main.html";
             }
         }); ///// abtn click //////
     }); /// each ////

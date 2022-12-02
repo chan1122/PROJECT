@@ -11,7 +11,7 @@ import {
   mon,
   GTASP,
   SUB_PMJ_album_track_For50,
-  albumsub,
+  Cl,
 } from "./variable.js";
 let GAG = JSON.parse(JSON.stringify(PMJjsonDATA));
 //////////////////////////////////////////////////
@@ -86,6 +86,7 @@ function PMJ_SUB_FOR_AL() {
   for (let i = 0; i < 50; i++) {
     GTASP.append(SUB_PMJ_album_track_For50);
   }
+  let albumsub = $(".albumsub");
   // 이미지 뿌리기
   albumsub.each((i1, e1) => {
     // 음원 뿌리기
@@ -109,6 +110,7 @@ function PMJ_SUB_FOR_AL() {
         });
       }); ////// each
   }); /////// each ///////
+  Cl("이미지뿌리장!")
 }
 
 export { LoadFor, Widbb, MuteBtn, PMJ_SUB_FOR_AL };

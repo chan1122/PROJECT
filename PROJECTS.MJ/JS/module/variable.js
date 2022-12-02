@@ -27,10 +27,11 @@ let main_album_track_FOR50 = `
       <span></span>
     </div>
     </div>`;
-// HTML BODY
+// HTML BODY (공통)
 const hb = $("html,boby");
 let m2 = $(".main2");
 let m3 = $(".main3");
+let abtn = $("html a");
 // 앨범 커버 박스 부모의 부모격
 const MTC = $(".maintrackcover");
 // gnb요소
@@ -62,8 +63,8 @@ const Cl = console.log;
 
 // ------서브페이지 전용 변수
 let tbt = $(".topbtn");
-let albumsub = $(".albumsub");
-const GTASP = $(".pmj_sub-ab-tem")
+
+const GTASP = $(".pmj_sub-ab-tem");
 // 추가된변수
 
 export {
@@ -91,6 +92,6 @@ export {
   m3,
   palt,
   mpp,
-  albumsub,
   GTASP,
+  abtn,
 };

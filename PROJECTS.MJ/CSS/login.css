@@ -2,7 +2,8 @@
 
 @import url(reset.css);
 @import url(core.css);
-
+@import url(midiaquery.css);
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&family=Kolker+Brush&family=Nanum+Brush+Script&family=Single+Day&family=Xanh+Mono&display=swap");
 
 
 /* 로그인 css */
@@ -525,7 +526,42 @@ body{
     width: 100%;
     display: block;
 }
+/* 햄버거 버튼 하단 상세 카테고리 */
+/* 공통 */
+.sham {
+    color: black;
+    display: none;
+}
+/* 공통 하위 li공통 */
+.hamul .sham > li {
+    font-size: 5vw;
+}
 
+.hamul .sham > li > a {
+    display: block;
+    width: 100%;
+}
+
+/* 상단 로고 싸는박스 */
+.coverlogotop {
+    position: absolute;
+    width: 20%;
+    height: 13%;
+    top: 4px;
+    left: 40%;
+    z-index: 10000000;
+}
+/* 상단로고 싸는박스 하위 a */
+.coverlogotop > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 햄버거 버튼 하위 li세부 사항 조정 */
+.sham > li > a {
+    width: 100%;
+}
 /* 하단 아이콘 들어가는 부분  */
 footer .ffll1 {
   z-index: 1;

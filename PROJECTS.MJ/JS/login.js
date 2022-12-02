@@ -1,5 +1,4 @@
 // 로그인 전용 JS
-import { Widbb } from "./module/FUNCTIONS.js";
 import { GuIA, Gul, Hamli, navC, ssm, tbt } from "./module/variable.js";
 $(()=>{
     // 상단 햄버거 버튼 클릭시 애니메이션

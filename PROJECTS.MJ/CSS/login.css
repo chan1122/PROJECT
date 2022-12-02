@@ -18,11 +18,9 @@ body * {
     /* color: darkgoldenrod; */
     /* font-size: 3vw; */
 }
-
-body {
-    height: auto;
+body{
+    height: 100vh;
 }
-
 /* 배경 영상 디자인 잡기 */
 .VID {
     /* z-index로 간섭 불가하게 만들기 */
@@ -520,17 +518,31 @@ body {
     width: 100%;
 }
 /********* 메인 영역 CSS *********/
-
-
-
+.maintit{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: black;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+/* 로그인 글자 요소 들어가는 부분  */
+.wbx{
+    max-width: 100%;
+    min-height: 500px;
+    background-color: #fff;
+}
+.loginmain{
+    width: 70vw;
+    margin: 0 auto;
+}
 
 /*****  하단 부분 css  *******/
 footer{
-    position: relative;
+    position: absolute;
     width: 100vw;
     height: 20vh;
     background-color: black;
-    bottom: 0;
+    top: 100%;
 }
 
 

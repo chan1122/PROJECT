@@ -58,11 +58,15 @@ body * {
 
 body {
 <<<<<<< HEAD
+<<<<<<< HEAD
     height: auto;
 =======
   height: auto;
   overflow-x: hidden;
 >>>>>>> parent of 0b80561 (aa)
+=======
+    height: auto;
+>>>>>>> parent of 40fa591 (aa)
 }
 
 /* 배경 영상 디자인 잡기 */
@@ -487,6 +491,7 @@ footer{
     height: 20vh;
     background-color: black;
     bottom: 0;
+<<<<<<< HEAD
 =======
 /* 메인 영역 */
 /* 메인! 타이틀 */
@@ -519,6 +524,8 @@ footer{
   transform: translate(-50%,-50%);
   background-color: rgba(128, 128, 128, 0.553);
 >>>>>>> parent of 0b80561 (aa)
+=======
+>>>>>>> parent of 40fa591 (aa)
 }
 
 

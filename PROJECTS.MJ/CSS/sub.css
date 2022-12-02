@@ -20,7 +20,6 @@ font-family: 'Single Day', cursive; = GNB폰트
 @import url(core.css);
 @import url(comon.css);
 @import url(AUDIO.css);
-@import url(midiaquery.css);
 
 /* 공사중 표시 */
 body * {

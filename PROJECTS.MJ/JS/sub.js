@@ -1,33 +1,26 @@
-import {PMJ_SUB_FOR} from "./module/FUNCTIONS.js"
+import {PMJ_SUB_FOR, Widbb} from "./module/FUNCTIONS.js"
+import { GuIA, Gul, Hamli, navC, ssm } from "./module/variable.js";
 PMJ_SUB_FOR();
 // PMJSUB PJ
-// 상단 햄버거 버튼 클릭시 애니메이션
 $(() => {
+    // 상단 햄버거 버튼 클릭시 애니메이션
     $(".topbtn").click(function () {
-        //버튼에 줄가있는거 x자 만들기
         $(this).toggleClass("on");
-
-        // 박스 늘어남!
-        $(".noise").toggleClass("on");
-        $(".wrapp").toggleClass("on");
-        $(".coralwrapp").toggleClass("on");
-        $(".whitewrapp").toggleClass("on");
-
-        $(".hamul").toggleClass("on");
+       Widbb();
     }); // 상단 햄버거 버튼 클릭시 이벤트 //
 
     // 상단 GNB A요소 호버시 슬라이드 다운효과
-    $(".ssm").css({
+    ssm.css({
         width: "99.6vw",
         background: "#000",
         left: "0",
     });
-    $(".gnb > ul > li").hover(
+    Gul.hover(
         function () {
             //오버시
             $(this).children("ul").stop().slideDown();
 
-            $(".gnb >ul>li>a").css({
+            GuIA.css({
                 color: "black",
                 transition: ".5s",
                 fontweight: "bold",
@@ -37,17 +30,17 @@ $(() => {
         function () {
             //아웃시
             $(this).children("ul").stop().slideUp();
-            $(".gnb >ul>li>a").css({
+            GuIA.css({
                 color: "#fff",
                 transition: ".5s",
                 fontweight: "bold",
             });
-            $(".nav").css({ background: "#000", transition: ".2s" });
+            navC.css({ background: "#000", transition: ".2s" });
         }
     );
 
     // 햄버거 버튼 마우스 오버 아웃 시
-    $(".hamul li").hover(
+    Hamli.hover(
         function () {
             const tfs = $(this).find(".sham");
             // 마우스 오버시
@@ -91,10 +84,5 @@ $(() => {
         },
        
     });
-
-    /*********** 이미지 뿌리는 곳!! ***********/
-
-    
-
 }); /////// JQB
 

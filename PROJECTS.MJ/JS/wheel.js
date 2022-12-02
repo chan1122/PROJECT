@@ -1,10 +1,10 @@
-import { sm, slidegnb, topA, Cl, m2, hb, m3, palt } from "./module/variable.js";
+import { sm, slidegnb, topA, Cl, m2, hb, m3, palt, mvSts, setMvSts } from "./module/variable.js";
 // 마우스 휠 (스크롤이벤트 전용 페이지)
 let port = 0;
 $(() => {
     let lastSc = 0;
 
-    $(window).on("mousewheel wheel",function () {
+    $(window).on("mousewheel wheel",function (e) {
         //  스크롤 위치값 찍기
         let scTop = $(this).scrollTop(); // -> 세로 스크롤 위치값을 리턴하는 메서드
         // 콘솔창에 위치값 찍어보기
@@ -30,52 +30,66 @@ $(() => {
             topA.find(".lm").slideDown();
             topA.removeClass("on");
         }
-        // 스테이지 맞추기
-        // hb.animate(
-        //   {
-        //     scrollTop: $(this).offset().top + "px",
-        //   },
-        //   600
-        // );
-        
-        ////////////////////////////
-        // 스크롤 방향 알아내기
-        if (port) return;
-        port = 1;
-        setTimeout(() => {
-            port = 0;
-        }, 1000);
+ 
 
-        // 마지막 위치 없데이트 필수!
-        // 스크롤 이동 위치 변수들!
-        // 두번째 앨범 위치값!
-        let mot = m2.offset().top; // 500
-        // 앨범 집약 페이지
-        let mot2 = m3.offset().top;
-        // 하단플랫카
-        let mot3 = palt.offset().top;
-        Cl(mot, "2버째");
-        Cl(mot2, "집약");
-        Cl(mot3, "플랫");
 
-        // 최상단으로 가게 하는 것!
-        if (scTop >= 200 && scTop <= 300) {
-            hb.animate({ scrollTop: mot+"px" }, 1000);
-        }
-        // // 두번째 앨범 으로 가게 함!
-        else if (scTop > mot && scTop <= mot+200) {
-            hb.animate({ scrollTop: mot2+"px" }, 1000);
-        }
-        // 앨범 집약 페이지로 가게 하는거
-        else if (scTop > mot2 && scTop <= mot2+200) {
-            hb.animate({ scrollTop: mot3+"px" }, 1000);
-        }
-        // //하단 플랫 카드 부분으로 가게 하는
-        // else if(){
-        //   hb.animate({ scrollTop: mot3 }, 1000);
-        // }
-        Cl("TOP", scTop);
-        Cl("LAST", lastSc);
+
+        /* 
+            [ 페이지 스크롤 기능 구현 구역 ]
+            
+        */
+       Cl("스크롤 준비완료")
         lastSc = scTop;
     }); /// 스크롤 ///
+
+    let temp=1;
+    $(document).scroll(function(e){
+        let scTop = $(this).scrollTop();
+        console.log(scTop);
+        if(scTop>1200&&temp){
+            $("html,body").stop().animate({
+                scrollTop:m3.offset().top+"px"
+            },400);
+            temp=0;
+        }
+        else{
+
+        }
+    })
+
+    let protWheel = 0;
+    m3.on("mousewheel wheel",function(e){
+        
+        let delta = event.wheelDelta || event.detail;
+        // e.wheelDelta 일반 브라우저용 방향정보
+        // e.detail 은 파이어폭스용 방향정보
+        // 변수 = 속성값1 || 속성값2;
+        // 둘 중 유효한 값이 변수에 할당됨!
+
+        console.log('방향:', delta);
+      
+      if(mvSts) {
+        //e.preventDefault();
+
+        if(protWheel) return;
+        protWheel = 1;
+        setTimeout(()=>protWheel=0,20);
+
+        if(delta<0){
+            $(".mtrack").filter(".on")
+            .parent().next().trigger("click");
+
+        }
+        else{
+            $(".mtrack").filter(".on")
+            .parent().prev().trigger("click");
+        }
+        console.log("ㅎㅎㅎ");
+    }
+      
+    });
+
+
+
+
 }); ///////  JQB  //////////

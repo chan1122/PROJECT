@@ -51,6 +51,8 @@ let lpnum = 0;
 const Cl = console.log;
 
 
+let mvSts=0;
+let setMvSts=(val)=>{mvSts=val};
 
 // 추가된변수
 
@@ -75,7 +77,8 @@ export {
     Hamli,
     m2,
 
-
+    mvSts,
+    setMvSts,
 
     m3,
     palt

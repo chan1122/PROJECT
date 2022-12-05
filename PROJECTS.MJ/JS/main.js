@@ -3,11 +3,24 @@
 // 상단 import 구역 -------------------------------------
 ////////////////////////////////////////////
 import { LoadFor, Widbb, MuteBtn } from "./module/FUNCTIONS.js";
-import { ssm, mtb, Gul, GuIA, navC, Hamli, tbt, mpp,setAlSts } from "./module/variable.js";
+import {
+    ssm,
+    mtb,
+    Gul,
+    GuIA,
+    navC,
+    Hamli,
+    tbt,
+    mpp,
+    setAlSts,
+    hb,
+    m3,
+    MTC,
+} from "./module/variable.js";
 LoadFor();
 ////////////////////////////////////////////////
 // 변수 정리 구역 ------------------------------
-const mtc = $(".mtrackcoverinng");
+export const mtc = $(".mtrackcoverinng");
 const track = $(".track");
 const ttrack = $(".ttrack");
 const AUDIO = $(".AUDIO");
@@ -15,135 +28,134 @@ const AUDIO = $(".AUDIO");
 //-------------------------------------------------------//
 // JQB ////////////////////////////////////////////////////
 $(() => {
-  // 메인 트랙 커버박스 클릭 이벤트 //
-  mtc.click(function () {
+    // 메인 트랙 커버박스 클릭 이벤트 //
+    mtc.click(function () {
+        $(this).animate({
+            height: "50vh",
+        });
+        // 앨범 세우고 내리기
+        $(".ttrack", this)
+            .delay(2000)
+            .addClass("on")
+            .parent()
+            .siblings()
+            .css({ height: "0" })
+            .find(".ttrack")
+            .removeClass("on");
 
-    $(this).animate({
-      height: "50vh",
+            // 오디오 뿌려주기
+            track.each((idx, ele) => {
+                $(ele).find(".AUDIO").get(0).pause();
+            });
+            // 오디오재생 변수 할당
+            let iam = $(this).find(".AUDIO").get(0);
+            // 오디오 클릭시 처음부터  재생
+            iam.currentTime = 0;
+            
+            iam.play();
+            
+            // 앨범열기 상태값 변경하기
+            setAlSts(1); //1 열린상태
+            // m3.animate({scrollTop: $(this,mtc).offset().top + "px"})
+    }); // 메인 트랙 커버박스 클릭 이벤트 //
+    // 앨범 z-index주기
+    $(track.get().reverse()).each(function (ti, te) {
+        $(this).css({ zIndex: ti });
     });
-    // 앨범 세우고 내리기
-    $(".ttrack", this)
-      .delay(2000)
-      .addClass("on")
-      .parent()
-      .siblings()
-      .css({ height: "0" })
-      .find(".ttrack")
-      .removeClass("on");
-
-    // 오디오 뿌려주기
-    track.each((idx, ele) => {
-      $(ele).find(".AUDIO").get(0).pause();
+    // 앨범 듀레이션 뿌려주기
+    ttrack.each(function (t1, r1) {
+        $(r1).each((t2, r2) => {
+            $(r2).css({
+                animationDuration: `${70 + t1 / 3}s`,
+            });
+        });
     });
-    // 오디오재생 변수 할당
-    let iam = $(this).find(".AUDIO").get(0);
-    // 오디오 클릭시 처음부터  재생
-    iam.currentTime = 0;
+    // 상단 햄버거 버튼 클릭시 애니메이션
+    tbt.click(function () {
+        $(this).toggleClass("on");
+        Widbb();
+    }); // 상단 햄버거 버튼 클릭시 이벤트 //
 
-    iam.play();
-
-    // 앨범열기 상태값 변경하기
-    setAlSts(1);//1 열린상태
-
-  }); // 메인 트랙 커버박스 클릭 이벤트 //
-  // 앨범 z-index주기
-  $(track.get().reverse()).each(function (ti, te) {
-    $(this).css({ zIndex: ti });
-  });
-  // 앨범 듀레이션 뿌려주기
-  ttrack.each(function (t1, r1) {
-    $(r1).each((t2, r2) => {
-      $(r2).css({
-        animationDuration: `${70 + t1 / 3}s`,
-      });
+    // 상단 첫번쨰 MPP호버시 늘어나는 애니
+    mpp.hover(
+        function () {
+            // over
+            let myw = $(">div>span", this);
+            myw.each((idx, ele) => {
+                $(ele)
+                    .parent() // 부모div
+                    .css({
+                        width: $(ele).width() + "px",
+                        paddingRight: ".9vw",
+                    });
+            });
+        },
+        function () {
+            // out
+            $($(">div", this)).css({
+                width: "0",
+                paddingRight: "0",
+            });
+        }
+    );
+    /* ******************************* */
+    // 상단 GNB A요소 호버시 슬라이드 다운효과
+    ssm.css({
+        width: "99.6vw",
+        background: "#000",
+        left: "0",
     });
-  });
-  // 상단 햄버거 버튼 클릭시 애니메이션
-  tbt.click(function () {
-    $(this).toggleClass("on");
-    Widbb();
-  }); // 상단 햄버거 버튼 클릭시 이벤트 //
+    Gul.hover(
+        function () {
+            //오버시
+            $(this).children("ul").stop().slideDown();
 
-  // 상단 첫번쨰 MPP호버시 늘어나는 애니
-  mpp.hover(
-    function () {
-      // over
-      let myw = $(">div>span", this);
-      myw.each((idx, ele) => {
-        $(ele)
-          .parent() // 부모div
-          .css({
-            width: $(ele).width() + "px",
-            paddingRight: ".9vw",
-          });
-      });
-    },
-    function () {
-      // out
-      $($(">div", this)).css({
-        width: "0",
-        paddingRight: "0",
-      });
-    }
-  );
-  /* ******************************* */
-  // 상단 GNB A요소 호버시 슬라이드 다운효과
-  ssm.css({
-    width: "99.6vw",
-    background: "#000",
-    left: "0",
-  });
-  Gul.hover(
-    function () {
-      //오버시
-      $(this).children("ul").stop().slideDown();
+            GuIA.css({
+                color: "black",
+                transition: ".5s",
+                fontweight: "bold",
+            });
+            navC.css({ background: "#fff", transition: ".2s" });
+        },
+        function () {
+            //아웃시
+            $(this).children("ul").stop().slideUp();
 
-      GuIA.css({
-        color: "black",
-        transition: ".5s",
-        fontweight: "bold",
-      });
-      navC.css({ background: "#fff", transition: ".2s" });
-    },
-    function () {
-      //아웃시
-      $(this).children("ul").stop().slideUp();
+            GuIA.css({
+                color: "#fff",
+                transition: ".5s",
+                fontweight: "bold",
+            });
+            navC.css({ background: "#000", transition: ".2s" });
+        }
+    );
 
-      GuIA.css({
-        color: "#fff",
-        transition: ".5s",
-        fontweight: "bold",
-      });
-      navC.css({ background: "#000", transition: ".2s" });
-    }
-  );
+    // 햄버거 버튼 안쪽 요소들 오버시--------
+    Hamli.hover(
+        function () {
+            const tfs = $(this).find(".sham");
+            // 마우스 오버시
+            tfs.stop().slideDown();
 
-  // 햄버거 버튼 안쪽 요소들 오버시--------
-  Hamli.hover(
-    function () {
-      const tfs = $(this).find(".sham");
-      // 마우스 오버시
-      tfs.stop().slideDown();
+            $(this)
+                .children(".hambtnbiga")
+                .css({ backgroundColor: "white", color: "black" });
+        },
+        function () {
+            // 마우스 아웃시
+            const tfs = $(this).find(".sham");
+            tfs.stop().slideUp();
 
-      $(this)
-        .children(".hambtnbiga")
-        .css({ backgroundColor: "white", color: "black" });
-    },
-    function () {
-      // 마우스 아웃시
-      const tfs = $(this).find(".sham");
-      tfs.stop().slideUp();
+            $(this)
+                .children(".hambtnbiga")
+                .css({ backgroundColor: "black", color: "white" });
+        }
+    );
+    // 햄버거 버튼 안쪽 요소들 오버시
 
-      $(this)
-        .children(".hambtnbiga")
-        .css({ backgroundColor: "black", color: "white" });
-    }
-  );
-  // 햄버거 버튼 안쪽 요소들 오버시
-
-  // 음소거 버튼 클릭
-  mtb.click(function () {
-    MuteBtn();
-  }); // 음소거 버튼
+    // 음소거 버튼 클릭
+    mtb.click(function () {
+        MuteBtn();
+    }); // 음소거 버튼
 }); //제이쿼리 로딩구역/////////////////////////
 // 제이슨 파일 - albnum 파일 불러와서 변수에 할당함!

@@ -704,21 +704,28 @@ body {
 }
 
 /* 앨범 집약 페이지 */
-.main3 {
+.bodywrapp {
     top: 0;
     left: 0;
-    width: 99vw;
-    height: 110vh;
+    width: 100vw;
+    height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 1300px;
+    position: fixed;
 }
-
+.asdasd{
+    perspective: 1300px;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
 .maintrackcover {
-    height: 4400px;
+    height: 7000px;
     margin-top: 450px;
     margin-bottom: 950px;
     transform-style: preserve-3d;
+    width: 100vw;
 }
 
 /* 트랙 공통 */
@@ -783,7 +790,7 @@ footer {
     width: 100%;
     height: 500px;
     text-align: center;
-    top: 50vw;
+
 }
 /* 하단 로고 들어가는 부분 */
 footer .flogo {
@@ -1079,7 +1086,6 @@ footer .ffll1 {
     position: relative;
     width: 99.5vw;
     height: 100vh;
-    margin-top: 25vh;
 }
 .dExplanation:hover {
     animation-play-state: paused;

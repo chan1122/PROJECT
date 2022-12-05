@@ -67,6 +67,10 @@ let tbt = $(".topbtn");
 const GTASP = $(".pmj_sub-ab-tem");
 // 추가된변수
 
+// 앨범 열린상태값
+let alSts = 0;
+let setAlSts = (val) => {alSts = val};
+
 export {
   tfrxry1,
   tfrxry2,
@@ -94,4 +98,6 @@ export {
   mpp,
   GTASP,
   abtn,
+  alSts,
+  setAlSts,
 };

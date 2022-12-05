@@ -1,4 +1,5 @@
-import { sm, slidegnb, topA, Cl, m2, hb, m3, palt } from "./module/variable.js";
+import albnum from "./module/DBconnect.js";
+import { sm, slidegnb, topA, Cl, m2, hb, m3, palt,setAlSts, alSts } from "./module/variable.js";
 // 마우스 휠 (스크롤이벤트 전용 페이지)
 let port = 0;
 $(() => {
@@ -37,45 +38,66 @@ $(() => {
         //   },
         //   600
         // );
-        
-        ////////////////////////////
-        // 스크롤 방향 알아내기
-        if (port) return;
-        port = 1;
+
+        if(scTop >= lastSc && scTop == m2.offset().top + "px" +500+"px"){
+            hb.animate({scrollTop: m3.offset().top + "px"})
+        }
         setTimeout(() => {
-            port = 0;
-        }, 1000);
+            lastSc = scTop;
+            
+        }, 10);
+        Cl(lastSc)
+        Cl(scTop,"xkq")
+    }); /// 윈도우스크롤 ///
+    ///////////// 메인 트랙 스크롤 
 
-        // 마지막 위치 없데이트 필수!
-        // 스크롤 이동 위치 변수들!
-        // 두번째 앨범 위치값!
-        let mot = m2.offset().top; // 500
-        // 앨범 집약 페이지
-        let mot2 = m3.offset().top;
-        // 하단플랫카
-        let mot3 = palt.offset().top;
-        Cl(mot, "2버째");
-        Cl(mot2, "집약");
-        Cl(mot3, "플랫");
+    let tempSts = 0;// 광스크롤 막기
 
-        // 최상단으로 가게 하는 것!
-        if (scTop >= 200 && scTop <= 300) {
-            hb.animate({ scrollTop: mot+"px" }, 1000);
+    m3.on("mousewheel wheel", function(e){
+
+        e = window.event || e;
+
+        // 스크롤방향(-:아랫,+윗)
+        let delta = e.wheelDelta || e.detail;
+        console.log("방향:",delta);
+        console.log("상태:",alSts);
+
+        // 상태가 1이면 앨범이 열린상태이므로 스크롤 금지
+        if(alSts){
+            e.preventDefault();
+            // 방향에 따라 이전,다음 전환
+
+            // 광스크롤 막기
+            if(tempSts) return;
+            tempSts = 1;
+            setTimeout(()=>tempSts=0,400);
+
+            if(delta<0){
+                $(".album").filter(".on")   
+                .parent().next()
+                .trigger("click");
+                // 스크롤 위치이동하기
+                m3.animate({scrollTop:"+=150px"});
+            }
+            else{
+                $(".album").filter(".on")
+                .parent().prev()
+                .trigger("click");
+                // 스크롤 위치이동하기
+                m3.animate({scrollTop:"-=150px"});
+            }
+
+
         }
-        // // 두번째 앨범 으로 가게 함!
-        else if (scTop > mot && scTop <= mot+200) {
-            hb.animate({ scrollTop: mot2+"px" }, 1000);
+        else{
+
         }
-        // 앨범 집약 페이지로 가게 하는거
-        else if (scTop > mot2 && scTop <= mot2+200) {
-            hb.animate({ scrollTop: mot3+"px" }, 1000);
-        }
-        // //하단 플랫 카드 부분으로 가게 하는
-        // else if(){
-        //   hb.animate({ scrollTop: mot3 }, 1000);
+        
+
+        // if($(".album").hasClass("on")){
+        //     // if(){}
+        //     $(".track").next().stop().trigger("click")
         // }
-        Cl("TOP", scTop);
-        Cl("LAST", lastSc);
-        lastSc = scTop;
-    }); /// 스크롤 ///
+        
+    })// 메인 앨범 트랙 스크롤 
 }); ///////  JQB  //////////

@@ -39,6 +39,7 @@ const slidegnb = $(".slidegnb");
 const Gul = $(".gnb > ul > li");
 const GuIA = Gul.children("a");
 const navC = $(".nav");
+const BWP = $(".bodywrapp")
 // gnb하위요소
 let ssm = $(".ssm");
 const sm = $(".sm");
@@ -100,4 +101,5 @@ export {
   abtn,
   alSts,
   setAlSts,
+  BWP
 };

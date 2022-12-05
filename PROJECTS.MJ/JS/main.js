@@ -16,6 +16,7 @@ import {
     hb,
     m3,
     MTC,
+    BWP,
 } from "./module/variable.js";
 LoadFor();
 ////////////////////////////////////////////////
@@ -33,6 +34,8 @@ $(() => {
         $(this).animate({
             height: "50vh",
         });
+        BWP.animate({scrollTop: $(this).offset().top})
+        // 앨범 클릭시 위치이동
         // 앨범 세우고 내리기
         $(".ttrack", this)
             .delay(2000)
@@ -43,20 +46,20 @@ $(() => {
             .find(".ttrack")
             .removeClass("on");
 
-            // 오디오 뿌려주기
-            track.each((idx, ele) => {
-                $(ele).find(".AUDIO").get(0).pause();
-            });
-            // 오디오재생 변수 할당
-            let iam = $(this).find(".AUDIO").get(0);
-            // 오디오 클릭시 처음부터  재생
-            iam.currentTime = 0;
-            
-            iam.play();
-            
-            // 앨범열기 상태값 변경하기
-            setAlSts(1); //1 열린상태
-            // m3.animate({scrollTop: $(this,mtc).offset().top + "px"})
+        // 오디오 뿌려주기
+        track.each((idx, ele) => {
+            $(ele).find(".AUDIO").get(0).pause();
+        });
+        // 오디오재생 변수 할당
+        let iam = $(this).find(".AUDIO").get(0);
+        // 오디오 클릭시 처음부터  재생
+        iam.currentTime = 0;
+
+        iam.play();
+
+        // 앨범열기 상태값 변경하기
+        // setAlSts(1); //1 열린상태
+        hb.animate({ scrollTop: $(this).offset().top + "px" }, 600);
     }); // 메인 트랙 커버박스 클릭 이벤트 //
     // 앨범 z-index주기
     $(track.get().reverse()).each(function (ti, te) {
@@ -158,4 +161,3 @@ $(() => {
         MuteBtn();
     }); // 음소거 버튼
 }); //제이쿼리 로딩구역/////////////////////////
-// 제이슨 파일 - albnum 파일 불러와서 변수에 할당함!

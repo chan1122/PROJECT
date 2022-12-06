@@ -152,11 +152,10 @@
         margin-top: 37px;
     }
     body {
-        overflow-y: hidden;
         width: 100vw;
     }
     footer {
-        height: 50vh;
+        height: 30vh;
     }
 }
 /* 미디어쿼리 300px */

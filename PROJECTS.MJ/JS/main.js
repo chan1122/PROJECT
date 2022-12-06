@@ -78,8 +78,8 @@ $(() => {
         iam.play();
 
         // 앨범열기 상태값 변경하기
-        // setAlSts(1); //1 열린상태
-        hb.animate({ scrollTop: $(this).offset().top + "px" }, 600);
+        setAlSts(1); //1 열린상태
+
     }); // 메인 트랙 커버박스 클릭 이벤트 //
     // 앨범 z-index주기
     $(track.get().reverse()).each(function (ti, te) {

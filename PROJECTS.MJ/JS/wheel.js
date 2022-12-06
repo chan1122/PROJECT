@@ -23,10 +23,11 @@ $(() => {
     BWP.on("mousewheel wheel", function (e) {
         setScTop($(this).scrollTop());
 
-        e = BWP.event || e;
+        e = window.event || e;
 
         // 스크롤방향(-:아랫,+윗)
-        setDelta(e.wheelDelta || e.detail);
+        let tmDelta = e.wheelDelta || e.detail;
+        setDelta(tmDelta);
         // console.log("방향:", delta);
         // console.log("상태:", alSts);
         // // 1 . 상단 큰 로고 클래스 온 적용 + 줄어들기

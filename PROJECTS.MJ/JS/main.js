@@ -33,18 +33,26 @@ const AUDIO = $(".AUDIO");
 //-------------------------------------------------------//
 // JQB ////////////////////////////////////////////////////
 $(() => {
+
+    // 처음클릭상태
+    let firstSts = 0;
     
     // 메인 트랙 커버박스 클릭 이벤트 //
     mtc.click(function () {
         $(this).animate({
-            height: "50vh",
+            height: "100vh",
         });
         BWP.animate({
             scrollTop: 
-            (delta>0?
-                2000+$(this).position().top:
-                3000+$(this).position().top) + "px"
+            ((delta<0&&firstSts)?
+                1700+$(this).position().top:
+                2500+$(this).position().top) + "px"
         })
+
+        // 처음클릭상태 변경
+        firstSts = 1;
+
+        console.log("델타:", delta);
         console.log("요기:", scTop);
         console.log("조기:",$(this).position().top);
         // 앨범 클릭시 위치이동

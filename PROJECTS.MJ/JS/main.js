@@ -29,12 +29,16 @@ const AUDIO = $(".AUDIO");
 //-------------------------------------------------------//
 // JQB ////////////////////////////////////////////////////
 $(() => {
+    
     // 메인 트랙 커버박스 클릭 이벤트 //
     mtc.click(function () {
         $(this).animate({
             height: "50vh",
+        },()=>{
+
+            BWP.animate({scrollTop: $(this).offset().top})
+            console.log("요기:",$(this).offset().top);
         });
-        BWP.animate({scrollTop: $(this).offset().top})
         // 앨범 클릭시 위치이동
         // 앨범 세우고 내리기
         $(".ttrack", this)

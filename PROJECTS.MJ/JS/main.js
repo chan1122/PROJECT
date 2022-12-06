@@ -17,6 +17,10 @@ import {
     m3,
     MTC,
     BWP,
+    scTop,
+    setScTop,
+    delta,
+    setDelta,
 } from "./module/variable.js";
 LoadFor();
 ////////////////////////////////////////////////
@@ -34,16 +38,20 @@ $(() => {
     mtc.click(function () {
         $(this).animate({
             height: "50vh",
-        },()=>{
-
-            BWP.animate({scrollTop: $(this).offset().top})
-            console.log("요기:",$(this).offset().top);
         });
+        BWP.animate({
+            scrollTop: 
+            (delta>0?
+                2000+$(this).position().top:
+                3000+$(this).position().top) + "px"
+        })
+        console.log("요기:", scTop);
+        console.log("조기:",$(this).position().top);
         // 앨범 클릭시 위치이동
         // 앨범 세우고 내리기
         $(".ttrack", this)
             .delay(2000)
-            .addClass("on")
+            .addClass("on") 
             .parent()
             .siblings()
             .css({ height: "0" })

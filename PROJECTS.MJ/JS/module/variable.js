@@ -72,6 +72,14 @@ const GTASP = $(".pmj_sub-ab-tem");
 let alSts = 0;
 let setAlSts = (val) => {alSts = val};
 
+// 스크롤위치값
+let scTop = 0;
+let setScTop = (val) => {scTop = val};
+
+// 델타값
+let delta = 0;
+let setDelta = (val) => {delta = val};
+
 export {
   tfrxry1,
   tfrxry2,
@@ -101,5 +109,9 @@ export {
   abtn,
   alSts,
   setAlSts,
-  BWP
+  BWP,
+  scTop,
+  setScTop,
+  delta,
+  setDelta,
 };

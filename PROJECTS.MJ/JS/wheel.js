@@ -11,18 +11,22 @@ import {
     setAlSts,
     alSts,
     BWP,
+    scTop,
+    setScTop,
+    delta,
+    setDelta,
 } from "./module/variable.js";
 // 마우스 휠 (스크롤이벤트 전용 페이지)
 $(() => {
     let lastSc = 0;
 
     BWP.on("mousewheel wheel", function (e) {
-        let scTop = $(this).scrollTop();
+        setScTop($(this).scrollTop());
 
         e = BWP.event || e;
 
         // 스크롤방향(-:아랫,+윗)
-        let delta = e.wheelDelta || e.detail;
+        setDelta(e.wheelDelta || e.detail);
         // console.log("방향:", delta);
         // console.log("상태:", alSts);
         // // 1 . 상단 큰 로고 클래스 온 적용 + 줄어들기

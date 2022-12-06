@@ -6,6 +6,12 @@
     font-size: 3vw;
   }
 }
+/* 미디어쿼리 1400px */
+@media screen and (max-width: 1400px) {
+  footer{
+    height: 50vh;
+  }
+}
 /* 미디어쿼리 1200px */
 @media screen and (max-width: 1200px) {
   .hamul > li > a {
@@ -36,6 +42,16 @@
   }
   .mtt1{
     margin-top: 29px;
+  }
+}
+/* 미디어쿼리 850px */
+@media screen and (max-height: 1200px){
+  body{
+    overflow-x: hidden;
+
+  }
+  footer{
+    height: 40vh;
   }
 }
 /* 미디어쿼리 800px */
@@ -84,6 +100,18 @@
   }
 }
 
+/* 미디어쿼리 550px */
+@media screen and (max-width: 550px) {
+  .loginmain{
+    width: 100vw;
+  }
+  .maintit{
+    display: none;
+  }
+  .wbx{
+    margin-bottom: 0;
+  }
+}
 /* 미디어쿼리 500px */
 @media screen and (max-width: 500px) {
   .topbtn {
@@ -107,7 +135,7 @@
     margin-top: 29px;
   }
 }
-/* 미디어쿼리 400px */
+/* 미디어쿼리 450px */
 @media screen and (max-width: 450px) {
 
   .shamaa{
@@ -125,5 +153,26 @@
   }
   .mtt1{
     margin-top: 37px;
+  }
+  body{
+    height: 200vh;
+    overflow-y: hidden;
+    width: 100vw;
+  }
+  footer{
+    height: 50vh;
+  }
+}
+/* 미디어쿼리 300px */
+@media screen and (max-width: 300px){
+  html{
+    overflow-x: hidden;
+  }
+  footer{
+    height: 50vh;
+  }
+  .loginmain{
+    position: relative;
+    left: -15%;
   }
 }

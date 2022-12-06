@@ -1,60 +1,15 @@
 @charset "utf-8";
-
-@import url(reset.css);
-@import url(core.css);
-@import url(midiaquery.css);
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&family=Klee+One&family=Kolker+Brush&family=Nanum+Brush+Script&family=Single+Day&family=Xanh+Mono&family=Zen+Dots&display=swap');
 /* 로그인 css */
 
-html {
-  overflow-x: hidden;
-}
-.loginmain {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  margin: 0 auto;
-}
-footer {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  text-align: center;
-  top: 0;
-}
-
-@import url(reset.css);
-@import url(core.css);
-
-/* 로그인 css */
-
-html {
-  overflow-x: hidden;
-}
-.loginmain {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  margin: 0 auto;
-}
-footer {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  text-align: center;
-  top: 0;
-}
-
-/* 글자폰트 */
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&family=Kolker+Brush&family=Nanum+Brush+Script&family=Single+Day&family=Xanh+Mono&display=swap");
-/* 
-*/
-/* 외부 CSS 합치기 */
 @import url(reset.css);
 @import url(core.css);
 @import url(comon.css);
-@import url(AUDIO.css);
-@import url(midiaquery.css);
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,600&family=Black+Han+Sans&family=Cairo:wght@600&family=Gugi&family=Klee+One&family=Kolker+Brush&family=Nanum+Brush+Script&family=Single+Day&family=Xanh+Mono&family=Zen+Dots&display=swap');
+
+
+
+
+
 
 /* 공사중 표시 */
 body * {
@@ -62,10 +17,10 @@ body * {
   /*임시!!!!*/
   /* color: darkgoldenrod; */
   /* font-size: 3vw; */
+  
 }
-body {
-  height: 100vh;
-}
+
+
 /* 배경 영상 디자인 잡기 */
 .VID {
   /* z-index로 간섭 불가하게 만들기 */
@@ -373,9 +328,7 @@ body {
 }
 /* 개별 */
 /* gnb 통배너 밑에 하위 카테고리 ll */
-.ssm > li {
   /* display: none; */
-}
 /* 공통 */
 .ssm > li > a {
   color: #000;
@@ -608,9 +561,10 @@ footer .ffll1 {
 }
 /* 로그인 글자 요소 들어가는 부분  */
 .wbx {
-  max-width: 100%;
+  width: max(360px,100%);
   min-height: 500px;
   background-color: #fff;
+  margin-bottom: 35px;
 }
 .loginmain {
   width: 70vw;
@@ -620,6 +574,7 @@ footer .ffll1 {
 .logtit {
   text-align: center;
   font-size: 50px;
+  font-family: 'Barlow Condensed', sans-serif;
 }
 /* 로그인 박스 안쪽 부분 싸는 박스  */
 .Formlogin {
@@ -728,9 +683,16 @@ font-weight: bold;
 
 /*****  하단 부분 css  *******/
 footer {
-  position: absolute;
+  position: relative;
   width: 100vw;
   height: 20vh;
   background-color: black;
-  top: 100%;
+  bottom: -1px;
 }
+
+
+
+
+
+
+

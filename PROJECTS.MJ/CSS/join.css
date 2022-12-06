@@ -2,38 +2,15 @@
 
 @import url(reset.css);
 @import url(core.css);
+@import url(comon.css);
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,600&family=Black+Han+Sans&family=Cairo:wght@600&family=Gugi&family=Klee+One&family=Kolker+Brush&family=Nanum+Brush+Script&family=Single+Day&family=Xanh+Mono&family=Zen+Dots&display=swap");
 /* 회원가입 css */
 
 html {
   overflow-x: hidden;
 }
-.bodermain {
-  position: relative;
-  width: 1400px;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 100px;
-}
-footer {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  text-align: center;
-  top: 0;
-}
 
-/* 웹폰트 */
-@import url("https://fonts.googleapis.com/css2?family=Hahmlet&display=swap");
-/* 
-    font-family: 'Hahmlet', serif;
-*/
 
-/* 초기화 */
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
 
 /* 공사중 표시 */
 body * {
@@ -41,10 +18,6 @@ body * {
   /*임시!!!!*/
   /* color: darkgoldenrod; */
   /* font-size: 3vw; */
-}
-
-body {
-  height: auto;
 }
 
 /* 배경 영상 디자인 잡기 */
@@ -66,6 +39,8 @@ body {
   position: absolute;
   top: 10px;
   display: flex;
+  font-size: 17px;
+  font-weight: bold;
   justify-content: flex-end;
 }
 /* 로그인 */
@@ -236,18 +211,13 @@ body {
   /* 배경색 */
   background: #000;
 }
-/* 클래스 on시 fixed */
-.tbox1.on {
-  position: fixed;
-}
-
 /* 상단 디자인 */
 .top {
   position: relative;
   height: 130px;
   z-index: -1;
 }
-
+/*  */
 /* 싸는 박스 */
 .coverSVG {
   width: 90vw;
@@ -284,17 +254,6 @@ body {
   width: 410%;
 }
 
-/* SVG개별 */
-/* .toplogo svg:nth-child(1) {
-  left: 40.2%;
-}
-.toplogo svg:nth-child(2) {
-  left: 47%;
-}
-.toplogo svg:nth-child(3) {
-  left: 53%;
-} */
-/* SVG PATH 공통 클래스 */
 .path {
   fill: none;
   stroke: #fff;
@@ -318,12 +277,13 @@ body {
     stroke: lightsteelblue;
   }
 }
-/* SVG  PATH 개별 디자인 */
 
+/* SVG  PATH 개별 디자인 */
 /* 상단 ul */
 .gnb > ul {
-  bottom: -3px;
-  position: relative;
+  transition: all 0.7s ease-out;
+  /* bottom: -3px; */
+  /* position: relative; */
   height: 47px;
   display: flex;
   justify-content: center;
@@ -367,91 +327,186 @@ body {
 }
 /* 개별 */
 /* gnb 통배너 밑에 하위 카테고리 ll */
-.ssm > li {
-  /* display: none; */
-}
+/* display: none; */
 /* 공통 */
 .ssm > li > a {
   color: #000;
   font-size: 2 vw;
 }
-
-
-
-/* 1 . 상단영역 디자인!******************************/
-
-
-/* 하단 로고 들어가는 부분 */
-footer .flogo {
-  z-index: 1;
-  top: 0;
-  position: relative;
-
-  width: 99.2%;
+/* 개별 */
+/* ****************************************** */
+/* GNB싸는 박스 */
+.nav {
+  /* height: 50px; */
+  margin-top: 0;
 }
-/* 하단 SVG 로고 디자인 잡는 부분 */
-.infologo {
-  width: 100%;
-  position: absolute;
-  height: 100px;
+
+.tt {
+  color: #fff;
+  font-weight: 1vw;
 }
-.infologo::before {
-  position: absolute;
-  /* z-index: -9999; */
-  content: "";
-  display: block;
-  padding-top: 30%;
+@keyframes txtFlow1 {
+  to {
+    left: -100%;
+  }
 }
-.infologo > div {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
+
+/* 카테고리(숨김네비) */
+/* 노이즈 */
+.noise {
+  width: 0vw;
+  height: 100vh;
   left: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  background-color: rgba(128, 128, 128, 0.434);
+  transition: all 0.5s;
 }
-.infologo svg {
-  top: 5px;
+/* 가로 늘어나는 클래스 */
+.noise.on {
+  width: 100vw;
+}
+/* 가로 늘어나는거 코랄 */
+.coralwrapp {
+  width: 0vw;
+
+  height: 99vh;
+  left: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  background-color: lightcoral;
+  transition: all 0.55s;
+}
+.coralwrapp.on {
+  border-radius: 0 0 20% 0;
+  width: 96vw;
+  z-index: 99999999;
+}
+/* 두번째  */
+.whitewrapp {
+  width: 0vw;
+  height: 97vh;
+  left: 0;
+  position: fixed;
+  z-index: 100000000;
+  top: 0;
+  transition: all 0.6s;
+}
+.whitewrapp.on {
+  border-radius: 0 0 28% 0;
+  width: 94vw;
+  z-index: 100000000;
+}
+/* 가로늘어나는 클래스 wrapp */
+.wrapp {
+  z-index: 999999999;
+  border-radius: 0 0 30% 0;
+  width: 0vw;
+  height: 95vh;
+  background-color: black;
+  top: 0;
+  position: fixed;
+  transition: all 0.61s;
+  overflow: hidden;
+}
+.wrapp.on {
+  width: 93vw;
+}
+
+/* 햅버거 버튼 안에 버튼들 */
+.ulcoverham {
   position: absolute;
-  width: 30%;
+  right: 0;
+  width: 70%;
+  top: 50px;
+  height: 100%;
 }
-/* SVG하단로고 개별! */
-.infologo svg:nth-child(1) {
-  left: 35%;
+.hamul {
+  position: absolute;
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
 }
-.infologo svg:nth-child(2) {
-  left: 45.7%;
+/* 햄버튼 밑에 하위 자손 li */
+/* 공통 */
+.hamul > li {
+  position: relative;
+  border-bottom: 2px solid #fff;
+  line-height: 1.5;
+
+  width: 0;
+  overflow: hidden;
+  transition: all 0.7s ease-in;
 }
-.infologo svg:nth-child(3) {
-  left: 56.8%;
+.hamul.on > li {
+  width: 100%;
+}
+.hamul > li:first-child {
+  font-family: "Gugi", cursive;
+}
+.hamul > li:nth-child(2) {
+  font-family: "Nanum Brush Script", cursive;
+}
+.hamul > li:nth-child(3) {
+  font-family: "Black Han Sans", sans-serif;
 }
 
-/* SVG하단로고 PATH 공통 */
-.path1 {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 2px;
-
-  stroke-dasharray: 350%;
-  stroke-dashoffset: -350%;
-
-  animation: flogoani 5s ease-out 0.2s forwards;
+/* 마지막 */
+.hamul.on > li:last-child > a {
+  transform: translateX(0);
+  font-family: "Cinzel", serif;
+  transition-delay: 0.11s;
 }
-/* 애니 메이션 하단로고 */
-@keyframes flogoani {
-  80% {
-    stroke: #fff;
-    stroke-dashoffset: 0%;
-  }
-  90% {
-    stroke: gray;
-    stroke-dashoffset: -350%;
-  }
-  100% {
-    stroke: #fff;
-    stroke-dashoffset: 0%;
-  }
+.hamul > li > a {
+  color: #fff;
+
+  font-size: 5vw;
+  transition: all 0.2s;
+  transition: transform 0.7s ease-out 0.5s;
+  width: 100%;
+  display: block;
+}
+/* 햄버거 버튼 하단 상세 카테고리 */
+/* 공통 */
+.sham {
+  color: black;
+  display: none;
+}
+/* 공통 하위 li공통 */
+.hamul .sham > li {
+  font-size: 5vw;
 }
 
+.hamul .sham > li > a {
+  display: block;
+  width: 100%;
+}
+
+/* 상단 로고 싸는박스 */
+.coverlogotop {
+  position: absolute;
+  width: 20%;
+  height: 13%;
+  top: 4px;
+  left: 40%;
+  z-index: 10000000;
+}
+/* 상단로고 싸는박스 하위 a */
+.coverlogotop > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* 햄버거 버튼 하위 li세부 사항 조정 */
+.sham > li > a {
+  width: 100%;
+}
 /* 하단 아이콘 들어가는 부분  */
 footer .ffll1 {
   z-index: 1;
@@ -495,16 +550,170 @@ footer .ffll1 {
 .fooeterstar section:nth-child(4) {
   border-radius: 50% 0 0 0;
 }
-/* 바닥 별모양 호버시 애니 */
-.fooeterstar section:nth-child(1):hover {
-  border-radius: 0 0 70% 0;
+/********* 메인 영역 CSS *********/
+.maintit {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: black;
+  margin: 0 auto;
+  margin-top: 30px;
 }
-.fooeterstar section:nth-child(2):hover {
-  border-radius: 0 0 0 70%;
+/* 로그인 글자 요소 들어가는 부분  */
+.wbx {
+  position: relative;
+  width: max(270px, 100%);
+  padding-bottom: 100px;
+  background-color: #fff;
+  animation: bgcslide 20s linear alternate infinite;
+  margin-bottom: 30px;
 }
-.fooeterstar section:nth-child(3):hover {
-  border-radius: 0 70% 0 0;
+/* 배경색 바뀌는 애니 */
+@keyframes bgcslide {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: gray;
+  }
 }
-.fooeterstar section:nth-child(4):hover {
-  border-radius: 70% 0 0 0;
+.loginmain {
+  width: 70vw;
+  margin: 0 auto;
+}
+/* 로그인 현수막 */
+.logtit {
+  font-family: "Barlow Condensed", sans-serif;
+  text-align: center;
+  font-size: 50px;
+  color: #000;
+}
+/* 로그인 박스 안쪽 부분 싸는 박스  */
+.Formlogin {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* 아이디 패스워드 위치 공통 */
+.joinPUT {
+  position: relative;
+  text-align: center;
+}
+/* 아이디 패스워드 글자 공통 */
+.JTXT {
+  font-size: 20px;
+  font-family: "Zen Dots", cursive;
+}
+/* 아이디 패스워드 글자개별 */
+.IDtxt {
+  display: block;
+  position: relative;
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 40px;
+}
+.passtxt {
+  font-size: 30px;
+  width: 230px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.NAME {
+  display: block;
+  position: relative;
+  width: 160px;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-size: 40px;
+}
+.EMAIL1 {
+  display: block;
+  position: relative;
+  width: 160px;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-size: 40px;
+}
+.ALPA_GOL {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Cairo", sans-serif;
+  font-weight: bold;
+  margin: 0 10px;
+}
+/* 로그인 클릭 버튼  */
+#logbtn {
+  position: relative;
+
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+  width: max(250px, 60%);
+  height: 40px;
+  font-family: "Zen Dots", cursive;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  transition: all 0.3s ease-out;
+}
+/* 로그인 클릭 버튼 호버시  */
+#logbtn:hover {
+  cursor: pointer;
+  text-shadow: 5px 5px 20px #000;
+  box-shadow: inset 5px 5px 20px white;
+}
+
+/* input요소 공통 */
+.INPUTCOMMON {
+  text-align: center;
+  width: 220px;
+  height: 30px;
+  outline: 2px solid #000;
+  font-size: 20px;
+}
+/* 로그인 아이디 input 요소 */
+#IDTEXT {
+  text-align: center;
+  width: 220px;
+  height: 30px;
+  outline: 2px solid #000;
+  font-size: 20px;
+}
+/* 로그인 비밀번호 input 요소 */
+#PWDTEXT {
+  text-align: center;
+  width: 220px;
+  height: 30px;
+  outline: 2px solid #000;
+  font-size: 20px;
+  margin-top: 10px;
+}
+/* 이메일 input요소 */
+#email1 {
+  text-align: center;
+  width: 220px;
+  height: 30px;
+  outline: 2px solid #000;
+  font-size: 20px;
+}
+/* 이메일 select요소 */
+#selmail {
+  text-align: center;
+  width: 220px;
+  height: 35px;
+  outline: 2px solid #000;
+  font-size: 20px;
+}
+/*****  하단 부분 css  *******/
+footer {
+  position: relative;
+  width: 100vw;
+  height: 30vh;
+  background-color: black;
+  bottom: 0;
 }

@@ -1,3 +1,4 @@
+import { mtc } from "./main.js";
 import albnum from "./module/DBconnect.js";
 import {
     sm,
@@ -21,6 +22,8 @@ $(() => {
     let lastSc = 0;
 
     BWP.on("mousewheel wheel", function (e) {
+        let a = $(".mtt1 .track .mtrackcoverinng .on").offset().top;
+        Cl(a);
         setScTop($(this).scrollTop());
 
         e = window.event || e;

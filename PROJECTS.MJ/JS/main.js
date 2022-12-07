@@ -21,6 +21,7 @@ import {
     setScTop,
     delta,
     setDelta,
+    Cl,
 } from "./module/variable.js";
 LoadFor();
 ////////////////////////////////////////////////
@@ -41,6 +42,7 @@ $(() => {
     Math.abs($(".maintrackcover").offset().top);
 
     $("body").css({height:$(".bodywrapp").height()+"px"});
+    
 
     // 메인 트랙 커버박스 클릭 이벤트 //
     mtc.click(function () {
@@ -49,26 +51,28 @@ $(() => {
     let gap = Math.abs($(this).position().top - albpos);
 
         $(this).animate({
-            height: "100vh",
+            height: "50vh",
+
         });
+        $(this).addClass("on")
         BWP.animate({
-            scrollTop: 
+            screenTop: 
             ((delta<0&&firstSts)?
                 scTop+$(this).offset().top+gap:
                 scTop+$(this).offset().top+gap
                 ) + "px"
         })
-
+        
         // 처음클릭상태 변경
         firstSts = 1;
 
-        console.log("델타:", delta);
-        console.log("scTop:", scTop);
-        console.log("offset:",$(this).offset().top);
-        console.log("위치:",albpos);
-        console.log("position:",$(this).position().top);
-        console.log("gap:",gap);
-        console.log("document:",$(document).height());
+        // console.log("델타:", delta);
+        // console.log("scTop:", scTop);
+        // console.log("offset:",$(this).offset().top);
+        // console.log("위치:",albpos);
+        // console.log("position:",$(this).position().top);
+        // console.log("gap:",gap);
+        // console.log("document:",$(document).height());
         // 앨범 클릭시 위치이동
         // 앨범 세우고 내리기
         $(".ttrack", this)

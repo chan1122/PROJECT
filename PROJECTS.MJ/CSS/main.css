@@ -32,8 +32,14 @@ body * {
 
 body {
     height: auto;
+    /* perspective: 1300px; */
 }
-
+.aa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 /* 배경 영상 디자인 잡기 */
 .VID {
     /* z-index로 간섭 불가하게 만들기 */

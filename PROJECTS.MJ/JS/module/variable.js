@@ -85,6 +85,7 @@ const jBTN = $("#logbtn");
 const IT = $("#IDTEXT");
 const PT = $("#PWDTEXT")
 const NAME = $("#JOINNAME");
+const PT2 = $("#PWDTEXT2")
 const inputTESP = $(`input[type=text][id!=email2][class!=search],
 input[type=password]`)
 

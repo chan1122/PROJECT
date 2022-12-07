@@ -39,7 +39,7 @@ const slidegnb = $(".slidegnb");
 const Gul = $(".gnb > ul > li");
 const GuIA = Gul.children("a");
 const navC = $(".nav");
-const BWP = $(".bodywrapp")
+const BWP = $(".bodywrapp");
 // gnb하위요소
 let ssm = $(".ssm");
 const sm = $(".sm");
@@ -58,60 +58,74 @@ const Hamli = $(".hamul li");
 let palt = $(".wrap3dplat");
 const mpp = $(".mostpopular");
 /* *******스크롤 액션 변수******** */
-// 일반변수
 let lpnum = 0;
 const Cl = console.log;
-
-// ------서브페이지 전용 변수
 let tbt = $(".topbtn");
-
 const GTASP = $(".pmj_sub-ab-tem");
-// 추가된변수
-
 // 앨범 열린상태값
 let alSts = 0;
-let setAlSts = (val) => {alSts = val};
+let setAlSts = (val) => {
+    alSts = val;
+};
 
 // 스크롤위치값
 let scTop = 0;
-let setScTop = (val) => {scTop = val};
-
+let setScTop = (val) => {
+    scTop = val;
+};
 // 델타값
 let delta = 0;
-let setDelta = (val) => {delta = val};
+let setDelta = (val) => {
+    delta = val;
+};
+
+/* ********************************** */
+// 유효성 검사 함수 들 
+const jBTN = $("#logbtn");
+const IT = $("#IDTEXT");
+const PT = $("#PWDTEXT")
+const NAME = $("#JOINNAME");
+const inputTESP = $(`input[type=text][id!=email2][class!=search],
+input[type=password]`)
 
 export {
-  tfrxry1,
-  tfrxry2,
-  main_album_track_FOR50,
-  SUB_PMJ_album_track_For50,
-  hb,
-  MTC,
-  ssm,
-  lpnum,
-  moff,
-  mon,
-  mtb,
-  sm,
-  slidegnb,
-  topA,
-  Cl,
-  Gul,
-  GuIA,
-  navC,
-  Hamli,
-  m2,
-  tbt,
-  m3,
-  palt,
-  mpp,
-  GTASP,
-  abtn,
-  alSts,
-  setAlSts,
-  BWP,
-  scTop,
-  setScTop,
-  delta,
-  setDelta,
+    tfrxry1,
+    tfrxry2,
+    main_album_track_FOR50,
+    SUB_PMJ_album_track_For50,
+    hb,
+    MTC,
+    ssm,
+    lpnum,
+    moff,
+    mon,
+    mtb,
+    sm,
+    slidegnb,
+    topA,
+    Cl,
+    Gul,
+    GuIA,
+    navC,
+    Hamli,
+    m2,
+    tbt,
+    m3,
+    palt,
+    mpp,
+    GTASP,
+    abtn,
+    alSts,
+    setAlSts,
+    BWP,
+    scTop,
+    setScTop,
+    delta,
+    setDelta,
+    jBTN,
+    IT,
+    PT,
+    inputTESP,
+    NAME,
+
 };

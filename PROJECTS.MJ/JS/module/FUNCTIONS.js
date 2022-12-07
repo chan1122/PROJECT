@@ -112,5 +112,10 @@ function PMJ_SUB_FOR_AL() {
   }); /////// each ///////
   Cl("이미지뿌리장!")
 }
-
+/********************************************* 
+  [ 유효성 검사 구역 ]
+*********************************************/
+function VALIDATION (){
+  
+};
 export { LoadFor, Widbb, MuteBtn, PMJ_SUB_FOR_AL };

@@ -15,7 +15,7 @@
     <script src="./JS/jquery/jquery-ui.min.js"></script>
     <!-- JS -->
     <script src="./JS/module/DATA-JSON/PMJ_JSON_DATA.json"></script>
-    <script src="./JS/login.js" type="module"></script>
+    <script src="./JS/join.js" type="module"></script>
     <script src="./JS/link.js" type="module"></script>
   </head>
   <body>
@@ -307,7 +307,8 @@
                 id="IDTEXT"
                 maxlength="10"
                 placeholder="ID INSERT HERE"
-              />
+                />
+                <span class="Requird-input">안뇽</span>
             </div>
             <!-- PASSWORD요소 -->
             <div class="joinPUT">
@@ -319,17 +320,19 @@
                 maxlength="20"
                 placeholder="PASSWORD INSERT"
               />
+              <span class="Requird-input">안뇽</span>
             </div>
             <!-- PASSWORD 확인 요소 -->
             <div class="joinPUT">
-              <label for="PWDTEXT" class="JTXT passtxt">CHECKPWD </label>
+              <label for="PWDTEXT2" class="JTXT passtxt">CHECKPWD </label>
               <input
                 type="password"
-                name="PWDTEXT"
-                id="PWDTEXT"
+                name="PWDTEXT2"
+                id="PWDTEXT2"
                 maxlength="20"
                 placeholder="CHECK PASSWORD"
               />
+              <span class="Requird-input">안뇽</span>
             </div>
             <!-- 이름 기입 -->
             <div class="name joinPUT">
@@ -337,12 +340,14 @@
                NAME
               </label>
               <input type="text" name="JOINNAME" id="JOINNAME" maxlength="10" placeholder="WHAT YOUR NAME?" class="INPUTCOMMON">
+              <span class="Requird-input">안뇽</span>
             </div>
             <!-- 성별 -->
             <div class="gender joinPUT">
               <label for="gender">GENDER</label>
               <input type="radio" class="WM">
               <input type="radio" class="MM">
+              <span class="Requird-input">안뇽</span>
             </div>
             <!-- 이메일  -->
             <div class="EMAIL joinPUT">
@@ -356,6 +361,7 @@
                 <option value="hotmail.com">hotmail.com</option>
                 <option value="hanmail.com">hanmail.com</option>
               </select>
+              <span class="Requird-input EINput">안뇽</span>
             </div>
             
             <!-- 회원가입 버튼!-->

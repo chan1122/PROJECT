@@ -29,9 +29,12 @@
     white-space: nowrap;
     left: 50%;
     transform: translate(-50%, 4px);
+    
     text-align: left;
 }
-
+.Requird-input.on{
+  color: green;
+}
 /* 공통 파티션 12그리드 클래스 */
 /* col-숫자 : 숫자는 기둥의 수
 한줄에는 최대한이 12기둥이 되어야함! */

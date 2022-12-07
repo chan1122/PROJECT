@@ -122,7 +122,7 @@ $(() => {
       $(this).siblings(".Requird-input").text("‼필수입력!");
       // siblings(요소) - 다른형제요소 중 특정요소선택
       // siblings() - 아무값도 안쓰면 다른형제요소 모두선택
-
+      $(this).css({background:"#f28267"})
       // 불통과!
       pass = false;
     } /////////// if : 빈값체크 ///////////
@@ -131,7 +131,7 @@ $(() => {
             4. 아이디일 경우 유효성 검사하기
             - 검사기준: 영문자로 시작하는 6~20글자 영문자/숫자
         ******************************************************/
-    else if (cid === "mid") {
+    else if (cid === "IDTEXT") {
       // console.log("검사결과:",vReg(cv,cid));
 
       if (!vReg(cv, cid)) {
@@ -142,13 +142,14 @@ $(() => {
           .siblings(".Requird-input")
           .text("영문자로 시작하는 6~20글자 영문자/숫자")
           .removeClass("on"); //빨간글자
+          $(this).css({background:"#f28267"})
 
         // 불통과!
         pass = false;
       } ///////// if : 불통과시 //////////
       else {
         // 검사결과가 통과시 /////
-
+        $(this).css({background:"rgb(79 255 79 / 64%)"})
         /********************************** 
                         [ Ajax로 중복아이디 검사하기 ]
                         ajax 처리유형 2가지
@@ -174,58 +175,58 @@ $(() => {
 
                     **********************************/
 
-        $.ajax({
-          // 1. 전송할페이지,
-          url: "",
-          // 2. 전송방식,
-          type: "post",
-          // 3. 보낼데이터,
-          data: {
-            mid: IT.val(),
-          },
-          // 4. 전송할데이터타입,
-          dataType: "html",
-          // 5. 비동기옵션    (실행시점을 본 페이지와 맞추는옵션)
-          async: false,
-          // 비동기 옵션을 꺼야(false)
-          // 전역변수 pass 에 값을 넣을수 있다!
+        // $.ajax({
+        //   // 1. 전송할페이지,
+        //   url: "",
+        //   // 2. 전송방식,
+        //   type: "post",
+        //   // 3. 보낼데이터,
+        //   data: {
+        //     mid: IT.val(),
+        //   },
+        //   // 4. 전송할데이터타입,
+        //   dataType: "html",
+        //   // 5. 비동기옵션    (실행시점을 본 페이지와 맞추는옵션)
+        //   async: false,
+        //   // 비동기 옵션을 꺼야(false)
+        //   // 전역변수 pass 에 값을 넣을수 있다!
 
-          // 6. 성공처리,
-          success: function (res) {
-            res = res.trim(); // 앞뒤 공백 제거
-            console.log("결과: ", res);
-            if (res === "USER CONNECTER SUCCES") {
-              // 메시지 띄우기
-              IT
-                .siblings(".Requird-input")
-                .text("사용 기능한 ID 입니다.")
-                .addClass("on"); //글자녹색
-            } else if (res === "USER NOT CONNENTER") {
-              // 기존에 있음!
-              // 메시지 띄우기
-              IT
-                .siblings(".Requird-input")
-                .text("존재하는 ID 입니다.")
-                .removeClass("on"); //빨간글자
+        //   // 6. 성공처리,
+        //   success: function (res) {
+        //     res = res.trim(); // 앞뒤 공백 제거
+        //     console.log("결과: ", res);
+        //     if (res === "USER CONNECTER SUCCES") {
+        //       // 메시지 띄우기
+        //       IT
+        //         .siblings(".Requird-input")
+        //         .text("사용 기능한 ID 입니다.")
+        //         .addClass("on"); //글자녹색
+        //     } else if (res === "USER NOT CONNENTER") {
+        //       // 기존에 있음!
+        //       // 메시지 띄우기
+        //       IT
+        //         .siblings(".Requird-input")
+        //         .text("존재하는 ID 입니다.")
+        //         .removeClass("on"); //빨간글자
               
 
-              // 불통과 업데이트 필수!!!
-              pass = false;
-            } else {
-              alert("개발중에 있습니다. 개발제에게 문의해주십시오. 감사합니다.");
-              // 불통과 업데이트 필수!!!
-              pass = false;
-            }
-          },
-          // 7. 실패처리
-          // xhr - XMLRequest 객체
-          // status - 실패상태코드번호
-          // error - 에러결과 메시지
-          error: function (xhr, status, error) {
-            alert("비동기터리 실패 " + error);
-            pass = false;
-          },
-        }); ////// ajax 메서드
+        //       // 불통과 업데이트 필수!!!
+        //       pass = false;
+        //     } else {
+        //       alert("개발중에 있습니다. 개발제에게 문의해주십시오. 감사합니다.");
+        //       // 불통과 업데이트 필수!!!
+        //       pass = false;
+        //     }
+        //   },
+        //   // 7. 실패처리
+        //   // xhr - XMLRequest 객체
+        //   // status - 실패상태코드번호
+        //   // error - 에러결과 메시지
+        //   error: function (xhr, status, error) {
+        //     alert("비동기터리 실패 " + error);
+        //     pass = false;
+        //   },
+        // }); ////// ajax 메서드
       } ////////// else : 통과시 ///////////
     } //////////// else if : 아이디검사 /////////////
 
@@ -240,6 +241,7 @@ $(() => {
         // 불통과시 if안으로 들어오기!
         // false일때 들어오려면 !(NOT)연산자로 결과 뒤집기함!
         // 메시지 띄우기
+        $(this).css({background:"#f28267"})
         $(this).siblings(".Requird-input").text("특수문자,문자,숫자포함 형태의 5~15자리");
 
         // 불통과!
@@ -249,6 +251,7 @@ $(() => {
         // 검사결과가 통과시 /////
         // 메시지 지우기
         $(this).siblings(".Requird-input").empty();
+        $(this).css({background:"rgb(79 255 79 / 64%)"})
       } ////////// else : 통과시 ///////////
     } //////////// else if : 비밀번호검사 /////////////
 
@@ -260,7 +263,7 @@ $(() => {
       if (cv !== PT.val()) {
         // 메시지 띄우기
         $(this).siblings(".Requird-input").text("비밀번호가 일치하지 않습니다!");
-
+        $(this).css({background:"#f28267"})
         // 불통과!
         pass = false;
       } ///////// if : 불통과시 //////////
@@ -268,6 +271,7 @@ $(() => {
         // 검사결과가 통과시 /////
         // 메시지 지우기
         $(this).siblings(".Requird-input").empty();
+        $(this).css({background:"rgb(79 255 79 / 64%)"})
       } ////////// else : 통과시 ///////////
     } //////////// else if : 비밀번호확인검사 /////////////
 
@@ -277,7 +281,6 @@ $(() => {
         ******************************************************/
     else if (cid === "email1") {
       // 이메일 주소 만들기 : 앞주소@뒷주소
-      
       let comp =
         EM.val() +
         "@" +
@@ -322,7 +325,6 @@ $(() => {
     // 2. 선택옵션별 분기문
     if (cv === "init") {
       // "선택해주세요"
-
       // 1. 메시지 출력
       EM.siblings(".Requird-input").text("이메일 옵션 선택필수!").removeClass("on");
       // 2. 직접입력창 숨기기
@@ -578,7 +580,7 @@ function vReg(val, cid) {
 
   // 검사할 아이디에 따라 정규식을 변경함
   switch (cid) {
-    case "mid": // 아이디
+    case "IDTEXT": // 아이디
       reg = /^[a-z]{1}[a-z0-9]{5,19}$/g;
       // 영문자로 시작하는 6~20글자 영문자/숫자
       // /^[a-z]{1} 첫글자는 영문자로 체크!

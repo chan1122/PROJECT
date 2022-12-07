@@ -36,25 +36,39 @@ $(() => {
 
     // 처음클릭상태
     let firstSts = 0;
-    
+    // 앨범박스
+    let albpos = 
+    Math.abs($(".maintrackcover").offset().top);
+
+    $("body").css({height:$(".bodywrapp").height()+"px"});
+
     // 메인 트랙 커버박스 클릭 이벤트 //
     mtc.click(function () {
+
+    // 보정수치계산: position - 위치
+    let gap = Math.abs($(this).position().top - albpos);
+
         $(this).animate({
             height: "100vh",
         });
         BWP.animate({
             scrollTop: 
             ((delta<0&&firstSts)?
-                $()+$(this).position().top:
-                2500+$(this).position().top) + "px"
+                scTop+$(this).offset().top+gap:
+                scTop+$(this).offset().top+gap
+                ) + "px"
         })
 
         // 처음클릭상태 변경
         firstSts = 1;
 
         console.log("델타:", delta);
-        console.log("요기:", scTop);
-        console.log("조기:",$(this).position().top);
+        console.log("scTop:", scTop);
+        console.log("offset:",$(this).offset().top);
+        console.log("위치:",albpos);
+        console.log("position:",$(this).position().top);
+        console.log("gap:",gap);
+        console.log("document:",$(document).height());
         // 앨범 클릭시 위치이동
         // 앨범 세우고 내리기
         $(".ttrack", this)

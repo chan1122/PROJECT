@@ -107,7 +107,7 @@ $(() => {
                         // 로그인 성공후 본페이지로 이동하기
                         location.replace("main.jsp");
                     } // IF
-                    else if (RS === "YOU NOT CONNECTER") {
+                    else if (RS === "YOU NOT CONNECTER!") {
                         alert(
                             "ID 를 한번더 확인해주십시오. 사용가능한 ID가 아닙니다."
                         );

@@ -8,10 +8,11 @@ import {
     IT,
     NAME,
     navC,
+    PT,
     ssm,
     tbt,
 } from "./module/variable.js";
-import { PMJ_SUB_FOR_AL, Widbb } from "./module/FUNCTIONS.js";
+import { PMJ_SUB_FOR_AL, VALITest, Widbb } from "./module/FUNCTIONS.js";
 
 PMJ_SUB_FOR_AL();
 // import {albnum} from `./main`;
@@ -110,13 +111,71 @@ $(() => {
         **********************************/
         if (Bb === "") {
             $(this).siblings(".Requird-input").text("⛔필수입력");
-        } // if : 빈값 체크 
+        } // if : 빈값 체크
 
         /********************************** 
           [ 4. 아이디일 경우 유효성 검사 ]
         **********************************/
-       else if (Bid === IT){
-        if()
-       };//else if : 아이디 유효성 검사 
+        else if (Bid === IT) {
+            if (!VALITest(Bb, Bid)) {
+                $(this)
+                    .siblings(".Requird-input")
+                    .text("영문자로 시작하는 6~20글자 영문자/숫자")
+                    .removeClass("on");
+            } else {
+                // 백엔드 -> 소스
+                $.ajax({
+                    url: "",
+                    type: "",
+                    data: {
+                        IT: IT.val(),
+                    },
+                    dataType: "html",
+                    async: false,
+                    success: function (RES) {
+                        RES = RES.trim();
+                        Cl("결과: ", RES);
+                        if (RES === "USERS YOUR SUCCES!") {
+                            IT.siblings(".Requird-input")
+                                .text("사용가능한 ID 입니다.")
+                                .addClass("on");
+                        } else if (RES === "YOU NOT CONNECTER!") {
+                            IT.siblings(".Requird-input")
+                                .text("존재하는 ID 입니다.")
+                                .removeClass("on");
+                        } else {
+                            alert(
+                                "개발중입니다 이용에 불편을 드려 죄송합니다. 자세한 것은 개발자에게 문의 바랍니다. 감사합니다"
+                            );
+                        } // else
+                    }, /// AJAX
+                    // 실패처리
+                    error: function (xhr, status, error) {
+                        alert("비동기터리 실패" + error);
+                    }, // error
+                });
+            } /// else if
+        } //else if : 아이디 유효성 검사
+        /******************************************* 
+        [ 5. 비밀번호일 경우 유효성 검사하기
+            - 검사기준: 특수문자,문자,숫자포함 형태의 5~15자리 ]
+        *******************************************/
+        else if (Bid === PT) {
+            console.log("검사결과: ", VALITest(Bb, Bid));
+
+            if (!VALITest(Bb, Bid)) {
+                $(this)
+                    .siblings(".Requird-input")
+                    .text("특수문자,문자,숫자포험 형태의 5~15자리");
+            } else {
+                $(this).siblings(".Requird-input").empty();
+            } // else : 통과시
+        } //// else if : 비밀번호 유효성 검사
+
+        /******************************************* 
+       [ 6. 비밀번호확인일 경우 유효성 검사하기
+            - 검사기준: 입력된 비밀번호와 일치여부 ]
+       *******************************************/
+      else if(){};// else if : 비밀번호 확인 유효성 검사
     }); //// blur
 }); /////// JQB

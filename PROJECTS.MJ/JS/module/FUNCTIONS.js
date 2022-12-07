@@ -118,4 +118,37 @@ function PMJ_SUB_FOR_AL() {
 function VALIDATION (){
   
 };
-export { LoadFor, Widbb, MuteBtn, PMJ_SUB_FOR_AL };
+function VALITest(val, Bid){
+  let reg;
+  switch (Bid) {
+
+    case "mid": // 아이디
+      reg = /^[a-z]{1}[a-z0-9]{5,19}$/g;
+      // 영문자로 시작하는 6~20글자 영문자/숫자
+      // /^[a-z]{1} 첫글자는 영문자로 체크!
+      // [a-z0-9]{5,19} 첫글자 다음 문자는 영문 또는 숫자로
+      // 최소 5글자에서 최대 19글자를 유효범위로 체크!
+      // 첫글자 한글자를 더하면 최소 6글자에서 최대 20글자체크!
+      break;
+    case "mpw": // 비밀번호
+      reg = /^.*(?=^.{5,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+      // 특수문자,문자,숫자포함 형태의 5~15자리
+      // (?=^.{5,15}$) 시작부터 끝까지 전체 5~15자릿수 체크!
+      // (?=.*\d) 숫자 사용체크!
+      // (?=.*[a-zA-Z]) 영문자 대문자 또는 소문자 사용체크!
+      // (?=.*[!@#$%^&+=]) 특수문자 사용체크!
+      break;
+    case "eml": // 이메일
+      reg =
+        /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+      // 이메일 형식에 맞는지 검사하는 정규식
+      break;
+  } //////////// switch case문 //////////////////
+
+  // //console.log("정규식:"+reg);
+
+  // 정규식 검사를 위한 JS메서드
+  // -> 정규식.test(검사할값) : 결과 true/false
+  return reg.test(val); //호출한 곳으로 검사결과리턴!
+}
+export { LoadFor, Widbb, MuteBtn, PMJ_SUB_FOR_AL,VALIDATION,VALITest };

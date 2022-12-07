@@ -45,7 +45,7 @@ $(() => {
         BWP.animate({
             scrollTop: 
             ((delta<0&&firstSts)?
-                1700+$(this).position().top:
+                $()+$(this).position().top:
                 2500+$(this).position().top) + "px"
         })
 

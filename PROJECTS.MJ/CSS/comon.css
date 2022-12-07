@@ -29,8 +29,8 @@
     white-space: nowrap;
     left: 50%;
     transform: translate(-50%, 4px);
-    
-    text-align: left;
+    font-weight: bold;
+    text-align: center;
 }
 .Requird-input.on{
   color: green;

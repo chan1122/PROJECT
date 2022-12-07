@@ -86,6 +86,8 @@ const IT = $("#IDTEXT");
 const PT = $("#PWDTEXT")
 const NAME = $("#JOINNAME");
 const PT2 = $("#PWDTEXT2")
+const EM = $("#email1");
+const SM2 = $("#selmail")
 const inputTESP = $(`input[type=text][id!=email2][class!=search],
 input[type=password]`)
 
@@ -128,5 +130,5 @@ export {
     PT,
     inputTESP,
     NAME,
-    PT2,
+    PT2,EM,SM2,
 };

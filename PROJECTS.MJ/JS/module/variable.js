@@ -80,7 +80,7 @@ let setDelta = (val) => {
 };
 
 /* ********************************** */
-// 유효성 검사 함수 들 
+// 유효성 검사 함수 
 const jBTN = $("#logbtn");
 const IT = $("#IDTEXT");
 const PT = $("#PWDTEXT")

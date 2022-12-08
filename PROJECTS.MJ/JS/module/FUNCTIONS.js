@@ -1,4 +1,5 @@
 import albnum from "./DBconnect.js";
+import { mtc } from "../main.js";
 import {
   tfrxry1,
   tfrxry2,
@@ -12,6 +13,7 @@ import {
   GTASP,
   SUB_PMJ_album_track_For50,
   Cl,
+  BWP,
 } from "./variable.js";
 let GAG = JSON.parse(JSON.stringify(PMJjsonDATA));
 //////////////////////////////////////////////////
@@ -69,6 +71,11 @@ function Widbb() {
   $(".whitewrapp").toggleClass("on");
   $(".hamul").toggleClass("on");
 } ////// Widbb ////////////////////////////////
+
+/************************************************* 
+  [ tmzmfhftl 이치문 돌기 MAINPJ  ]
+*************************************************/
+
 // ----------------------------------------//
 ///// 음소거 버튼 ----------------------//////
 function MuteBtn() {
@@ -110,18 +117,15 @@ function PMJ_SUB_FOR_AL() {
         });
       }); ////// each
   }); /////// each ///////
-  Cl("이미지뿌리장!")
+  Cl("이미지뿌리장!");
 }
 /********************************************* 
   [ 유효성 검사 구역 ]
 *********************************************/
-function VALIDATION (){
-  
-};
-function VALITest(val, Bid){
+function VALIDATION() {}
+function VALITest(val, Bid) {
   let reg;
   switch (Bid) {
-
     case "mid": // 아이디
       reg = /^[a-z]{1}[a-z0-9]{5,19}$/g;
       // 영문자로 시작하는 6~20글자 영문자/숫자
@@ -151,4 +155,12 @@ function VALITest(val, Bid){
   // -> 정규식.test(검사할값) : 결과 true/false
   return reg.test(val); //호출한 곳으로 검사결과리턴!
 }
-export { LoadFor, Widbb, MuteBtn, PMJ_SUB_FOR_AL,VALIDATION,VALITest };
+export {
+  LoadFor,
+  Widbb,
+  MuteBtn,
+  PMJ_SUB_FOR_AL,
+  VALIDATION,
+  VALITest,
+
+};

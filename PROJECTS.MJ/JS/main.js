@@ -4,24 +4,24 @@
 ////////////////////////////////////////////
 import { LoadFor, Widbb, MuteBtn } from "./module/FUNCTIONS.js";
 import {
-    ssm,
-    mtb,
-    Gul,
-    GuIA,
-    navC,
-    Hamli,
-    tbt,
-    mpp,
-    setAlSts,
-    hb,
-    m3,
-    MTC,
-    BWP,
-    scTop,
-    setScTop,
-    delta,
-    setDelta,
-    Cl,
+  ssm,
+  mtb,
+  Gul,
+  GuIA,
+  navC,
+  Hamli,
+  tbt,
+  mpp,
+  setAlSts,
+  hb,
+  m3,
+  MTC,
+  BWP,
+  scTop,
+  setScTop,
+  delta,
+  setDelta,
+  Cl,
 } from "./module/variable.js";
 LoadFor();
 ////////////////////////////////////////////////
@@ -34,168 +34,137 @@ const AUDIO = $(".AUDIO");
 //-------------------------------------------------------//
 // JQB ////////////////////////////////////////////////////
 $(() => {
+  // 처음클릭상태
+  // 앨범박스
 
-    // 처음클릭상태
-    let firstSts = 0;
-    // 앨범박스
-    let albpos = 
-    Math.abs($(".maintrackcover").offset().top);
-
-    $("body").css({height:$(".bodywrapp").height()+"px"});
-    
-
-    // 메인 트랙 커버박스 클릭 이벤트 //
-    mtc.click(function () {
-
+  let scTop = BWP.scrollTop();
+  // 메인 트랙 커버박스 클릭 이벤트 //
+  mtc.click(function (e) {
+    console.log(scTop);
     // 보정수치계산: position - 위치
-    let gap = Math.abs($(this).position().top - albpos);
 
-        $(this).animate({
-            height: "50vh",
+    // 처음클릭상태 변경
 
-        });
-        $(this).addClass("on")
-        BWP.animate({
-            screenTop: 
-            ((delta<0&&firstSts)?
-                scTop+$(this).offset().top+gap:
-                scTop+$(this).offset().top+gap
-                ) + "px"
-        })
-        
-        // 처음클릭상태 변경
-        firstSts = 1;
+    $(".ttrack", this)
+      .delay(2000)
+      .addClass("on")
+      .parent()
+      .siblings()
+      .css({ height: "0vh" })
+      .find(".ttrack")
+      .removeClass("on");
 
-        // console.log("델타:", delta);
-        // console.log("scTop:", scTop);
-        // console.log("offset:",$(this).offset().top);
-        // console.log("위치:",albpos);
-        // console.log("position:",$(this).position().top);
-        // console.log("gap:",gap);
-        // console.log("document:",$(document).height());
-        // 앨범 클릭시 위치이동
-        // 앨범 세우고 내리기
-        $(".ttrack", this)
-            .delay(2000)
-            .addClass("on") 
-            .parent()
-            .siblings()
-            .css({ height: "0" })
-            .find(".ttrack")
-            .removeClass("on");
-
-        // 오디오 뿌려주기
-        track.each((idx, ele) => {
-            $(ele).find(".AUDIO").get(0).pause();
-        });
-        // 오디오재생 변수 할당
-        let iam = $(this).find(".AUDIO").get(0);
-        // 오디오 클릭시 처음부터  재생
-        iam.currentTime = 0;
-
-        iam.play();
-
-        // 앨범열기 상태값 변경하기
-        setAlSts(1); //1 열린상태
-
-    }); // 메인 트랙 커버박스 클릭 이벤트 //
-    // 앨범 z-index주기
-    $(track.get().reverse()).each(function (ti, te) {
-        $(this).css({ zIndex: ti });
+    // 전체 오디오 멈추기
+    track.each((idx, ele) => {
+      $(ele).find(".AUDIO").get(0).pause();
     });
-    // 앨범 듀레이션 뿌려주기
-    ttrack.each(function (t1, r1) {
-        $(r1).each((t2, r2) => {
-            $(r2).css({
-                animationDuration: `${70 + t1 / 3}s`,
-            });
-        });
+    // 오디오재생 변수 할당
+    let iam = $(this).find(".AUDIO").get(0);
+    // 오디오 클릭시 처음부터  재생
+    iam.currentTime = 0;
+
+    iam.play();
+
+    // 앨범열기 상태값 변경하기
+    setAlSts(1); //1 열린상태
+  }); // 메인 트랙 커버박스 클릭 이벤트 //
+  // 앨범 z-index주기
+  $(track.get().reverse()).each(function (ti, te) {
+    $(this).css({ zIndex: ti });
+  });
+  // 앨범 듀레이션 뿌려주기
+  ttrack.each(function (t1, r1) {
+    $(r1).each((t2, r2) => {
+      $(r2).css({
+        animationDuration: `${70 + t1 / 3}s`,
+      });
     });
-    // 상단 햄버거 버튼 클릭시 애니메이션
-    tbt.click(function () {
-        $(this).toggleClass("on");
-        Widbb();
-    }); // 상단 햄버거 버튼 클릭시 이벤트 //
+  });
+  // 상단 햄버거 버튼 클릭시 애니메이션
+  tbt.click(function () {
+    $(this).toggleClass("on");
+    Widbb();
+  }); // 상단 햄버거 버튼 클릭시 이벤트 //
 
-    // 상단 첫번쨰 MPP호버시 늘어나는 애니
-    mpp.hover(
-        function () {
-            // over
-            let myw = $(">div>span", this);
-            myw.each((idx, ele) => {
-                $(ele)
-                    .parent() // 부모div
-                    .css({
-                        width: $(ele).width() + "px",
-                        paddingRight: ".9vw",
-                    });
-            });
-        },
-        function () {
-            // out
-            $($(">div", this)).css({
-                width: "0",
-                paddingRight: "0",
-            });
-        }
-    );
-    /* ******************************* */
-    // 상단 GNB A요소 호버시 슬라이드 다운효과
-    ssm.css({
-        width: "99.6vw",
-        background: "#000",
-        left: "0",
-    });
-    Gul.hover(
-        function () {
-            //오버시
-            $(this).children("ul").stop().slideDown();
+  // 상단 첫번쨰 MPP호버시 늘어나는 애니
+  mpp.hover(
+    function () {
+      // over
+      let myw = $(">div>span", this);
+      myw.each((idx, ele) => {
+        $(ele)
+          .parent() // 부모div
+          .css({
+            width: $(ele).width() + "px",
+            paddingRight: ".9vw",
+          });
+      });
+    },
+    function () {
+      // out
+      $($(">div", this)).css({
+        width: "0",
+        paddingRight: "0",
+      });
+    }
+  );
+  /* ******************************* */
+  // 상단 GNB A요소 호버시 슬라이드 다운효과
+  ssm.css({
+    width: "99.6vw",
+    background: "#000",
+    left: "0",
+  });
+  Gul.hover(
+    function () {
+      //오버시
+      $(this).children("ul").stop().slideDown();
 
-            GuIA.css({
-                color: "black",
-                transition: ".5s",
-                fontweight: "bold",
-            });
-            navC.css({ background: "#fff", transition: ".2s" });
-        },
-        function () {
-            //아웃시
-            $(this).children("ul").stop().slideUp();
+      GuIA.css({
+        color: "black",
+        transition: ".5s",
+        fontweight: "bold",
+      });
+      navC.css({ background: "#fff", transition: ".2s" });
+    },
+    function () {
+      //아웃시
+      $(this).children("ul").stop().slideUp();
 
-            GuIA.css({
-                color: "#fff",
-                transition: ".5s",
-                fontweight: "bold",
-            });
-            navC.css({ background: "#000", transition: ".2s" });
-        }
-    );
+      GuIA.css({
+        color: "#fff",
+        transition: ".5s",
+        fontweight: "bold",
+      });
+      navC.css({ background: "#000", transition: ".2s" });
+    }
+  );
 
-    // 햄버거 버튼 안쪽 요소들 오버시--------
-    Hamli.hover(
-        function () {
-            const tfs = $(this).find(".sham");
-            // 마우스 오버시
-            tfs.stop().slideDown();
+  // 햄버거 버튼 안쪽 요소들 오버시--------
+  Hamli.hover(
+    function () {
+      const tfs = $(this).find(".sham");
+      // 마우스 오버시
+      tfs.stop().slideDown();
 
-            $(this)
-                .children(".hambtnbiga")
-                .css({ backgroundColor: "white", color: "black" });
-        },
-        function () {
-            // 마우스 아웃시
-            const tfs = $(this).find(".sham");
-            tfs.stop().slideUp();
+      $(this)
+        .children(".hambtnbiga")
+        .css({ backgroundColor: "white", color: "black" });
+    },
+    function () {
+      // 마우스 아웃시
+      const tfs = $(this).find(".sham");
+      tfs.stop().slideUp();
 
-            $(this)
-                .children(".hambtnbiga")
-                .css({ backgroundColor: "black", color: "white" });
-        }
-    );
-    // 햄버거 버튼 안쪽 요소들 오버시
+      $(this)
+        .children(".hambtnbiga")
+        .css({ backgroundColor: "black", color: "white" });
+    }
+  );
+  // 햄버거 버튼 안쪽 요소들 오버시
 
-    // 음소거 버튼 클릭
-    mtb.click(function () {
-        MuteBtn();
-    }); // 음소거 버튼
+  // 음소거 버튼 클릭
+  mtb.click(function () {
+    MuteBtn();
+  }); // 음소거 버튼
 }); //제이쿼리 로딩구역/////////////////////////

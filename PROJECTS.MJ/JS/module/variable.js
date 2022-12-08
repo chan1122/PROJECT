@@ -73,6 +73,7 @@ let scTop = 0;
 let setScTop = (val) => {
     scTop = val;
 };
+let aa;
 // 델타값
 let delta = 0;
 let setDelta = (val) => {
@@ -131,4 +132,5 @@ export {
     inputTESP,
     NAME,
     PT2,EM,SM2,
+    
 };

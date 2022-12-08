@@ -133,15 +133,15 @@ $(() => {
                 */
 
             if (url === "at" || url === "ad") {
-                window.location.href = "sub.html";
+                window.location.href = "sub.jsp";
             } else if (url === "pp") {
-                window.location.href = "index.html";
+                window.location.href = "index.jsp";
             } else if (url === "bd" || url === "mbd" || url === "ubd") {
-                window.location.href = "border.html";
+                window.location.href = "border.jsp";
             }  else if (url === "lg") {
-                window.location.href = "login.html";
+                window.location.href = "login.jsp";
             } else if (url === "mem") {
-                window.location.href = "join.html";
+                window.location.href = "join.jsp";
             }else if (
                 url === "lang" ||
                 url === "" ||
@@ -151,11 +151,11 @@ $(() => {
                 alert(
                     "현제 공사중 입니다. / 게시판(일밤,회원) /앨범상세(서브페이지)  /안내문구,페이지소개 / 를 이용 가능하십니다! 이용에 불편을 드려 죄송합니다.",
                     function () {
-                        window.location.href = "./sub.html";
+                        window.location.href = "./sub.jsp";
                     }
                 );
             }else if (url === "HOME"){
-                window.location.href = "./main.html";
+                window.location.href = "./main.jsp";
             }
         }); ///// abtn click //////
     }); /// each ////

@@ -26,7 +26,7 @@ import {
 LoadFor();
 ////////////////////////////////////////////////
 // 변수 정리 구역 ------------------------------
-export const mtc = $(".mtrackcoverinng");
+export const mtc = $(".mtt1");
 const track = $(".track");
 const ttrack = $(".ttrack");
 const AUDIO = $(".AUDIO");
@@ -39,35 +39,29 @@ $(() => {
 
   let scTop = BWP.scrollTop();
   // 메인 트랙 커버박스 클릭 이벤트 //
-  mtc.click(function (e) {
-    console.log(scTop);
-    // 보정수치계산: position - 위치
+  // mtc.click(function (e) {
+  //   console.log(scTop);
+  //   // 보정수치계산: position - 위치
 
-    // 처음클릭상태 변경
+  //   // 처음클릭상태 변경
 
-    $(".ttrack", this)
-      .delay(2000)
-      .addClass("on")
-      .parent()
-      .siblings()
-      .css({ height: "0vh" })
-      .find(".ttrack")
-      .removeClass("on");
+  //   
 
-    // 전체 오디오 멈추기
-    track.each((idx, ele) => {
-      $(ele).find(".AUDIO").get(0).pause();
-    });
-    // 오디오재생 변수 할당
-    let iam = $(this).find(".AUDIO").get(0);
-    // 오디오 클릭시 처음부터  재생
-    iam.currentTime = 0;
+  //   // 전체 오디오 멈추기
+  //   track.each((idx, ele) => {
+  //     $(ele).find(".AUDIO").get(0).pause();
+  //   });
+  //   // 오디오재생 변수 할당
+  //   let iam = $(this).find(".AUDIO").get(0);
+  //   // 오디오 클릭시 처음부터  재생
+  //   iam.currentTime = 0;
 
-    iam.play();
+  //   iam.play();
 
-    // 앨범열기 상태값 변경하기
-    setAlSts(1); //1 열린상태
-  }); // 메인 트랙 커버박스 클릭 이벤트 //
+  //   // 앨범열기 상태값 변경하기
+  //   
+   //1 열린상태
+  // }); // 메인 트랙 커버박스 클릭 이벤트 //
   // 앨범 z-index주기
   $(track.get().reverse()).each(function (ti, te) {
     $(this).css({ zIndex: ti });

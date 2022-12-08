@@ -19,14 +19,13 @@ let GAG = JSON.parse(JSON.stringify(PMJjsonDATA));
 //////////////////////////////////////////////////
 // 함수 구역 -------------------------------------
 //////////////////////////////////////////////////
-let album;
-let track;
+
 function LoadFor() {
   for (let i = 0; i < 50; i++) {
     MTC.append(main_album_track_FOR50);
   }
-  album = $(".album");
-  track = $(".track");
+  let album = $(".album");
+  let track = $(".track");
 
   album.each((i1, e1) => {
     // 변수 셋팅

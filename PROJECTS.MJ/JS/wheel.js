@@ -1,3 +1,4 @@
+import win from "../../../05.jQuery학습/004.플러그인/009.swiper-4.1.0/swiper-4.1.0/src/utils/window.js";
 import { mtc } from "./main.js";
 import albnum from "./module/DBconnect.js";
 import {
@@ -24,25 +25,32 @@ $(() => {
         return Math.floor(ele.offset().top);
     };
 
-    let sec;
-    let asd = 0;
+    let tempsc = 100;
 
     const clickSetFn = (ele) => {
-        let idx = $(ele).index();
-        let section = mtc.eq(idx);
+        // 1. 대상의 높이값을 화면의 절반크기만큼 키움
+        $(ele).css({
+            height: "50vh",
+        });
 
-        sec = updateOffset(section);
-        asd = Math.floor(BWP.scrollTop() - 200);
-        console.log("offset Top값:", sec);
-        console.log("this:", ele);
-        $(ele)
-            .css({
-                height: "50vh",
-            })
-            .delay(100, () => {
-                BWP.animate({ scrollTop: asd + sec + "px" });
+        // 2. 높이값 절반크기 계산
+        let winH = $(window).height() / 2;
+
+        // 3. 대상의 높아진 높이만큼 계산된 값으로 보정함!
+        BWP.animate({ scrollTop: "-=" + winH + "px" }, 10, () => {
+            // scrollIntoView() 메서드로 대상을 보이는 화면상단으로 이동함
+            // 이 메서드는 JS순수 메서드임!(제이쿼리 절대아님!)
+            // 그래서 ele를 $(ele)로 쓰면 안됨!
+            ele.scrollIntoView({
+                // 부드러운 스크롤 옵션
+                behavior: "smooth", // or "auto" or "instant"
+                // 화면 상단/하단 위치이동옵션
+                block: "start", // or "end"
+                // inline 옵션 -> 가로스크롤 옵션
             });
+        });
 
+        // 4. 클래스 "on"적용
         $(".ttrack", ele)
             .delay(2000)
             .addClass("on")
@@ -66,16 +74,13 @@ $(() => {
 
     let tempSts = 0; // 광스크롤 막기
 
+    let scTop;
+
     BWP.on("mousewheel wheel", function (e) {
         e = window.event || e;
         let delta = e.wheelDelta || e.detail;
 
-        let scTop = BWP.scrollTop();
-        // 현제 위치값 소수점 버리고
-        asd = Math.floor($(this).scrollTop() - 200);
-        let aa = $(this).scrollTop();
-
-        $(".qq").text(aa);
+        scTop = BWP.scrollTop();
 
         // // 1 . 상단 큰 로고 클래스 온 적용 + 줄어들기
         if (scTop >= 100) {

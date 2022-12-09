@@ -603,9 +603,17 @@ body {
     position: relative;
     width: 100%;
     height: 88vh;
+    margin-top: 175px;
     overflow: hidden;
 }
-
+.toppin{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 175px;
+    background-color: black;
+}
 .Lcoverbox {
     z-index: -2;
     position: absolute;

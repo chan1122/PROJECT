@@ -1,4 +1,3 @@
-import win from "../../../05.jQuery학습/004.플러그인/009.swiper-4.1.0/swiper-4.1.0/src/utils/window.js";
 import { mtc } from "./main.js";
 import albnum from "./module/DBconnect.js";
 import {

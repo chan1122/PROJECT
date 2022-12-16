@@ -5,7 +5,13 @@
 @import url(reset.css);
 @import url(core.css);
 
-
+body *{
+    outline: 2px dotted red;
+}
 /* 컨셉 = 책 */
 
+.bodywrapp_cover_border{
+    width: 100vw;
+    height: 100vh;
+}
 

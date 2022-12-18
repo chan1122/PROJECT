@@ -41,16 +41,25 @@ body {
   background-color: #fff;
 
   transform-origin: left center;
-  transform: rotateY(30deg);
+  transform: rotateY(0deg);
+  transition: all 1s ease-out;
 }
-
+/* 페이지 개별 디자인 */
+.frontimg {
+  width: 96%;
+  height: 100%;
+  right: 0;
+  position: absolute;
+}
 /* 페이지공통 - 앨범 클릭시 */
 .page .on {
   position: absolute;
   width: 50%;
   height: 70%;
 }
-
+.page .tpo {
+  transform: rotateY(180deg);
+}
 /* 페이지를 가르는 막대기 */
 .stroke {
   position: absolute;

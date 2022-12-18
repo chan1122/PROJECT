@@ -4,14 +4,59 @@
 /* 외부 CSS 합치기 */
 @import url(reset.css);
 @import url(core.css);
+@import url(introcommon.css);
 
-body *{
-    outline: 2px dotted red;
+/* 공사중 확인 */
+body * {
+  outline: 2px dotted red;
 }
-/* 컨셉 = 책 */
-
-.bodywrapp_cover_border{
-    width: 100vw;
-    height: 100vh;
+/* 배경색 설정 */
+body {
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  background-color: #000;
+  overflow: hidden;
 }
 
+.pillar {
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+  position: relative;
+
+  transform: translate(-50%, -50%);
+}
+/* 페이지 공통 */
+.page {
+  position: absolute;
+  width: 500px;
+  height: 90%;
+  top: 5%;
+  left: 50%;
+
+  background-color: #fff;
+
+  transform-origin: left center;
+  transform: rotateY(30deg);
+}
+
+/* 페이지공통 - 앨범 클릭시 */
+.page .on {
+  position: absolute;
+  width: 50%;
+  height: 70%;
+}
+
+/* 페이지를 가르는 막대기 */
+.stroke {
+  position: absolute;
+
+  width: 20px;
+  height: 100%;
+  background-color: red;
+  left: 0;
+}

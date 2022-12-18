@@ -1,15 +1,12 @@
 // 음원사이트 인트로페이지 자바스크립트
+// 변수 구역
+const page = $(".page");
+const pr = $(".pillar");
+$(() => {
+  console.log("로딩완료!");
 
-window.addEventListener("DOMContentLoaded",()=>{
-    //호출해보기
-    console.log("인트로 페이지..로딩...완료");
-
-    // 영상 선택!!
-    const myvid = document.getElementById("myvid");
-    // 영상 로드!!
-    console.log("영상로드 완료",myvid);
-
-
-
-
+  // pgae.each문으로 돌리기
+  $(page.get().reverse()).each((idx, ele) => {
+    $(e.curr).css({ zIndex: $(idx) });
+  });
 });

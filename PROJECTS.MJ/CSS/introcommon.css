@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* 인트로페이지 공통부분 */
+
+.flex {
+  display: flex;
+}
+.poa {
+  position: absolute;
+}
+.por {
+  position: relative;
+}
+.per3d {
+  transform-style: preserve-3d;
+}
+/* 가운데정렬 */
+.tf {
+  transform: translate(-50% -50%);
+  left: 50%;
+  top: 50%;
+}

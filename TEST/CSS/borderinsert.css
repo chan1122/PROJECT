@@ -37,7 +37,7 @@ main {
   margin-left: 20px;
   font-size: 30px;
   top: 4px;
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
 }
 #title_border {
   position: relative;
@@ -66,14 +66,14 @@ main {
 
   top: 0;
   letter-spacing: 5px;
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
 }
 
-.cover_styels{
-    width: 70%;
-    position: relative;
-    left: 50%;
-    transform: translate(-50% , 0);
+.cover_styels {
+  width: 70%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 #text_for_input {
   font-size: 20px;
@@ -83,7 +83,7 @@ main {
   width: 100%;
   height: 500px;
   outline-color: 5px solid black;
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
 }
 
 .top_box {
@@ -141,107 +141,134 @@ main {
   padding: 0;
   margin: 0;
   margin-top: 20px;
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
 }
-.FW1{
-    position: relative;
-    display: block;
-    outline: 2px solid black;
-    font-size: 20px;
-    width: 25px;
-    height: 20px;
-    float: left;
-    margin-right: 5px;
+.FW1 {
+  position: relative;
+  display: block;
+  outline: 2px solid black;
+  font-size: 20px;
+  width: 25px;
+  height: 20px;
+  float: left;
+  margin-right: 5px;
 }
-.FW2{
-    position: relative;
-    display: block;
-    outline: 2px solid black;
-    font-size: 20px;
-    width: 25px;
-    height: 20px;
-    float: left;
-    margin-right: 5px;
-    right: 0;
+
+.FF1 {
+  position: relative;
+  display: block;
+  outline: 2px solid black;
+  font-size: 20px;
+  width: 25px;
+  height: 20px;
+  float: left;
+  margin-right: 5px;
 }
-.style_FW1{
-    position: absolute;
-    width: 100%;
-    height: 0%;
-    top: -6px;
-    left: -2px;
+.FW2 {
+  position: relative;
+  display: block;
+  outline: 2px solid black;
+  font-size: 20px;
+  width: 25px;
+  height: 20px;
+  float: left;
+  margin-right: 5px;
+  right: 0;
 }
-.style_FW2{
-    position: absolute;
-    width: 100%;
-    height: 0%;
-    top: -3px;
-    font-size: 24px;
-    left: -2px;
+.style_FW1 {
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  top: -6px;
+  left: -2px;
 }
 /* 글자 텍스트 스타일 개별설정 */
-.fW1{
-    font-style: inherit;
+.fW1 {
+  font-style: inherit;
 }
-.fW2{
-    font-style: unset;
+.fW2 {
+  font-style: unset;
 }
-.fW3{
-    
-    font-style: oblique;
+.fW3 {
+  font-style: oblique;
 }
-.fW4{
+.fW4 {
+  font-weight: bold;
+}
+.fW1.on {
+  color: white;
+  background-color: black;
+  outline: 5px double white;
+}
+.fW2.on {
+  color: white;
+  background-color: black;
+  outline: 5px double white;
+}
+.fW3.on {
+  color: white;
+  background-color: black;
+  outline: 5px double white;
+}
+.fW4.on {
+  color: white;
+  background-color: black;
+  outline: 5px double white;
+}
+.fontW1.on {
+  font-style: inherit;
+}
+.fontW2.on {
+  font-style: unset;
+}
+.fontW3.on {
+  font-style: oblique;
+}
+.fontW4.on {
+  font-weight: bold;
+}
+.FW1:hover {
+  background-color: lightblue;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+.FF1:hover {
+  background-color: lightblue;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+.fwb{
     font-weight: bold;
-    
+
 }
-.fW5{
-    font-family: 'Jua', sans-serif;
+#style1 {
+  width: 120px;
+  left: 2px;
+  height: 20px;
+  position: absolute;
+  margin: 0;
+  padding-left: 0;
 }
-.fW6{
-    font-family: 'Single Day', cursive;
-}
-.fW7{
-    
-    font-family: 'Yeon Sung', cursive;
-}
-.fW8{
-    font-family: 'Black Han Sans', sans-serif;
-    
+#style2 {
+  width: 120px;
+  right: -8px;
+  height: 20px;
+  position: absolute;
+  margin: 0;
+  padding-left: 0;
 }
 
-.FW1:hover{
-    background-color: lightblue;
-    color: white;
-    cursor: pointer;
-    outline: none;
-}
-.FW2:hover{
-    background-color: lightcoral;
-    color: white;
-    cursor: pointer;
-    outline: none;
-}
-#style1{
-    width: 120px;
-    left: 2px;
-    height: 20px;
-    position: absolute;
-    margin: 0;
-    padding-left: 0;
-}
-#style2{
-    width: 120px;
-    right: -8px;
-    height: 20px;
-    position: absolute;
-    margin: 0;
-    padding-left: 0;
+.sv70per {
+  width: 100%;
+  position: relative;
+  height: 23px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
-.sv70per{
-    width: 100%;
-    position: relative;
-    height: 23px;
-    left: 50%;
-    transform: translate(-50% ,0 );
+#sellectfont {
+  position: absolute;
+  right: 0;
 }
